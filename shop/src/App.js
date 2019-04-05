@@ -64,8 +64,9 @@ box-sizing: border-box;
 class App extends Component {
   render() {
     return (
-      <div className="App">
 
+      <div className="App">
+      
         <img class="logo" src={logo}/>
         <Busqueda
           type="text"
@@ -89,20 +90,25 @@ class App extends Component {
             Crear Cuenta
             </Login>
 
-        <div className="card">
-          <img class="iphone" src={iphone}/>
+       <div className="card">
+        <div class="box">
+          <img class="box" src={iphone}/>
+          <span>Telefonos</span>
         </div>
 
-        <div className="card">
-        <img class="watch" src={watch}/>
+        <div class="box">
+        <img class="box" src={watch}/>
+        <span>Tecnologia</span>
         </div>
 
-        <div className="card">
-        <img class="makeup" src={makeup}/>
+
+        <div class="box">
+        <img class="box" src={makeup}/>
+        <span>Maquillaje</span>
+        </div>
         </div>
 
       </div>
-
 
     );
   }
