@@ -66,7 +66,7 @@ class App extends Component {
     return (
 
       <div className="App">
-      
+
         <img class="logo" src={logo}/>
         <Busqueda
           type="text"
