@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import  Gallery  from './Components/Gallery/';
+=======
+import Gallery from './Components/Gallery/';
+>>>>>>> 54eb19bb28732ebd091b63a8ae0e1bcae09484b1
 import styled,{css} from 'styled-components'
 
 import fondo from './images/fondo.jpg';
@@ -66,8 +70,22 @@ const Login = styled.button`
 class App extends Component {
 
   render() {
+const images = images.map((images, i) => {
     return (
+<<<<<<< HEAD
       <div className="App" >
+=======
+
+      <div className="App">
+      <header className="App-Header">
+      <Gallery
+        images={["http://lorempixel.com/400/200/technics/","http://lorempixel.com/400/200/technics/",
+        "http://lorempixel.com/400/200/technics/"]}
+        texto={"Tecnologias"}
+       />
+      </header>
+
+>>>>>>> 54eb19bb28732ebd091b63a8ae0e1bcae09484b1
         <img class="logo" src={logo}/>
         <Busqueda
           type="text"
@@ -90,6 +108,7 @@ class App extends Component {
             type="submit">
             Crear Cuenta
             </Login>
+<<<<<<< HEAD
 
             <div className="App-Header" >
             <Gallery
@@ -102,6 +121,13 @@ class App extends Component {
 
     );
   }
+=======
+      </div>
+
+    );
+  });
+ }
+>>>>>>> 54eb19bb28732ebd091b63a8ae0e1bcae09484b1
  }
 
 
