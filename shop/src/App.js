@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import  Gallery  from './Components/Gallery/';
+import styled,{css} from 'styled-components'
+
 import fondo from './images/fondo.jpg';
 import logo from './images/shopMak.png';
 import iphone from './images/iphone.gif';
 import watch from './images/watch.jpg';
-import makeup from './images/makeup.jpg'
+import makeup from './images/makeup.jpg';
+
 import './App.css';
-import styled,{css} from 'styled-components'
 
 
 const Busqueda = styled.input.attrs(({ size }) => ({
@@ -21,52 +24,50 @@ const Busqueda = styled.input.attrs(({ size }) => ({
   max-width: 500px;
   box-sizing: border-box;
   transform: translate(100%, -100%);
-
 `;
 const Buscar = styled.button`
-background:  #000 ;
-color: #fff;
-font:100% "sans-serif";
-border-radius: 1em;
-border: 1px solid black;
-padding: 0.25em 1em;
-transform: translate(290%, -100%);
-width: 7%;
-max-width: 500px;
-box-sizing: border-box;
+  background:  #000 ;
+  color: #fff;
+  font:100% "sans-serif";
+  border-radius: 1em;
+  border: 1px solid black;
+  padding: 0.25em 1em;
+  transform: translate(290%, -100%);
+  width: 7%;
+  max-width: 500px;
+  box-sizing: border-box;
 `;
 const Sesion = styled.button`
-background:  #000 ;
-color: #fff;
-font:100% "sans-serif";
-border-radius: 1em;
-border: 1px solid black;
-padding: 0.25em 1em;
-transform: translate(250%, -100%);
-width: 12%;
-max-width: 500px;
-box-sizing: border-box;
+  background:  #000 ;
+  color: #fff;
+  font:100% "sans-serif";
+  border-radius: 1em;
+  border: 1px solid black;
+  padding: 0.25em 1em;
+  transform: translate(250%, -100%);
+  width: 12%;
+  max-width: 500px;
+  box-sizing: border-box;
 `;
 
 const Login = styled.button`
-background:  #000 ;
-color: #fff;
-font:100% "sans-serif";
-border-radius: 1em;
-border: 1px solid black;
-padding: 0.25em 1em;
-transform: translate(255%, -100%);
-width: 12%;
-max-width: 500px;
-box-sizing: border-box;
+  background:  #000 ;
+  color: #fff;
+  font:100% "sans-serif";
+  border-radius: 1em;
+  border: 1px solid black;
+  padding: 0.25em 1em;
+  transform: translate(255%, -100%);
+  width: 12%;
+  max-width: 500px;
+  box-sizing: border-box;
 `;
 
 class App extends Component {
+
   render() {
     return (
-
-      <div className="App">
-
+      <div className="App" >
         <img class="logo" src={logo}/>
         <Busqueda
           type="text"
@@ -90,28 +91,19 @@ class App extends Component {
             Crear Cuenta
             </Login>
 
-       <div className="card">
-        <div class="box">
-          <img class="box" src={iphone}/>
-          <span>Telefonos</span>
-        </div>
-
-        <div class="box">
-        <img class="box" src={watch}/>
-        <span>Tecnologia</span>
-        </div>
-
-
-        <div class="box">
-        <img class="box" src={makeup}/>
-        <span>Maquillaje</span>
-        </div>
-        </div>
-
+            <div className="App-Header" >
+            <Gallery
+              images={["http://lorempixel.com/400/200/technics/","http://lorempixel.com/400/200/technics/",
+              "http://lorempixel.com/400/200/technics/"]}
+              texto={"Tecnologias"}
+             />
+            </div>
       </div>
 
     );
   }
-}
+ }
+
+
 
 export default App;
