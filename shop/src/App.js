@@ -104,6 +104,13 @@ class App extends Component {
              span={["Tecnologias","Comida","Maquillaje"]}
             />
 
+           <div className="Footer">
+             <h1>CONOCENOS</h1>
+             <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+             </p>
+             <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+             </p>
+            </div>
  </div>
 </div>
 

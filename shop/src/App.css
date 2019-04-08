@@ -19,7 +19,7 @@ body{
     height: 200vh;
     padding: 4% 2%;
     box-sizing: border-box;
-      transform: translate(45%, 5%);
+    transform: translate(45%, 5%);
 }
 
 .box{
@@ -62,5 +62,12 @@ body{
   body{
       background-size:  100% 20%;
   }
-  
+}
+
+.Footer{
+  transform: translate(0%, -300%);
+}
+
+.Footer > p {
+    font-size: 25px;
 }
