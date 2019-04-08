@@ -95,7 +95,7 @@ class App extends Component {
             Crear Cuenta
             </Login>
 
-          
+
 
             <div className="App-Header" >
            <Gallery
