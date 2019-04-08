@@ -66,17 +66,9 @@ const Login = styled.button`
 
 class App extends Component {
   render() {
-const images = images.map((images, i) => {
     return (
 
       <div className="App">
-      <header className="App-Header">
-      <Gallery
-        images={["http://lorempixel.com/400/200/technics/","http://lorempixel.com/400/200/technics/",
-        "http://lorempixel.com/400/200/technics/"]}
-        texto={"Tecnologias"}
-       />
-      </header>
 
         <img class="logo" src={logo}/>
         <Busqueda
@@ -100,10 +92,17 @@ const images = images.map((images, i) => {
             type="submit">
             Crear Cuenta
             </Login>
+
+            <div className="App-Header" >
+           <Gallery
+             images={["http://lorempixel.com/400/200/technics/","http://lorempixel.com/400/200/technics/",
+             "http://lorempixel.com/400/200/technics/"]}
+             span={["Tecnologias","Comida","Maquillaje"]}
+            />
+</div>
       </div>
 
     );
-  });
  }
  }
 
