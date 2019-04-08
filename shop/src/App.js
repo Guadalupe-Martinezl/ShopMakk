@@ -95,6 +95,7 @@ class App extends Component {
             Crear Cuenta
             </Login>
 
+            <h4>CONOCENOS</h4>
 
             <div className="App-Header" >
            <Gallery
@@ -102,8 +103,11 @@ class App extends Component {
              "http://lorempixel.com/400/200/technics/"]}
              span={["Tecnologias","Comida","Maquillaje"]}
             />
+
+ </div>
 </div>
-</div>
+
+
 
     );
    }
