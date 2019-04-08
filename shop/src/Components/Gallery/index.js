@@ -2,8 +2,7 @@ import React from "react";
 
 export default function Gallery(props) {
 
-<<<<<<< HEAD
-console.log("Gallery props--->", props);
+
 
   return (
     <div className="card">
@@ -23,7 +22,7 @@ console.log("Gallery props--->", props);
 
   )
 }
-=======
+
 
   return (
     <div className="card">
