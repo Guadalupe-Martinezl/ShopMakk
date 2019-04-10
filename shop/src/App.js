@@ -64,8 +64,9 @@ const Login = styled.button`
   box-sizing: border-box;
 `;
 
-class App extends Component {
 
+
+class App extends Component {
   render() {
     return (
 
@@ -85,7 +86,9 @@ class App extends Component {
 
           <Sesion
            name="busqueda"
-           type="submit">
+           type="submit"
+           >
+
            Iniciar Sesion
            </Sesion>
 
