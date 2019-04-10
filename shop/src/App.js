@@ -65,14 +65,22 @@ const Login = styled.button`
   box-sizing: border-box;
 `;
 
+
+
 class App extends Component {
+
 
   render() {
     return (
 
+
       <div className="App">
 
+      <form>
 
+                                    <input type="button" value="volver atrás" name="volver atrás2" onclick="history.back()" />
+
+                                </form>
         <img class="logo" src={logo}/>
         <Busqueda
           type="text"
@@ -86,7 +94,9 @@ class App extends Component {
 
           <Sesion
            name="busqueda"
-           type="submit">
+           type="submit"
+           onClick="handleLogin"
+           >
            Iniciar Sesion
            </Sesion>
 

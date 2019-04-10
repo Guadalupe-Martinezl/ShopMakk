@@ -7,7 +7,6 @@ import fondo from '../../images/fondo.jpg';
 import styled, {css}from 'styled-components'
 
 const Contain = styled.div`
-
   padding:0;
   margin: 0;
 
@@ -110,16 +109,16 @@ export default function Login(props) {
 
   <div className="login">
     <h1>Login</h1>
-  <form>
-    <div>
+    <form>
+      <div>
       <label> Usuario </label><br/>
         <Input
           name ="usuario"
           type="text"
           placeholder="Usuario"
           />
-  </div>
-  <div>
+      </div>
+      <div>
        <label> Contraseña </label><br/>
         <Input
           name="password"
@@ -127,7 +126,7 @@ export default function Login(props) {
           placeholder="Contraseña"
           />
           </div><br />
-  <div>
+    <div>
       <Button
         name="ingresar"
         type="sumbmit"
@@ -136,7 +135,7 @@ export default function Login(props) {
       </Button>
         </div>
   </form>
-    </div>
+</div>
     </Contain>
   )
 
