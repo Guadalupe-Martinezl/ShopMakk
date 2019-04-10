@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Gallery from './Components/Gallery/';
+import FormLogin from './Components/Login/';
 
 import styled,{css} from 'styled-components'
 
@@ -95,7 +96,6 @@ class App extends Component {
             Crear Cuenta
             </Login>
 
-            <h4>CONOCENOS</h4>
 
             <div className="App-Header" >
            <Gallery
@@ -103,6 +103,7 @@ class App extends Component {
              "http://lorempixel.com/400/200/technics/"]}
              span={["Tecnologias","Comida","Maquillaje"]}
             />
+            <FormLogin />
 
  </div>
 </div>
