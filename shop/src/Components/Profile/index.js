@@ -1,3 +1,5 @@
+import React from "react";
+
 import shop from '../../images/shop2.png';
 import fondo from '../../images/fondo.jpg';
 

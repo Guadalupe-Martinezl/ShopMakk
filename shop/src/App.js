@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Gallery from './Components/Gallery/';
-import Prrofile from './Components/Profile/';
+import ProfilesU from './Components/Profile/';
 
 import styled,{css} from 'styled-components'
 
@@ -116,7 +116,7 @@ class App extends Component {
              </p>
             </div>
 
-            <Prrofile />
+            <ProfilesU />
  </div>
 </div>
 
