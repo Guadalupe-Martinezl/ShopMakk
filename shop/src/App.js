@@ -101,7 +101,7 @@ class App extends Component {
              "http://lorempixel.com/400/200/technics/"]}
              span={["Tecnologias","Comida","Maquillaje"]}
             />
-            <FormLogin />
+            
             <Registro />
 
  </div>

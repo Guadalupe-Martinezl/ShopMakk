@@ -3,6 +3,7 @@ import React from "react";
 import shop from '../../images/shop2.png';
 import usuario from '../../images/user.png';
 import fondo from '../../images/fondo.jpg';
+import ahorro from '../../images/ahorro.jpg';
 
 import styled, {css}from 'styled-components'
 
@@ -10,7 +11,7 @@ const Contain = styled.div`
   padding:0;
   margin: 0;
   background: url(${fondo}) no-repeat bottom;
-  background-size: 100% 110%;
+  background-size: 100%, 110%;
   box-sizing: border-box;
 
 .menu img {
@@ -25,16 +26,16 @@ const Contain = styled.div`
 }
 .login{
   margin:auto;
-  width: 30%;
-  padding: 3%;
-  transform: translate(3%, 40%);
+  width: 50%;
+  padding: 0;
+  transform: translate(3%, 100%);
   color: black;
   text-align: center;
   box-sizing: border-box;
 }
 .login img{
-  width: 30%;
-  height: 30%;
+  width: 15%;
+  height: 15%;
 }
 `;
 const Input = styled.input.attrs(({ size }) => ({
@@ -90,7 +91,16 @@ const Buscar = styled.button`
   box-sizing: border-box;
   transform: translate(290%, -100%);
 `;
+const Footer = styled.footer`
+font: 20px "monospace";
+transform: translate(30%, 100%);
 
+.img1 img{
+  width:20%;
+  height:20%;
+}
+
+`;
 
 export default function Registro(props) {
   return(
@@ -147,6 +157,15 @@ export default function Registro(props) {
           </div>
           </form>
       </div>
+      <Footer>
+        <div className="experiencia">
+          <h2>TU EXPERIENCIA EN SHOPMAK </h2>
+        </div>
+
+        <div className="img1">
+          <img src={ahorro} />
+        </div>
+    </Footer>
   </Contain>
   )
 
