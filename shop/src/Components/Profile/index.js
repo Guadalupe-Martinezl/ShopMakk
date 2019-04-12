@@ -1,5 +1,4 @@
 import shop from '../../images/shop2.png';
-import reloj from '../../images/reloj.jpeg';
 import fondo from '../../images/fondo.jpg';
 
 import styled, {css}from 'styled-components'
@@ -11,7 +10,7 @@ const Contain = styled.div`
   background: url(${fondo}) no-repeat bottom;
   background-size: 100% 110%;
   box-sizing: border-box;
-
+`;
 
 const Input = styled.input.attrs(({ size }) => ({
   margin: size || "5em",
@@ -83,6 +82,11 @@ export default function Profile(props) {
       </Buscar>
         </div>
 
-      )
 
-    }
+
+  </form>
+</div>
+    </Contain>
+  )
+
+}
