@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Gallery from './Components/Gallery/';
 import ProfilesU from './Components/Profile/';
+import FormLogin from './Components/Login/';
+import Registro from './Components/Registro/';
 
 import styled,{css} from 'styled-components'
 
@@ -107,16 +109,19 @@ class App extends Component {
              "http://lorempixel.com/400/200/technics/"]}
              span={["Tecnologias","Comida","Maquillaje"]}
             />
+            <div className="Footer">
+              <h1>CONOCENOS</h1>
+              <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              </p>
+              <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              </p>
+             </div>
 
-           <div className="Footer">
-             <h1>CONOCENOS</h1>
-             <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-             </p>
-             <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-             </p>
-            </div>
+            <FormLogin />
+            <Registro />
+          
 
-            <ProfilesU />
+
  </div>
 </div>
 

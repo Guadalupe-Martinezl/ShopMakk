@@ -1,6 +1,6 @@
 import React from "react";
 
-import shop from '../../images/shop2.png';
+import shop from '../../images/shopMak.png';
 import fondo from '../../images/fondo.jpg';
 
 import styled, {css}from 'styled-components'
@@ -75,8 +75,9 @@ export default function Profile(props) {
         <img  src={shop}/>
       <Busqueda
         type="text"
-        placeholder="Busqueda"
-        />
+        placeholder="Busqueda">
+        </Busqueda>
+
       <Buscar
         name="busqueda"
         type="submit">
@@ -84,11 +85,7 @@ export default function Profile(props) {
       </Buscar>
         </div>
 
-
-
-  </form>
-</div>
-    </Contain>
-  )
+</Contain>
+)
 
 }

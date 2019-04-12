@@ -1,9 +1,9 @@
 import React from "react";
 
-
 import shop from '../../images/shopMak.png';
-//import reloj from '../../images/reloj.jpeg';
+import usuario from '../../images/user.png';
 import fondo from '../../images/fondo.jpg';
+
 import styled, {css}from 'styled-components'
 
 const Contain = styled.div`
@@ -12,6 +12,7 @@ const Contain = styled.div`
   background: url(${fondo}) no-repeat bottom;
   background-size: 100% 110%;
   box-sizing: border-box;
+
 .menu img {
   width: 15%;
   height: 15%;
@@ -24,14 +25,18 @@ const Contain = styled.div`
 }
 .login{
   margin:auto;
-  width: 30%;
-  background:  #d8d4d4 ;
-  padding: 3%;
+  width: 20%;
+  height: 20%;
+  padding: 0;
   transform: translate(3%, 40%);
   color: black;
-  border: 2px solid black;
   text-align: center;
   box-sizing: border-box;
+}
+
+.login img{
+  width: 30%;
+  height: 30%;
 }
 `;
 const Input = styled.input.attrs(({ size }) => ({
@@ -60,6 +65,7 @@ const Busqueda = styled.input.attrs(({ size }) => ({
   max-width: 500px;
   box-sizing: border-box;
   transform: translate(100%, -100%);
+
 `;
 const Button = styled.button`
   background:  #000 ;
@@ -86,9 +92,13 @@ const Buscar = styled.button`
   box-sizing: border-box;
   transform: translate(290%, -100%);
 `;
+const Footer = styled.footer`
+  font: 20px "monospace";
+  transform: translate(30%, 450%);
+`;
 
 
-export default function Login(props) {
+export default function Registro(props) {
   return(
     <Contain>
       <div className="menu">
@@ -104,36 +114,53 @@ export default function Login(props) {
       </Buscar>
         </div>
 
-  <div className="login">
-    <h1>Login</h1>
-    <form>
-      <div>
-      <label> Usuario </label><br/>
-        <Input
-          name ="usuario"
-          type="text"
-          placeholder="Usuario"
-          />
+      <div className="login">
+      <img src={usuario} />
+        <h1>Crear Cuenta</h1>
+          <form>
+          <label>Nombre de Usuario</label>
+            <div>
+                <Input
+                  name ="usuario"
+                  type="text"
+                  placeholder="Usuario"
+                  />
+            </div>
+            <div>
+            <label>Correo</label>
+                <Input
+                  name ="correo"
+                  type="email"
+                  placeholder="Correo"
+                  />
+            </div>
+
+            <div>
+            <label>Contraseña</label>
+                <Input
+                  name="password"
+                  type="password"
+                  placeholder="Contraseña"
+                  />
+              </div><br/>
+
+           <div>
+            <Button
+              name="ingresar"
+              type="sumbmit">
+                Ingresar
+            </Button>
+          </div>
+          </form>
       </div>
+
+      <Footer className="Experiencia">
       <div>
-       <label> Contraseña </label><br/>
-        <Input
-          name="password"
-          type="password"
-          placeholder="Contraseña"
-          />
-          </div><br />
-    <div>
-      <Button
-        name="ingresar"
-        type="sumbmit"
-        >
-      Ingresar
-      </Button>
-        </div>
-  </form>
-</div>
-    </Contain>
+      <h2> TU EXPERIENCIA EN SHOPMAK</h2>
+       </div>
+
+      </Footer>
+  </Contain>
   )
 
 }
