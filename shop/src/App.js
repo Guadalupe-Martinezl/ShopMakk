@@ -69,10 +69,7 @@ class App extends Component {
 
   render() {
     return (
-
       <div className="App">
-
-
         <img class="logo" src={logo}/>
         <Busqueda
           type="text"
@@ -84,7 +81,7 @@ class App extends Component {
           Buscar
          </Buscar>
 
-          <Sesion
+          <Sesion 
            name="busqueda"
            type="submit">
            Iniciar Sesion
