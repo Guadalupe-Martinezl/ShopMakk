@@ -1,7 +1,7 @@
 import React from "react";
 
 import shop from '../../images/shop2.png';
-import reloj from '../../images/reloj.jpeg';
+import usuario from '../../images/user.png';
 import fondo from '../../images/fondo.jpg';
 
 import styled, {css}from 'styled-components'
@@ -26,13 +26,15 @@ const Contain = styled.div`
 .login{
   margin:auto;
   width: 30%;
-  background:  #d8d4d4 ;
   padding: 3%;
   transform: translate(3%, 40%);
   color: black;
-  border: 2px solid black;
   text-align: center;
   box-sizing: border-box;
+}
+.login img{
+  width: 30%;
+  height: 30%;
 }
 `;
 const Input = styled.input.attrs(({ size }) => ({
@@ -107,14 +109,23 @@ export default function Registro(props) {
         </div>
 
       <div className="login">
+      <img src={usuario} />
         <h1>Crear Cuenta</h1>
           <form>
             <div>
-              <label> Nombre </label><br/>
+              <label> Nombre del Usuario </label><br/>
                 <Input
                   name ="usuario"
                   type="text"
                   placeholder="Usuario"
+                  />
+            </div>
+            <div>
+              <label> Correo </label><br/>
+                <Input
+                  name ="usuario"
+                  type="email"
+                  placeholder="Correo"
                   />
             </div>
 
@@ -131,7 +142,7 @@ export default function Registro(props) {
             <Button
               name="ingresar"
               type="sumbmit">
-                Ingresar
+                Listo
             </Button>
           </div>
           </form>
