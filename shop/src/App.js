@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Gallery from './Components/Gallery/';
+import Profile from './Components/Profile/';
 
 import styled,{css} from 'styled-components'
 

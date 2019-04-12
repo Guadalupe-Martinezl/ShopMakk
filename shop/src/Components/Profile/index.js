@@ -4,6 +4,14 @@ import fondo from '../../images/fondo.jpg';
 
 import styled, {css}from 'styled-components'
 
+const Contain = styled.div`
+  padding:0;
+  margin: 0;
+
+  background: url(${fondo}) no-repeat bottom;
+  background-size: 100% 110%;
+  box-sizing: border-box;
+
 
 const Input = styled.input.attrs(({ size }) => ({
   margin: size || "5em",
@@ -58,3 +66,23 @@ const Buscar = styled.button`
   box-sizing: border-box;
   transform: translate(290%, -100%);
 `;
+
+export default function Profile(props) {
+  return(
+    <Contain>
+      <div className="menu">
+        <img  src={shop}/>
+      <Busqueda
+        type="text"
+        placeholder="Busqueda"
+        />
+      <Buscar
+        name="busqueda"
+        type="submit">
+        Buscar
+      </Buscar>
+        </div>
+
+      )
+
+    }
