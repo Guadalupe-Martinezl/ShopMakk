@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import Gallery from './Components/Gallery/';
-import ProfilesU from './Components/Profile/';
-import FormLogin from './Components/Login/';
-import Registro from './Components/Registro/';
 
 import ProfilesU from './Components/Profile/';
 

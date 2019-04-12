@@ -81,8 +81,8 @@ const Busqueda = styled.input.attrs(({ size }) => ({
 }))`
   color:palevioletred ;
   font-size: 20px;
-  border: 1px solid black;
-  border-radius: 2px;
+  border: 2px solid white;
+  border-radius: 5px;
   color: black;
   width: 20%;
   max-width: 500px;
@@ -107,7 +107,7 @@ const Buscar = styled.button`
   color: #fff;
   font:100% "sans-serif";
   border-radius: 1em;
-  border: 1px solid black;
+  border: 2px solid white;
   padding: 0.25em 1em;
   transform: translate(565%);
   width: 7%;
