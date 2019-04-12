@@ -76,11 +76,7 @@ class App extends Component {
 
       <div className="App">
 
-      <form>
-
-                                    <input type="button" value="volver atrás" name="volver atrás2" onclick="history.back()" />
-
-                                </form>
+    
         <img class="logo" src={logo}/>
         <Busqueda
           type="text"
