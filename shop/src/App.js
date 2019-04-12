@@ -4,6 +4,8 @@ import ProfilesU from './Components/Profile/';
 import FormLogin from './Components/Login/';
 import Registro from './Components/Registro/';
 
+import ProfilesU from './Components/Profile/';
+
 import styled,{css} from 'styled-components'
 
 import fondo from './images/fondo.jpg';
@@ -117,9 +119,9 @@ class App extends Component {
               </p>
              </div>
 
-            <FormLogin />
-            <Registro />
-          
+            <ProfilesU />
+
+
 
 
  </div>
