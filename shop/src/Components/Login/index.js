@@ -1,16 +1,14 @@
 import React from "react";
 
-
 import shop from '../../images/shop2.png';
 import reloj from '../../images/reloj.jpeg';
 import fondo from '../../images/fondo.jpg';
+
 import styled, {css}from 'styled-components'
 
 const Contain = styled.div`
-
   padding:0;
   margin: 0;
-
   background: url(${fondo}) no-repeat bottom;
   background-size: 100% 110%;
   box-sizing: border-box;
@@ -108,36 +106,37 @@ export default function Login(props) {
       </Buscar>
         </div>
 
-  <div className="login">
-    <h1>Login</h1>
-  <form>
-    <div>
-      <label> Usuario </label><br/>
-        <Input
-          name ="usuario"
-          type="text"
-          placeholder="Usuario"
-          />
-  </div>
-  <div>
-       <label> Contraseña </label><br/>
-        <Input
-          name="password"
-          type="password"
-          placeholder="Contraseña"
-          />
-          </div><br />
-  <div>
-      <Button
-        name="ingresar"
-        type="sumbmit"
-        >
-      Ingresar
-      </Button>
-        </div>
-  </form>
-    </div>
-    </Contain>
+      <div className="login">
+        <h1>Login</h1>
+          <form>
+            <div>
+              <label> Usuario </label><br/>
+                <Input
+                  name ="usuario"
+                  type="text"
+                  placeholder="Usuario"
+                  />
+            </div>
+
+            <div>
+              <label> Contraseña </label><br/>
+                <Input
+                  name="password"
+                  type="password"
+                  placeholder="Contraseña"
+                  />
+              </div><br/>
+
+           <div>
+            <Button
+              name="ingresar"
+              type="sumbmit">
+                Ingresar
+            </Button>
+          </div>
+          </form>
+      </div>
+  </Contain>
   )
 
 }
