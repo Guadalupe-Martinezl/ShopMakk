@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Gallery from './Components/Gallery/';
 import FormLogin from './Components/Login/';
+import Registro from './Components/Registro/';
 
 import styled,{css} from 'styled-components'
 
@@ -81,7 +82,7 @@ class App extends Component {
           Buscar
          </Buscar>
 
-          <Sesion 
+          <Sesion
            name="busqueda"
            type="submit">
            Iniciar Sesion
@@ -101,6 +102,7 @@ class App extends Component {
              span={["Tecnologias","Comida","Maquillaje"]}
             />
             <FormLogin />
+            <Registro />
 
  </div>
 </div>

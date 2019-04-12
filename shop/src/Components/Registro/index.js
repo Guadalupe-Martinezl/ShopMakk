@@ -90,7 +90,7 @@ const Buscar = styled.button`
 `;
 
 
-export default function Login(props) {
+export default function Registro(props) {
   return(
     <Contain>
       <div className="menu">
