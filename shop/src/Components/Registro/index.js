@@ -20,7 +20,7 @@ const Contain = styled.div`
   width: 15%;
   height: 15%;
   border-radius: 5px;
-  transform: translate(3%, 200%);
+  transform: translate(3%, 320%);
 
 }
 .login h1{
@@ -32,7 +32,7 @@ const Contain = styled.div`
   margin:auto;
   width: 40%;
   padding: 0;
-  transform: translate(3%, 40%);
+  transform: translate(3%, 50%);
   color: black;
   text-align: center;
   box-sizing: border-box;
@@ -67,7 +67,7 @@ const Busqueda = styled.input.attrs(({ size }) => ({
   width: 20%;
   max-width: 500px;
   box-sizing: border-box;
-  transform: translate(100%, 240%);
+  transform: translate(100%, 490%);
 
 `;
 const Button = styled.button`
@@ -77,7 +77,7 @@ const Button = styled.button`
   border-radius: 1em;
   border: 1px solid black;
   padding: 0.25em 1em;
-  transform: translate(15%);
+  transform: translate(10%);
   width: 50%;
   max-width: 500px;
   box-sizing: border-box;
@@ -89,21 +89,29 @@ const Buscar = styled.button`
   border-radius: 1em;
   border: 1px solid black;
   padding: 0.25em 1em;
-  transform: translate(565%);
   width: 7%;
   max-width: 500px;
   box-sizing: border-box;
-  transform: translate(290%, 230%);
+  transform: translate(290%, 460%);
 `;
 const Footer = styled.footer`
 font: 20px "monospace";
 transform: translate(30%, 100%);
-
+text-align: justify;
 img{
   width: 120px;
   height: 120px;
 }
-
+.imagen1{
+  display:inline-block;
+  width: 280px;
+  text-align:center;
+}
+.imagen2{
+  display: inline-block;
+  width: 280px;
+  text-align:center;
+}
 `;
 
 export default function Registro(props) {
@@ -165,11 +173,18 @@ export default function Registro(props) {
         <div>
           <h2>TU EXPERIENCIA EN SHOPMAK </h2>
           <p> lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-            <img src={compras} />
-            <img src={ahorro} />
-
         </div>
 
+        <div className="imagen1">
+        <p> lorem ipsum</p>
+            <img src={compras} />
+        </div>
+
+
+        <div className="imagen2">
+          <p> lorem ipsum</p>
+            <img src={ahorro} />
+            </div>
     </Footer>
   </Contain>
   )

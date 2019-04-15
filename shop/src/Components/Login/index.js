@@ -2,8 +2,9 @@ import React from "react";
 
 
 import shop from '../../images/shop2.png';
-import reloj from '../../images/reloj.jpeg';
+import reloj from '../../images/watch.jpg';
 import fondo from '../../images/fondo.jpg';
+import iphone from '../../images/iphone.gif';
 
 import styled, {css}from 'styled-components'
 
@@ -36,6 +37,22 @@ const Contain = styled.div`
   text-align: center;
   box-sizing: border-box;
 }
+.izquierda{
+  transform:translate(5%, -100%);
+}
+
+.derecha{
+  transform:translate(70%, -210%);
+}
+
+.derecha img{
+  width: 350px;
+}
+
+.izquierda img{
+  width: 350px;
+}
+
 `;
 const Input = styled.input.attrs(({ size }) => ({
   margin: size || "5em",
@@ -92,6 +109,7 @@ const Buscar = styled.button`
 `;
 
 
+
 export default function Login(props) {
   return(
     <Contain>
@@ -136,6 +154,14 @@ export default function Login(props) {
       </Button>
         </div>
   </form>
+</div>
+
+<div className="izquierda">
+  <img src={reloj} />
+</div>
+
+<div className="derecha">
+  <img src={iphone} />
 </div>
     </Contain>
   )
