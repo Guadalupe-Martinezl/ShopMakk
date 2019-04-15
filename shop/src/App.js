@@ -11,6 +11,7 @@ import iphone from './images/iphone.gif';
 import watch from './images/watch.jpg';
 import makeup from './images/makeup.jpg';
 
+
 import './App.css';
 
 
@@ -68,21 +69,26 @@ const Login = styled.button`
 
 
 
+
 class App extends Component {
   render() {
     return (
+
 
       <div className="App">
 
 
         <img class="logo" src={logo}/>
         <Busqueda
+          className="busqueda"
           type="text"
           placeholder="Busqueda" />
 
          <Buscar
           name="busqueda"
-          type="submit">
+          type="submit"
+
+          >
           Buscar
          </Buscar>
 
@@ -114,7 +120,11 @@ class App extends Component {
               </p>
               <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
               </p>
+
+
              </div>
+
+
 
             <ProfilesU />
 

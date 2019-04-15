@@ -155,7 +155,7 @@ const Compras = styled.button`
   transform: translate(565%);
   width: 10%;
   box-sizing: border-box;
-  transform: translate(-200%, -850%);
+  transform: translate(-200%, -905%);
 `;
 
 const Datos = styled.button`
