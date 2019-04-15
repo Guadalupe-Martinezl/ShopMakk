@@ -5,17 +5,13 @@ import fondo from '../../images/fondo.jpg';
 
 import styled, {css}from 'styled-components'
 
-const Body = styled.div`
-padding:0;
-margin: 0;
-
-background: url(${fondo}) no-repeat top;
-background-size: 2000px 100%;
-box-sizing: border-box;
-`;
 
 const Contain = styled.div`
+.fondo{
+  width: 100%;
+    height: 15%;
 
+}
   .logo {
     width: 15%;
     height: 15%;
@@ -35,7 +31,7 @@ const Contain = styled.div`
   list-style: none;
   background: #000;
   padding: 30px;
-  width: 100%;
+  width: 96%;
   font-weight: bold;
   left: 50%;
   margin-top: 2%;
@@ -48,7 +44,6 @@ const Contain = styled.div`
     cursor: pointer;
     color: white;
     }
-
    @media screen and (max-width: 300px){
 
     font-size: 10px
@@ -142,11 +137,11 @@ export default function Profile(props) {
 
   return(
     <Contain>
+
+
       <Menu />
 
-
-
-      <Body />
+  <img className="fondo" src={fondo}/>
 
 
     </Contain>
