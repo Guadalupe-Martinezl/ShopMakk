@@ -4,6 +4,7 @@ import React from "react";
 import shop from '../../images/shop2.png';
 import reloj from '../../images/reloj.jpeg';
 import fondo from '../../images/fondo.jpg';
+
 import styled, {css}from 'styled-components'
 
 const Contain = styled.div`
@@ -29,7 +30,7 @@ const Contain = styled.div`
   width: 30%;
   background:  #d8d4d4 ;
   padding: 3%;
-  transform: translate(3%, 40%);
+  transform: translate(3%, 20%);
   color: black;
   border: 2px solid black;
   text-align: center;
@@ -119,7 +120,7 @@ export default function Login(props) {
           />
       </div>
       <div>
-       <label> Contraseña </label><br/>
+       <label> Contraseña</label><br/>
         <Input
           name="password"
           type="password"

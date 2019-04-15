@@ -4,6 +4,8 @@ import shop from '../../images/shop2.png';
 import usuario from '../../images/user.png';
 import fondo from '../../images/fondo.jpg';
 import ahorro from '../../images/ahorro.jpg';
+import compras from '../../images/compras.jpg';
+
 
 import styled, {css}from 'styled-components'
 
@@ -18,6 +20,8 @@ const Contain = styled.div`
   width: 15%;
   height: 15%;
   border-radius: 5px;
+  transform: translate(3%, 200%);
+
 }
 .login h1{
   font-family: monospace;
@@ -26,16 +30,16 @@ const Contain = styled.div`
 }
 .login{
   margin:auto;
-  width: 50%;
+  width: 40%;
   padding: 0;
-  transform: translate(3%, 100%);
+  transform: translate(3%, 40%);
   color: black;
   text-align: center;
   box-sizing: border-box;
 }
 .login img{
   width: 15%;
-  height: 15%;
+  height: 15%4
 }
 `;
 const Input = styled.input.attrs(({ size }) => ({
@@ -63,7 +67,7 @@ const Busqueda = styled.input.attrs(({ size }) => ({
   width: 20%;
   max-width: 500px;
   box-sizing: border-box;
-  transform: translate(100%, -100%);
+  transform: translate(100%, 240%);
 
 `;
 const Button = styled.button`
@@ -89,15 +93,15 @@ const Buscar = styled.button`
   width: 7%;
   max-width: 500px;
   box-sizing: border-box;
-  transform: translate(290%, -100%);
+  transform: translate(290%, 230%);
 `;
 const Footer = styled.footer`
 font: 20px "monospace";
 transform: translate(30%, 100%);
 
-.img1 img{
-  width:20%;
-  height:20%;
+img{
+  width: 120px;
+  height: 120px;
 }
 
 `;
@@ -158,9 +162,14 @@ export default function Registro(props) {
           </form>
       </div>
       <Footer>
-        <div className="experiencia">
+        <div>
           <h2>TU EXPERIENCIA EN SHOPMAK </h2>
+          <p> lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+            <img src={compras} />
+            <img src={ahorro} />
+
         </div>
+
     </Footer>
   </Contain>
   )
