@@ -2,21 +2,35 @@ import React from "react";
 
 import shop from '../../images/shopMak.png';
 import fondo from '../../images/fondo.jpg';
+import medio from '../../images/perfil2.png';
+import icono from '../../images/iconoperson.jpg';
 
 import styled, {css}from 'styled-components'
 
 
 const Contain = styled.div`
-.fondo{
-  width: 100%;
+  .fondo{
+    width: 100%;
     height: 15%;
+  }
 
-}
+  .medio{
+    width:60%;
+    height:50%;
+    transform: translate(35%, -100%);
+  }
+
   .logo {
     width: 15%;
     height: 15%;
     border-radius: 5px;
-    transform: translate(-45%, 8%);
+    transform: translate(-55%, 8%);
+  }
+
+  .icono{
+    width: 3%;
+    height: 3%;
+    border-radius: 5px;
   }
 
   .nav{
@@ -30,17 +44,17 @@ const Contain = styled.div`
   z-index: 3;
   list-style: none;
   background: #000;
-  padding: 30px;
-  width: 96%;
+  padding: 20px;
+  width: 97.4%;
   font-weight: bold;
   left: 50%;
-  margin-top: 2%;
+  margin-top: 1%;
   transform: translate(-50%, -40%);
 
   }
   .li{
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 100px;
+    margin-right: 20px;
     cursor: pointer;
     color: white;
     }
@@ -111,25 +125,73 @@ const Buscar = styled.button`
   transform: translate(20%, -10%);
 `;
 
+const Compras = styled.button`
+  background:  #000 ;
+  color: #fff;
+  font:105% "sans-serif";
+  border-radius: 1em;
+  border: 3px solid white;
+  padding: 1em 1em;
+  transform: translate(565%);
+  width: 10%;
+  box-sizing: border-box;
+  transform: translate(-200%, -850%);
+`;
+
+const Datos = styled.button`
+  background:  #000 ;
+  color: #fff;
+  font:105% "sans-serif";
+  border-radius: 1em;
+  border: 3px solid white;
+  padding: 1em 1em;
+  transform: translate(565%);
+  width: 10%;
+  box-sizing: border-box;
+  transform: translate(-180%, -850%);
+`;
+
 const Menu = (props) => {
 
   return (
     <ul className="nav">
-    <img className="logo" src={shop}/>
-    <Busqueda
-      type="text"
-      placeholder="Busqueda"
-      />
-      <Buscar
+      <img className="logo" src={shop}/>
+      <Busqueda
+        type="text"
+        placeholder="Busqueda"
+        />
+        <Buscar
+          name="busqueda"
+          type="submit">
+          Buscar
+        </Buscar>
+        <li className="li">Productos</li>
+        <li className="li">Favoritos</li>
+        <li className="li">About</li>
+        <img className="icono" src={icono}/>
+     </ul>
+  )
+}
+const Menu2 = (props) => {
+  return (
+
+      <Compras
         name="busqueda"
         type="submit">
-        Buscar
-      </Buscar>
-      <li className="li">Productos</li>
-      <li className="li">Favoritos</li>
-      <li className="li">About</li>
+        Mis Compras
+      </Compras>
 
-    </ul>
+  )
+}
+const Menu3 = (props) => {
+  return (
+
+      <Datos
+        name="busqueda"
+        type="submit">
+        Mis Datos
+      </Datos>
+
   )
 }
 
@@ -137,13 +199,13 @@ export default function Profile(props) {
 
   return(
     <Contain>
-
-
       <Menu />
 
-  <img className="fondo" src={fondo}/>
+      <img className="fondo" src={fondo}/>
+      <img className="medio" src={medio}/>
 
-
+      <Menu2/>
+      <Menu3/>
     </Contain>
   )
 
