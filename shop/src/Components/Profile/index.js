@@ -58,16 +58,36 @@ const Contain = styled.div`
     cursor: pointer;
     color: white;
     }
-   @media screen and (max-width: 300px){
 
-    font-size: 10px
-   }
    @media screen and (max-width: 600px){
-
-    .li
-      margin-left: 30px
-      margin-right: 30px
-      font-size: 10px
+    .nav{
+      width:82.4%;
+    }
+    .li{
+      margin-left: 30px;
+      margin-right: 30px;
+      font-size: 10px;
+    }
+    .medio{
+      width:58%;
+    }
+    .logo{
+      width:25%;
+      transform: translate(-20%, -5%);
+    }
+    .icono{
+      width:7%;
+   }
+   .compras{
+     width:15%;
+     transform: translate(-180%, -530%);
+     font:60% "sans-serif";
+   }
+   .datos{
+     width:15%;
+     transform: translate(-160%, -530%);
+     font:60% "sans-serif";
+   }
 }
 `;
 
@@ -128,7 +148,7 @@ const Buscar = styled.button`
 const Compras = styled.button`
   background:  #000 ;
   color: #fff;
-  font:105% "sans-serif";
+  font:100% "sans-serif";
   border-radius: 1em;
   border: 3px solid white;
   padding: 1em 1em;
@@ -157,10 +177,12 @@ const Menu = (props) => {
     <ul className="nav">
       <img className="logo" src={shop}/>
       <Busqueda
+        className="busqueda"
         type="text"
         placeholder="Busqueda"
         />
         <Buscar
+          className="Buscar"
           name="busqueda"
           type="submit">
           Buscar
@@ -176,6 +198,7 @@ const Menu2 = (props) => {
   return (
 
       <Compras
+        className="compras"
         name="busqueda"
         type="submit">
         Mis Compras
@@ -187,6 +210,7 @@ const Menu3 = (props) => {
   return (
 
       <Datos
+      className="datos"
         name="busqueda"
         type="submit">
         Mis Datos
