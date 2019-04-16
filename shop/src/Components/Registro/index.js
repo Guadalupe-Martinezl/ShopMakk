@@ -39,7 +39,7 @@ const Contain = styled.div`
 }
 .login img{
   width: 15%;
-  height: 15%4
+  height: 15%;
 }
 `;
 const Input = styled.input.attrs(({ size }) => ({

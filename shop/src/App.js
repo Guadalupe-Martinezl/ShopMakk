@@ -69,15 +69,20 @@ const Login = styled.button`
 
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      currentlocation:'',
 
+    }
+}
 
   render() {
+    var URLactual = window.location;
+    console.log(URLactual);
+
     return (
-
-
       <div className="App">
-
-
         <img class="logo" src={logo}/>
         <Busqueda
           type="text"
@@ -92,7 +97,6 @@ class App extends Component {
           <Sesion
            name="busqueda"
            type="submit"
-           onClick="handleLogin"
            >
            Iniciar Sesion
            </Sesion>
