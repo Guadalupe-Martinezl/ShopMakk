@@ -148,14 +148,14 @@ const Buscar = styled.button`
 const Compras = styled.button`
   background:  #000 ;
   color: #fff;
-  font:100% "sans-serif";
+  font:105% "sans-serif";
   border-radius: 1em;
-  border: 3px solid white;
+  border: 2px solid white;
   padding: 1em 1em;
   transform: translate(565%);
   width: 10%;
   box-sizing: border-box;
-  transform: translate(-200%, -905%);
+  transform: translate(-200%, -850%);
 `;
 
 const Datos = styled.button`
@@ -163,7 +163,7 @@ const Datos = styled.button`
   color: #fff;
   font:105% "sans-serif";
   border-radius: 1em;
-  border: 3px solid white;
+  border: 2px solid white;
   padding: 1em 1em;
   transform: translate(565%);
   width: 10%;
