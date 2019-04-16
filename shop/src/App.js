@@ -79,50 +79,62 @@ class App extends Component {
 
   render() {
     var URLactual = window.location;
-    console.log(URLactual);
+    console.log(URLactual.pathname);
+    switch (URLactual.pathname) {
+      case "/Admin":
+        return (
+        <div className="App">
+          <img class="logo" src={logo}/>
+          <Busqueda
+            type="text"
+            placeholder="Busqueda" />
 
-    return (
-      <div className="App">
-        <img class="logo" src={logo}/>
-        <Busqueda
-          type="text"
-          placeholder="Busqueda" />
-
-         <Buscar
-          name="busqueda"
-          type="submit">
-          Buscar
-         </Buscar>
-
-          <Sesion
-           name="busqueda"
-           type="submit"
-           >
-           Iniciar Sesion
-           </Sesion>
-
-           <Login
+           <Buscar
             name="busqueda"
             type="submit">
-            Crear Cuenta
-            </Login>
+            Buscar
+           </Buscar>
+
+            <Sesion
+             name="busqueda"
+             type="submit"
+             >
+             Iniciar Sesion
+             </Sesion>
+
+             <Login
+              name="busqueda"
+              type="submit">
+              Crear Cuenta
+              </Login>
 
 
-            <div className="App-Header" >
-           <Gallery
-             images={["http://lorempixel.com/400/200/technics/","http://lorempixel.com/400/200/technics/",
-             "http://lorempixel.com/400/200/technics/"]}
-             span={["Tecnologias","Comida","Maquillaje"]}
-            />
-            <FormLogin/>
-            <Registro />
+              <div className="App-Header" >
+             <Gallery
+               images={["http://lorempixel.com/400/200/technics/","http://lorempixel.com/400/200/technics/",
+               "http://lorempixel.com/400/200/technics/"]}
+               span={["Tecnologias","Comida","Maquillaje"]}
+              />
 
- </div>
-</div>
+              <Registro />
+
+   </div>
+  </div>
 
 
 
-    );
+      );
+
+      break;
+      case "/Login":
+          return (<FormLogin/>);
+          break;
+      default:
+      return(<h1> Pagina no encontrada</h1>)
+
+    }
+
+
    }
   }
 
