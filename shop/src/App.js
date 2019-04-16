@@ -72,6 +72,9 @@ const Login = styled.button`
 
 class App extends Component {
   render() {
+    var URLactual = window.location.href;
+      console.log("location-->",URLactual);
+
     return (
 
 
