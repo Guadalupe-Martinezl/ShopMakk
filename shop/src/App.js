@@ -5,6 +5,7 @@ import Gallery from './Components/Gallery/';
 import ProfilesU from './Components/Profile/';
 import FormLogin from './Components/Login/';
 import Header from './Components/Header/';
+import Welcome from './Components/Welcome/';
 
 import styled,{css} from 'styled-components'
 
@@ -84,47 +85,81 @@ class App extends Component {
     }
   }
 
+
+
   render() {
     var URLactual = window.location;
-      console.log(URLactual);
-    return (
+    console.log(URLactual.pathname);
+    switch (URLactual.pathname) {
+      case "/Admin":
+        return (
+        <div className="App">
+          <img class="logo" src={logo}/>
+          <Busqueda
+            type="text"
+            placeholder="Busqueda" />
 
-      <div className="App">
+           <Buscar
+            name="busqueda"
+            type="submit">
+            Buscar
+           </Buscar>
 
-        <Header/>
+            <Sesion
+             name="busqueda"
+             type="submit"
+             >
+             Iniciar Sesion
+             </Sesion>
 
-       <div className="App-Header" >
-           <Gallery
-             images={["http://lorempixel.com/400/200/technics/","http://lorempixel.com/400/200/technics/",
-             "http://lorempixel.com/400/200/technics/"]}
-             span={["Tecnologias","Comida","Maquillaje"]}
-            />
-            <div className="Footer">
-              <h1>CONOCENOS</h1>
-              <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-              </p>
-              <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-              </p>
-
-
-             </div>
-
-
-
-            <ProfilesU />
-            <FormLogin />
-
-
-
-
- </div>
-</div>
+             <Login
+              name="busqueda"
+              type="submit">
+              Crear Cuenta
+              </Login>
 
 
+              <div className="App-Header" >
+             <Gallery
+               images={["http://lorempixel.com/400/200/technics/","http://lorempixel.com/400/200/technics/",
+               "http://lorempixel.com/400/200/technics/"]}
+               span={["Tecnologias","Comida","Maquillaje"]}
+              />
 
-    );
-   }
-  }
+              <div className="Footer">
+                <h1>CONOCENOS</h1>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                </p>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                </p>
+               </div>
+
+
+
+
+   </div>
+  </div>
+
+);
+
+    break;
+  case "/Login":
+    return (<FormLogin/>);
+    break;
+
+   case "/Perfil":
+        return (<Welcome/>);
+        break;
+default:
+return(<h1> Pagina no encontrada</h1>)
+
+}
+}
+}
+
+
+
+
 
 
 
