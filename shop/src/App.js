@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Switch, Route } from "react-router-dom";
+
 
 import Gallery from './Components/Gallery/';
 import ProfilesU from './Components/Profile/';
