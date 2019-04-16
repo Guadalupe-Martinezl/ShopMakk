@@ -12,8 +12,8 @@ const Contain = styled.div`
   padding:0;
   margin: 0;
 
-  background: url(${fondo}) no-repeat bottom;
-  background-size: 100% 110%;
+  background: url(${fondo}) no-repeat;
+  background-size: 100% 70%;
   box-sizing: border-box;
 
 .menu img {
@@ -42,15 +42,15 @@ const Contain = styled.div`
 }
 
 .derecha{
-  transform:translate(70%, -210%);
+  transform:translate(70%, -190%);
 }
 
 .derecha img{
-  width: 350px;
+  width: 250px;
 }
 
 .izquierda img{
-  width: 350px;
+  width: 250px;
 }
 
 `;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Gallery from './Components/Gallery/';
 import FormLogin from './Components/Login/';
 import Registro from './Components/Registro/';
+import Header from './Components/Header/';
 
 import styled,{css} from 'styled-components'
 
@@ -84,6 +85,7 @@ class App extends Component {
       case "/Admin":
         return (
         <div className="App">
+         <Header/>
           <img class="logo" src={logo}/>
           <Busqueda
             type="text"
@@ -116,7 +118,6 @@ class App extends Component {
                span={["Tecnologias","Comida","Maquillaje"]}
               />
 
-              <Registro />
 
    </div>
   </div>
@@ -129,8 +130,14 @@ class App extends Component {
       case "/Login":
           return (<FormLogin/>);
           break;
+
+          case "/Registro":
+              return (<Registro />);
+              break;
       default:
       return(<h1> Pagina no encontrada</h1>)
+
+
 
     }
 
