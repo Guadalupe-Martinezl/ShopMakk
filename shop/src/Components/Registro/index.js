@@ -1,4 +1,5 @@
 import React from "react";
+import Header from '../../Components/Header/';
 
 import shop from '../../images/shop2.png';
 import usuario from '../../images/user.png';
@@ -12,8 +13,8 @@ import styled, {css}from 'styled-components'
 const Contain = styled.div`
   padding:0;
   margin: 0;
-  background: url(${fondo}) no-repeat bottom;
-  background-size: 100%, 110%;
+  background: url(${fondo}) no-repeat;
+  background-size: 100%, 70%;
   box-sizing: border-box;
 
 .menu img {
@@ -32,13 +33,13 @@ const Contain = styled.div`
   margin:auto;
   width: 40%;
   padding: 0;
-  transform: translate(3%, 50%);
+  transform: translate(3%, 25%);
   color: black;
   text-align: center;
   box-sizing: border-box;
 }
 .login img{
-  width: 15%;
+  width: 20%;
   height: 15%;
 }
 `;
@@ -96,7 +97,7 @@ const Buscar = styled.button`
 `;
 const Footer = styled.footer`
 font: 20px "monospace";
-transform: translate(30%, 100%);
+transform: translate(30%, 75%);
 text-align: justify;
 img{
   width: 120px;
@@ -117,18 +118,7 @@ img{
 export default function Registro(props) {
   return(
     <Contain>
-      <div className="menu">
-        <img  src={shop}/>
-      <Busqueda
-        type="text"
-        placeholder="Busqueda"
-        />
-      <Buscar
-        name="busqueda"
-        type="submit">
-        Buscar
-      </Buscar>
-        </div>
+    <Header />
 
       <div className="login">
       <img src={usuario} />

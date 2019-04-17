@@ -1,4 +1,6 @@
 import React from "react";
+import Header from '../../Components/Header/';
+
 
 
 import shop from '../../images/shop2.png';
@@ -67,21 +69,7 @@ const Input = styled.input.attrs(({ size }) => ({
   max-width: 500px;
   box-sizing: border-box;
 `;
-const Busqueda = styled.input.attrs(({ size }) => ({
-  margin: size || "5em",
-  padding: size || "5px"
-}))`
-  color:palevioletred ;
-  font-size: 20px;
-  border: 1px solid black;
-  border-radius: 2px;
-  color: black;
-  width: 20%;
-  max-width: 500px;
-  box-sizing: border-box;
-  transform: translate(100%, -100%);
 
-`;
 const Button = styled.button`
   background:  #000 ;
   color: #fff;
@@ -94,38 +82,13 @@ const Button = styled.button`
   max-width: 500px;
   box-sizing: border-box;
 `;
-const Buscar = styled.button`
-  background:  #000 ;
-  color: #fff;
-  font:100% "sans-serif";
-  border-radius: 1em;
-  border: 1px solid black;
-  padding: 0.25em 1em;
-  transform: translate(565%);
-  width: 7%;
-  max-width: 500px;
-  box-sizing: border-box;
-  transform: translate(290%, -100%);
-`;
-
-
 
 export default function Login(props) {
   return(
     <Contain>
-      <div className="menu">
-        <img  src={shop}/>
-      <Busqueda
-        type="text"
-        placeholder="Busqueda"
-        />
-      <Buscar
-        name="busqueda"
-        type="submit">
-        Buscar
-      </Buscar>
-        </div>
-
+      <Header />
+<br />
+<br />
   <div className="login">
     <h1>Login</h1>
     <form>
