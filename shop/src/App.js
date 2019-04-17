@@ -3,6 +3,7 @@ import Gallery from './Components/Gallery/';
 import FormLogin from './Components/Login/';
 import Registro from './Components/Registro/';
 import Header from './Components/Header/';
+import Productos from './Components/Productos/';
 
 import styled,{css} from 'styled-components'
 
@@ -136,6 +137,11 @@ class App extends Component {
       case "/Registro":
         return (<Registro />);
         break;
+
+      case "/Productos":
+        return (<Productos />);
+        break;
+
       default:
       return(<h1> Pagina no encontrada</h1>)
     }
