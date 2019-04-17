@@ -75,12 +75,14 @@ class App extends Component {
     this.state = {
       currentlocation:'',
 
+
     }
 }
 
   render() {
     var URLactual = window.location;
     console.log(URLactual.pathname);
+      console.log(URLactual);
     switch (URLactual.pathname) {
       case "/Admin":
         return (
@@ -125,20 +127,17 @@ class App extends Component {
 
 
       );
+        break;
 
-      break;
       case "/Login":
-          return (<FormLogin/>);
-          break;
+        return (<FormLogin/>);
+        break;
 
-          case "/Registro":
-              return (<Registro />);
-              break;
+      case "/Registro":
+        return (<Registro />);
+        break;
       default:
       return(<h1> Pagina no encontrada</h1>)
-
-
-
     }
 
 

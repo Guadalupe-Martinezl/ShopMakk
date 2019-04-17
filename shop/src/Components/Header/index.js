@@ -8,10 +8,10 @@ import styled, {css}from 'styled-components'
 
 const Contain = styled.div`
   .logo {
-    width: 15%;
-    height: 15%;
+    width: 10%;
+    height: 10%;
     border-radius: 5px;
-    transform: translate(-40%, 8%);
+    transform: translate(-70%, -10%);
   }
   .icono{
     width: 3%;
@@ -30,15 +30,15 @@ const Contain = styled.div`
   list-style: none;
   background: #000;
   padding: 20px;
-  width: 97.4%;
+  width: 100%;
   font-weight: bold;
   left: 50%;
   margin-top: 1%;
   transform: translate(-50%, -40%);
   }
   .li{
-    margin-left: 100px;
-    margin-right: 20px;
+    margin-left: 50px;
+    margin-right: 5px;
     cursor: pointer;
     color: white;
     }
@@ -114,7 +114,9 @@ const Menu = (props) => {
         </Buscar>
         <li className="li">Productos</li>
         <li className="li">Favoritos</li>
-        <li className="li">About</li>
+        <li className="li">Registrate</li>
+        <li className="li">Login</li>
+
         <img className="icono" src={icono}/>
      </ul>
   )
