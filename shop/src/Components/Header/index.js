@@ -1,7 +1,6 @@
 import React from "react";
 
 import shop from '../../images/shopMak.png';
-import fondo from '../../images/fondo.jpg';
 import medio from '../../images/perfil2.png';
 import icono from '../../images/iconoperson.jpg';
 
@@ -13,11 +12,6 @@ const Contain = styled.div`
     height: 15%;
     border-radius: 5px;
     transform: translate(-55%, 8%);
-  }
-  *{
-    margin:15px;
-    padding:0px;
-    box-sizing: border-box;
   }
 
   nav{
@@ -63,13 +57,39 @@ const Contain = styled.div`
         width:60%;
       }
     }
-    @media screen and (max-width:768px;){
-      .nav-links{
+    @media screen and (max-width:768px){
+
+      .logo{
+        width: 30%;
+        height: 55%;
+        border-radius: 5px;
+        transform: translate(-10%, 8%);
+      }
+
+      .nav-links {
         position: absolute;
         right:0px;
         height:92vh;
-        top: 8vh;
+        top: 5.8vh;
+        background-color:#9d4e11;
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        width:50%;
+        transform:translateX(100%);
+        transition:transform 0.5s ease-in;
       }
+      .nav-links li{
+        opacity:0;
+      }
+      .burger{
+        display:block;
+        cursor:pointer;
+      }
+      .nav-active{
+        transform:translateX(0%);
+      }
+
     }
   `;
 
@@ -129,6 +149,7 @@ const Contain = styled.div`
 
 const Menu = (props) => {
   return (
+
   <nav>
    <img className="logo" src={shop}/>
     <ul className="nav-links">
@@ -143,8 +164,9 @@ const Menu = (props) => {
           <div className="line2"></div>
           <div className="line3"></div>
          </div>
-
   </nav>
+
+
  )
 
 }
