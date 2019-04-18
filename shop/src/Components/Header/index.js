@@ -14,36 +14,62 @@ const Contain = styled.div`
     border-radius: 5px;
     transform: translate(-55%, 8%);
   }
-  .icono{
-    width: 3%;
-    height: 3%;
-    border-radius: 5px;
+  *{
+    margin:15px;
+    padding:0px;
+    box-sizing: border-box;
   }
 
-  .nav{
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  font-size: 20px;
-  color: #fff;
-  justify-content: center;
-  align-items: center;
-  z-index: 3;
-  list-style: none;
-  background: #000;
-  padding: 20px;
-  width: 97.4%;
-  font-weight: bold;
-  left: 50%;
-  margin-top: 1%;
-  transform: translate(-50%, -40%);
-
+  nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    min-height:8vh;
+    background-color:black;
   }
-  .li{
-    margin-left: 100px;
-    margin-right: 20px;
-    cursor: pointer;
-    color: white;
+
+  .nav-links{
+    display:flex;
+    justify-content:space-around;
+    width:35%;
+  }
+
+  .nav-links li{
+    list-style:none;
+  }
+
+  .nav-links a{
+    color:white;
+    text-decoration:none;
+    letter-spacing:3px;
+    font-weight:bold;
+    font-size:14px;
+  }
+
+  .burger{
+    display:none;
+  }
+
+ .burger div{
+   width:25px;
+   height:5px;
+   background-color:white;
+   margin:5px;
+ }
+
+
+    @media screen and (max-width:1024px;){
+      .nav-links{
+        width:60%;
+      }
+    }
+    @media screen and (max-width:768px;){
+      .nav-links{
+        position: absolute;
+        right:0px;
+        height:92vh;
+        top: 8vh;
+      }
     }
   `;
 
@@ -103,26 +129,26 @@ const Contain = styled.div`
 
 const Menu = (props) => {
   return (
-    <ul className="nav">
-      <img className="logo" src={shop}/>
-      <Busqueda
-        className="busqueda"
-        type="text"
-        placeholder="Busqueda"
-        />
-        <Buscar
-          className="Buscar"
-          name="busqueda"
-          type="submit">
-          Buscar
-        </Buscar>
-        <li className="li">Productos</li>
-        <li className="li">Favoritos</li>
-        <li className="li">About</li>
-        <img className="icono" src={icono}/>
-     </ul>
-  )
+  <nav>
+   <img className="logo" src={shop}/>
+    <ul className="nav-links">
+        <li className="li"><a href="#">Productos</a></li>
+        <li className="li"><a href="#">Favoritos</a></li>
+        <li className="li"><a href="#">About</a></li>
+
+    </ul>
+
+        <div className="burger">
+          <div className="line1"></div>
+          <div className="line2"></div>
+          <div className="line3"></div>
+         </div>
+
+  </nav>
+ )
+
 }
+
 
 
 export default function Header(props) {
