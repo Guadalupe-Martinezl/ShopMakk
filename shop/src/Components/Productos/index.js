@@ -1,29 +1,52 @@
 import React from "react";
 import Header from '../../Components/Header/';
 
+import watch from '../../images/watch.jpg';
 import makeup from '../../images/makeup.jpg';
-import fondo from '../../images/fondo.jpg';
+import fondo from '../../images/fondop.jpg';
 
 import styled, {css}from 'styled-components'
 
 const Contain = styled.div`
-padding:0;
+padding: 0;
 margin: 0;
-width:100px;
-height:1100px;
-background: url(${fondo}) no-repeat;
-box-sizing: border-box;
+background: url(${fondo});
+width: 100%;
+height: 2000%;
 
-.container {
-  justify-content: center;
-  transform:translate(190%, 200%);
+
+.wrap{
+  width: 1100px;
+  margin: 50px auto;
   display: flex;
+  justify-content: center;
 }
-.card{
-  width:200%;
-  height:50%;
-  border-radius: 8px;
-  border-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+.tarjeta-wrap{
+  margin: 10px;
+}
+.tarjeta{
+  width: 300px;
+  height: 350px;
+  background: #F29720;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 2s ease;
+}
+.adelante, .atras {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.atras{
+  transform: rotateY(180deg);
+}
+.tarjeta-wrap: hover .tarjeta{
+  transform: rotateY(180deg);
+
 }
 
 `;
@@ -31,14 +54,36 @@ box-sizing: border-box;
 export default function Productos(props) {
   return(
     <Contain>
-     <Header/>
 
-     <div className="container">
-        <img className="card" src={makeup} />
-        <img className="card" src={makeup} />
-        <img className="card" src={makeup} />
-     </div>
 
+<div className="wrap">
+  <div className="tarjeta-wrap">
+    <div className="tarjeta">
+      <div className="adelante"><h1>Encabezado </h1> </div>
+    <div className="atras">
+    <p> Tecnologias</p>
+    </div>
+</div>
+  </div>
+
+  <div className="tarjeta-wrap">
+    <div className="tarjeta">
+      <div className="adelante"><h1>Encabezado </h1> </div>
+    <div className="atras">
+    <p> Tecnologias</p>
+    </div>
+</div>
+  </div>
+
+  <div className="tarjeta-wrap">
+    <div className="tarjeta">
+      <div className="adelante"><h1>Encabezado </h1> </div>
+    <div className="atras">
+    <p> Tecnologias</p>
+    </div>
+</div>
+  </div>
+    </div>
 
     </Contain>
 
