@@ -7,6 +7,9 @@ import icono from '../../images/iconoperson.jpg';
 import styled, {css}from 'styled-components'
 
 const Contain = styled.div`
+  paddin: 0;
+  margin: 0;
+  
   .logo {
     width: 10%;
     height: 10%;
