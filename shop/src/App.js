@@ -13,8 +13,64 @@ import iphone from './images/iphone.gif';
 import watch from './images/watch.jpg';
 import makeup from './images/makeup.jpg';
 
-import './App.css';
+//import './App.css';
+const Contain = styled.div`
+  padding: 0;
+  margin: 0;
+  background: url(${fondo}) no-repeat ;
+  background-size:  2000px 40%;
 
+  .logo{
+    width: 15%;
+    height: 15%;
+
+  }
+
+  .card{
+      display: flex;
+      width: 50%;
+      height: 200vh;
+      padding: 4% 2%;
+      box-sizing: border-box;
+        transform: translate(45%, 5%);
+  }
+
+  .box{
+      width: 20%;
+      height: 350px;
+      padding: 10px;
+      margin: 10px;
+      display:inline-block;
+      flex: 1;
+      overflow: hidden;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.20);
+      line-height: 0;
+      transition: all 600ms;
+
+  }
+  .box > img{
+      width: 120%;
+      height: calc(100% - 10vh);
+      object-fit: cover;
+      transition: all 300ms;
+  }
+  .box > span{
+      font-size: 25px;
+      font-family: sans-serif;
+      display: block;
+      text-align: center;
+      height: 10vh;
+      line-height: 2.6;
+  }
+  .box:hover{
+      flex: 50%;
+  }
+
+  .box:hover > img{
+      width: 100%;
+      height: 100%;
+  }
+`;
 
 const Busqueda = styled.input.attrs(({ size }) => ({
   margin: size || "5em",
@@ -87,6 +143,7 @@ class App extends Component {
     switch (URLactual.pathname) {
       case "/Admin":
         return (
+          <Contain>
         <div className="App">
          <Header/>
           <img class="logo" src={logo}/>
@@ -120,12 +177,9 @@ class App extends Component {
                "http://lorempixel.com/400/200/technics/"]}
                span={["Tecnologias","Comida","Maquillaje"]}
               />
-
-
    </div>
   </div>
-
-
+  </Contain>
 
       );
         break;
@@ -144,8 +198,8 @@ class App extends Component {
 
       default:
       return(<h1> Pagina no encontrada</h1>)
-    }
 
+    }
 
    }
   }
