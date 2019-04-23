@@ -7,57 +7,63 @@ import icono from '../../images/iconoperson.jpg';
 import styled, {css}from 'styled-components'
 
 const Contain = styled.div`
-  .logo {
-    width: 15%;
-    height: 15%;
-    border-radius: 5px;
-    transform: translate(-55%, 8%);
-  }
 
-  nav{
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
-    min-height:8vh;
-    background-color:black;
-  }
+    nav{
+      display:flex;
+      justify-content:space-around;
+      align-items:center;
+      min-height:8vh;
+      background-color:black;
+    }
 
-  .nav-links{
-    display:flex;
-    justify-content:space-around;
-    width:35%;
-  }
+    .logo {
+      width: 15%;
+      height: 15%;
+      border-radius: 5px;
+      transform: translate(-55%, 8%);
+     }
 
-  .nav-links li{
-    list-style:none;
-  }
+    .nav-links{
+      display:flex;
+      justify-content:space-around;
+      width:35%;
+    }
 
-  .nav-links a{
-    color:white;
-    text-decoration:none;
-    letter-spacing:3px;
-    font-weight:bold;
-    font-size:14px;
-  }
+    .nav-links li{
+      list-style:none;
+    }
 
-  .burger{
-    display:none;
-  }
+    .nav-links a{
+      color:white;
+      text-decoration:none;
+      letter-spacing:3px;
+      font-weight:bold;
+      font-size:14px;
+    }
 
- .burger div{
-   width:25px;
-   height:5px;
-   background-color:white;
-   margin:5px;
- }
+    .burger{
+      display:none;
+        div{
+          width:25px;
+          height:5px;
+          background-color:white;
+          margin:5px;
+        }
+     }
 
 
-    @media screen and (max-width:1024px;){
+
+
+   @media screen and (max-width:1024px;){
       .nav-links{
         width:60%;
       }
     }
     @media screen and (max-width:768px){
+
+      body{
+        overflow-x:hidden;
+      }
 
       .logo{
         width: 30%;
@@ -66,7 +72,7 @@ const Contain = styled.div`
         transform: translate(-10%, 8%);
       }
 
-      .nav-links {
+      .nav-links{
         position: absolute;
         right:0px;
         height:92vh;
@@ -119,7 +125,6 @@ const Contain = styled.div`
     max-width: 500px;
     box-sizing: border-box;
     transform: translate(8%, -10%);
-
   `;
   const Button = styled.button`
     background:  #000 ;
@@ -147,31 +152,36 @@ const Contain = styled.div`
     transform: translate(20%, -10%);
   `;
 
-const Menu = (props) => {
-  return (
+  const navSlide = (props) =>{
+      const burger = ('.burger');
+      const nav = ('.nav-links');
 
-  <nav>
-   <img className="logo" src={shop}/>
-    <ul className="nav-links">
-        <li className="li"><a href="#">Productos</a></li>
-        <li className="li"><a href="#">Favoritos</a></li>
-        <li className="li"><a href="#">About</a></li>
+      burger.addEventLister('click',() => {
+      nav.classList.toogle('nav-active');
+    })
 
-    </ul>
+  }
+
+ const Menu = (props) => {
+   return (
+  <body>
+    <nav>
+     <img className="logo" src={shop}/>
+        <ul className="nav-links">
+          <li className="li"><a href="#">Productos</a></li>
+          <li className="li"><a href="#">Favoritos</a></li>
+          <li className="li"><a href="#">About</a></li>
+        </ul>
 
         <div className="burger">
           <div className="line1"></div>
           <div className="line2"></div>
           <div className="line3"></div>
-         </div>
-  </nav>
-
-
- )
-
-}
-
-
+        </div>
+    </nav>
+  </body>
+  )
+ }
 
 export default function Header(props) {
   return(
@@ -179,6 +189,4 @@ export default function Header(props) {
       <Menu />
     </Contain>
   )
-
-
 }
