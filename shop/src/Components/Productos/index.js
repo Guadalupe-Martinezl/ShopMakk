@@ -6,6 +6,12 @@ import watch from '../../images/reloj.jpeg';
 import makeup from '../../images/makeup.jpg';
 import fondo from '../../images/fondop.jpg';
 import ropa from '../../images/ropa.jpeg';
+import galeria1 from '../../images/galeria1.jpeg';
+import galeria2 from '../../images/galeria2.jpg';
+import galeria3 from '../../images/galeria3.jpg';
+import galeria4 from '../../images/galeria4.jpg';
+
+
 
 
 import styled, {css}from 'styled-components'
@@ -32,7 +38,7 @@ height: 1000px;
 .tarjeta{
   width: 220px;
   height: 350px;
-  background: #c3c31a;
+  background:  #9d9d73 ;
   position: relative;
   transform-style: preserve-3d;
   transition: 2s ease;
@@ -72,9 +78,24 @@ height: 1000px;
 .card3{
   background: url(${ropa}) repeat;
 }
-.caja{
-
-  justify-content: center;
+.slider {
+  width: 85%;
+  margin: auto;
+  border: 2px solid black;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    width: 100%;
+    list-style: none;
+  }
 }
 `;
 const Caja = styled.div`
@@ -86,24 +107,37 @@ const Caja = styled.div`
   text-align:center;
   transform: translate(300%, 700%)
 `;
+const Texto = styled.p`
+  font-family:"arial";
+  font-size: 25px;
+  color: #000;
+  text-align: center;
+`;
+
 
 
 export default function Productos(props) {
   return(
     <Contain>
     <Header />
+    <div className="slider">
+    <ul>
+      <li><img src={galeria1} /> </li>
+      <li><img src={galeria2} /> </li>
+      <li><img src={galeria3} /> </li>
+      <li><img src={galeria4} /> </li>
+   </ul>
+    </div>
 
     <Caja className="caja">
       <h2> Categorias </h2>
     </Caja>
-
-
 <div className="wrap">
   <div className="tarjeta-wrap">
     <div className="tarjeta">
       <div className="adelante card1"></div>
     <div className="atras">
-    <button> Tecnologias</button>
+    <Texto> Tecnologias</Texto>
     </div>
 
 </div>
@@ -113,7 +147,7 @@ export default function Productos(props) {
     <div className="tarjeta">
       <div className="adelante card2"> </div>
     <div className="atras">
-    <p> Libros</p>
+    <Texto> Libros</Texto>
     </div>
 </div>
   </div>
@@ -122,7 +156,7 @@ export default function Productos(props) {
     <div className="tarjeta">
       <div className="adelante card3"> </div>
     <div className="atras">
-    <p> Ropa </p>
+    <Texto> Ropa </Texto>
     </div>
 </div>
   </div>
