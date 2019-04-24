@@ -13,50 +13,103 @@ const Contain = styled.div`
       border-radius: 5px;
       transform: translate(-55%, 8%);
      }
-     .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 60px;
-    transition: 0.5s;
-  }
 
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
+     .nav{
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      font-size: 20px;
+      color: #fff;
+      justify-content: center;
+      align-items: center;
+      z-index: 3;
+      list-style: none;
+      background: #000;
+      padding: 20px;
+      width: 97.4%;
+      font-weight: bold;
+      left: 50%;
+      margin-top: 1%;
+      transform: translate(-50%, -40%);
+      }
+      .li{
+        margin-left: 100px;
+        margin-right: 20px;
+        cursor: pointer;
+        color: white;
+        }
 
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
+      .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 60px;
+      transition: 0.5s;
+       a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        }
+         a:hover {
+          color: #f1f1f1;
+         }
+     }
 
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
 
-#main {
-  transition: margin-left .5s;
-  padding: 20px;
-}
+    .nav2 div{
+       width:25px;
+       height:5px;
+       background-color:white;
+       margin:5px;
+     }
 
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+    @media screen and (max-width:768px){
+          .logo{
+            width: 30%;
+            height: 55%;
+            border-radius: 5px;
+            transform: translate(-10%, 8%);
+          }
+
+          .nav{
+            display:none;
+          }
+
+          .nav2{
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            font-size: 10px;
+            color: #fff;
+            justify-content: center;
+            align-items: center;
+            z-index: 0;
+            list-style: none;
+            background: #000;
+            padding: 40px;
+            width: 97.4%;
+            font-weight: bold;
+            left: 50%;
+            margin-top: 1%;
+            transform: translate(-50%, -40%);
+          }
+
 
  `;
   const Input = styled.input.attrs(({ size }) => ({
@@ -124,15 +177,38 @@ const Contain = styled.div`
  const Menu = (props) => {
    return (
      <Contain>
+     <ul className="nav">
+     <img className="logo" src={shop}/>
+     <Busqueda
+       className="busqueda"
+       type="text"
+       placeholder="Busqueda"
+       />
+       <Buscar
+         className="Buscar"
+         name="busqueda"
+         type="submit">
+         Buscar
+       </Buscar>
+       <li className="li">Productos</li>
+       <li className="li">Favoritos</li>
+       <li className="li">About</li>
+
+    </ul>
+
      <div id="mySidenav" class="sidenav">
        <a href="javascript:void(0)" class="closebtn" onClick={()=>closeNav()}>&times;</a>
+       <a href="#">Productos</a>
+       <a href="#">Favoritos</a>
        <a href="#">About</a>
-       <a href="#">Services</a>
-       <a href="#">Clients</a>
      </div>
 
+   <div onClick={()=>openNav()} className="nav2">
+      <div className="line1"></div>
+      <div className="line2"></div>
+      <div className="line3"></div>
 
-     <span onClick={()=>openNav()}>open</span>
+  </div>
    </Contain>
   )
  }
