@@ -11,7 +11,7 @@ const Contain = styled.div`
       width: 15%;
       height: 15%;
       border-radius: 5px;
-      transform: translate(-55%, 8%);
+      transform: translate(-60%, 25%);
      }
      .nav{
       position: absolute;
@@ -32,10 +32,11 @@ const Contain = styled.div`
       transform: translate(-50%, -40%);
       }
       .li{
-        margin-left: 100px;
-        margin-right: 20px;
+        margin-left: 80px;
+        margin-right: -20px;
         cursor: pointer;
         color: white;
+        transform: translate(80%, 40%);
         }
       .sidenav {
         height: 100%;
@@ -49,12 +50,12 @@ const Contain = styled.div`
         padding-top: 60px;
         transition: 0.5s;
          a {
-          padding: 8px 8px 8px 32px;
+          padding: 8px 200px 10px 52px;
           text-decoration: none;
-          font-size: 25px;
+          font-size: 30px;
           color: #818181;
           display: block;
-          transition: 0.3s;
+          transition: 0.2s;
           }
            a:hover {
             color: #f1f1f1;
@@ -67,13 +68,7 @@ const Contain = styled.div`
       font-size: 36px;
       margin-left: 50px;
     }
-    .nav2 div{
-       width:25px;
-       height:5px;
-       background-color:white;
-       margin:5px;
 
-     }
     @media screen and (max-width:768px){
           .logo{
             width: 45%;
@@ -84,6 +79,13 @@ const Contain = styled.div`
           .nav{
             display:none;
           }
+          .nav2 div{
+             width:25px;
+             height:5px;
+             background-color:white;
+             margin:5px;
+
+           }
           .nav2{
             position: absolute;
             display: flex;
@@ -103,10 +105,6 @@ const Contain = styled.div`
             transform: translate(-50%, -40%);
             display:block;
             cursor:pointer;
-
-          }
-
-          .nav2 {
 
           }
  `;
@@ -135,7 +133,7 @@ const Contain = styled.div`
     width: 20%;
     max-width: 500px;
     box-sizing: border-box;
-    transform: translate(8%, -10%);
+    transform: translate(40%, 25%);
   `;
   const Button = styled.button`
     background:  #000 ;
@@ -160,7 +158,7 @@ const Contain = styled.div`
     width: 7%;
     max-width: 500px;
     box-sizing: border-box;
-    transform: translate(20%, -10%);
+    transform: translate(115%, 25%);
   `;
 
   function openNav() {
