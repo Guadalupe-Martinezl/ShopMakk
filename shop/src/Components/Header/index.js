@@ -7,98 +7,58 @@ import icono from '../../images/iconoperson.jpg';
 import styled, {css}from 'styled-components'
 
 const Contain = styled.div`
-
-    nav{
-      display:flex;
-      justify-content:space-around;
-      align-items:center;
-      min-height:8vh;
-      background-color:black;
-    }
-
     .logo {
       width: 15%;
       height: 15%;
       border-radius: 5px;
       transform: translate(-55%, 8%);
      }
+     .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+  }
 
-    .nav-links{
-      display:flex;
-      justify-content:space-around;
-      width:35%;
-    }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
 
-    .nav-links li{
-      list-style:none;
-    }
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
 
-    .nav-links a{
-      color:white;
-      text-decoration:none;
-      letter-spacing:3px;
-      font-weight:bold;
-      font-size:14px;
-    }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
 
-    .burger{
-      display:none;
-        div{
-          width:25px;
-          height:5px;
-          background-color:white;
-          margin:5px;
-        }
-     }
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
 
 
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 
-
-   @media screen and (max-width:1024px;){
-      .nav-links{
-        width:60%;
-      }
-    }
-    @media screen and (max-width:768px){
-
-      body{
-        overflow-x:hidden;
-      }
-
-      .logo{
-        width: 30%;
-        height: 55%;
-        border-radius: 5px;
-        transform: translate(-10%, 8%);
-      }
-
-      .nav-links{
-        position: absolute;
-        right:0px;
-        height:92vh;
-        top: 5.8vh;
-        background-color:#9d4e11;
-        display:flex;
-        flex-direction: column;
-        align-items:center;
-        width:50%;
-        transform:translateX(100%);
-        transition:transform 0.5s ease-in;
-      }
-      .nav-links li{
-        opacity:0;
-      }
-      .burger{
-        display:block;
-        cursor:pointer;
-      }
-      .nav-active{
-        transform:translateX(0%);
-      }
-
-    }
-  `;
-
+ `;
   const Input = styled.input.attrs(({ size }) => ({
     margin: size || "5em",
     padding: size || "5px"
@@ -152,34 +112,28 @@ const Contain = styled.div`
     transform: translate(20%, -10%);
   `;
 
-  const navSlide = (props) =>{
-      const burger = ('.burger');
-      const nav = ('.nav-links');
-
-      burger.addEventLister('click',() => {
-      nav.classList.toogle('nav-active');
-    })
-
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
   }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+
 
  const Menu = (props) => {
    return (
-  <body>
-    <nav>
-     <img className="logo" src={shop}/>
-        <ul className="nav-links">
-          <li className="li"><a href="#">Productos</a></li>
-          <li className="li"><a href="#">Favoritos</a></li>
-          <li className="li"><a href="#">About</a></li>
-        </ul>
+     <Contain>
+     <div id="mySidenav" class="sidenav">
+       <a href="javascript:void(0)" class="closebtn" onClick={()=>closeNav()}>&times;</a>
+       <a href="#">About</a>
+       <a href="#">Services</a>
+       <a href="#">Clients</a>
+     </div>
 
-        <div className="burger">
-          <div className="line1"></div>
-          <div className="line2"></div>
-          <div className="line3"></div>
-        </div>
-    </nav>
-  </body>
+
+     <span onClick={()=>openNav()}>open</span>
+   </Contain>
   )
  }
 
