@@ -13,7 +13,6 @@ const Contain = styled.div`
       border-radius: 5px;
       transform: translate(-55%, 8%);
      }
-
      .nav{
       position: absolute;
       display: flex;
@@ -38,31 +37,29 @@ const Contain = styled.div`
         cursor: pointer;
         color: white;
         }
-
       .sidenav {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      right: 0;
-      background-color: #111;
-      overflow-x: hidden;
-      padding-top: 60px;
-      transition: 0.5s;
-       a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
-        }
-         a:hover {
-          color: #f1f1f1;
-         }
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.5s;
+         a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+          }
+           a:hover {
+            color: #f1f1f1;
+           }
      }
-
     .sidenav .closebtn {
       position: absolute;
       top: 0;
@@ -70,27 +67,23 @@ const Contain = styled.div`
       font-size: 36px;
       margin-left: 50px;
     }
-
     .nav2 div{
        width:25px;
        height:5px;
        background-color:white;
        margin:5px;
+
      }
-
-
     @media screen and (max-width:768px){
           .logo{
-            width: 30%;
-            height: 55%;
+            width: 45%;
+            height: 45%;
             border-radius: 5px;
-            transform: translate(-10%, 8%);
+            transform: translate(65%, 80%);
           }
-
           .nav{
             display:none;
           }
-
           .nav2{
             position: absolute;
             display: flex;
@@ -102,15 +95,20 @@ const Contain = styled.div`
             z-index: 0;
             list-style: none;
             background: #000;
-            padding: 40px;
+            padding: 30px;
             width: 97.4%;
             font-weight: bold;
             left: 50%;
             margin-top: 1%;
             transform: translate(-50%, -40%);
+            display:block;
+            cursor:pointer;
+
           }
 
+          .nav2 {
 
+          }
  `;
   const Input = styled.input.attrs(({ size }) => ({
     margin: size || "5em",
@@ -204,6 +202,7 @@ const Contain = styled.div`
      </div>
 
    <div onClick={()=>openNav()} className="nav2">
+    <img className="logo" src={shop}/>
       <div className="line1"></div>
       <div className="line2"></div>
       <div className="line3"></div>

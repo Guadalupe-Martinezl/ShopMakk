@@ -148,7 +148,7 @@ class App extends Component {
     break;
 
    case "/Perfil":
-        return (<Header/>);
+        return (<ProfilesU/>);
         break;
 default:
 return(<h1> Pagina no encontrada</h1>)
