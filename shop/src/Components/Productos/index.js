@@ -11,9 +11,6 @@ import galeria2 from '../../images/galeria2.jpg';
 import galeria3 from '../../images/galeria3.jpg';
 import galeria4 from '../../images/galeria4.jpg';
 
-
-
-
 import styled, {css}from 'styled-components'
 
 const Contain = styled.div`
@@ -21,14 +18,14 @@ padding: 10px;
 margin: 0;
 background: url(${fondo}) ;
 width: 1350px;
-height: 1000px;
+height: 1150px;
 
 .wrap{
   width: 1100px;
   margin: 50px auto;
   display: flex;
   justify-content: center;
-  transform: translate(3%, 130%);
+  transform: translate(3%, 5%);
 }
 .tarjeta-wrap{
   margin: 10px;
@@ -97,6 +94,34 @@ height: 1000px;
     list-style: none;
   }
 }
+textarea {
+  opacity: 0;
+  width: 20px;
+  height: 10px;
+  position: relative;
+  top: 50%;
+  transform: scaleY(30);
+  cursor: e-resize;
+  max-width: 100%;
+}
+.imagen1{
+  width: 700px;
+  height: 400px;
+  background: url(${galeria1});
+  margin: 100px auto;
+  position: relative;
+}
+.imagen2 {
+  background: url(${galeria4});
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  max-width: 100%;
+
+  resize: horizontal;
+  overflow: hidden;
+}
 `;
 const Caja = styled.div`
   border: 2px solid white;
@@ -105,7 +130,7 @@ const Caja = styled.div`
   color: white;
   justify-content:center;
   text-align:center;
-  transform: translate(300%, 700%)
+  transform: translate(300%, 10%)
 `;
 const Texto = styled.p`
   font-family:"arial";
@@ -114,20 +139,15 @@ const Texto = styled.p`
   text-align: center;
 `;
 
-
-
 export default function Productos(props) {
   return(
     <Contain>
     <Header />
-    <div className="slider">
-    <ul>
-      <li><img src={galeria1} /> </li>
-      <li><img src={galeria2} /> </li>
-      <li><img src={galeria3} /> </li>
-      <li><img src={galeria4} /> </li>
-   </ul>
-    </div>
+      <div className="imagen1">
+        <div className="imagen2">
+          <textarea disabled></textarea>
+        </div>
+      </div>
 
     <Caja className="caja">
       <h2> Categorias </h2>
