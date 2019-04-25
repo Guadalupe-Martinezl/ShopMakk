@@ -146,31 +146,6 @@ class App extends Component {
           <Contain>
         <div className="App">
          <Header/>
-          <img class="logo" src={logo}/>
-          <Busqueda
-            type="text"
-            placeholder="Busqueda" />
-
-           <Buscar
-            name="busqueda"
-            type="submit">
-            Buscar
-           </Buscar>
-
-            <Sesion
-             name="busqueda"
-             type="submit"
-             >
-             Iniciar Sesion
-             </Sesion>
-
-             <Login
-              name="busqueda"
-              type="submit">
-              Crear Cuenta
-              </Login>
-
-
               <div className="App-Header" >
              <Gallery
                images={["http://lorempixel.com/400/200/technics/","http://lorempixel.com/400/200/technics/",
