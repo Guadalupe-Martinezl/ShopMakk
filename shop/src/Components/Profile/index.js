@@ -117,13 +117,15 @@ const Contain = styled.div`
   transition: all 0.3s ease-in-out;
 }
 .ia-container > figure {
-    position: relative;
+  position: relative;
 	left: 0 !important;
 }
+
 .ia-container img {
 	display: block;
 	width: 120%;
 }
+
 .ia-container input {
 	position: absolute;
 	top: 0;
@@ -147,7 +149,8 @@ const Contain = styled.div`
 }
 .ia-container input:checked ~ figure {
     left: 335px;
-    transition: all 0.7s ease-in-out;
+    transition: slide 0.1s infinite;
+
 }
 
 .ia-container figcaption {
@@ -406,6 +409,7 @@ const Galeria2 = (props) => {
         </figure>
       </figure>
         </figure>
+
     </div>
     )
   }
