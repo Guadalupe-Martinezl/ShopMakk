@@ -4,21 +4,25 @@ import shop from '../../images/shopMak.png';
 import fondo from '../../images/fondo.jpg';
 import medio from '../../images/perfil2.png';
 import icono from '../../images/iconoperson.jpg';
+import img1 from '../../images/img1.jpg';
+import img2 from '../../images/im2.jpg';
+import img3 from '../../images/img3.jpg';
+import img4 from '../../images/img4.jpg';
 
 import styled, {css}from 'styled-components'
 
 
 const Contain = styled.div`
+  *{
+    padding:0px;
+    margin:0px;
+  }
+
   .fondo{
     width: 100%;
     height: 15%;
   }
 
-  .medio{
-    width:60%;
-    height:50%;
-    transform: translate(35%, -100%);
-  }
 
   .logo {
     width: 15%;
@@ -58,6 +62,42 @@ const Contain = styled.div`
     cursor: pointer;
     color: white;
     }
+
+  .imgaleria{
+    width:800px;
+    height:400px;
+  }
+
+  #Container{
+    width:800px;
+    margin: 60px auto;
+    overflow:hidden;
+    transform: translate(-2%, -140%);
+  }
+
+  #Container ul {
+    list-style: none;
+    width:2800px;
+    display: flex;
+    animation: slide 15s infinite;
+  }
+
+  @keyframes slide {
+    0%{margin-left: 0px;}
+    20%{margin-left: 0px;}
+
+    25%{margin-left: -800px;}
+    45%{margin-left: -800px;}
+
+    50%{margin-left: -1600px;}
+    70%{margin-left: -1600px;}
+
+    75%{margin-left: -2400px;}
+    100%{margin-left: -2400px;}
+
+    101%{margin-left: -3200px;}
+
+  }
 
    @media screen and (max-width: 600px){
     .nav{
@@ -142,7 +182,7 @@ const Buscar = styled.button`
   width: 7%;
   max-width: 500px;
   box-sizing: border-box;
-  transform: translate(20%, -10%);
+  transform: translate(25%, -10%);
 `;
 
 const Compras = styled.button`
@@ -155,7 +195,7 @@ const Compras = styled.button`
   transform: translate(565%);
   width: 10%;
   box-sizing: border-box;
-  transform: translate(-200%, -850%);
+  transform: translate(500%, -980%);
 `;
 
 const Datos = styled.button`
@@ -168,7 +208,7 @@ const Datos = styled.button`
   transform: translate(565%);
   width: 10%;
   box-sizing: border-box;
-  transform: translate(-180%, -850%);
+  transform: translate(280%, -980%);
 `;
 
 const Menu = (props) => {
@@ -219,6 +259,22 @@ const Menu3 = (props) => {
   )
 }
 
+const Galeria = (props) => {
+  return (
+    <Contain>
+      <div id="Container">
+       <ul>
+        <li><img className="imgaleria" src={img1} alt="1"/></li>
+        <li><img className="imgaleria" src={img2} alt="2"/></li>
+        <li><img className="imgaleria"src={img3} alt="3"/></li>
+        <li><img className="imgaleria"src={img4} alt="4"/></li>
+       </ul>
+      </div>
+    </Contain>
+
+  )
+}
+
 
 export default function Profile(props) {
 
@@ -227,10 +283,12 @@ export default function Profile(props) {
       <Menu />
 
       <img className="fondo" src={fondo}/>
-      <img className="medio" src={medio}/>
+        <Galeria/>
 
       <Menu2/>
       <Menu3/>
+
+
     </Contain>
   )
 
