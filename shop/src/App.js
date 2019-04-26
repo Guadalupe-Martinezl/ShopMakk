@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
-import Gallery from './Components/Gallery/';
 
+
+import Gallery from './Components/Gallery/';
 import ProfilesU from './Components/Profile/';
+import FormLogin from './Components/Login/';
+import Header from './Components/Header/';
+
 
 import styled,{css} from 'styled-components'
 
@@ -13,6 +17,8 @@ import makeup from './images/makeup.jpg';
 
 
 import './App.css';
+
+
 
 
 const Busqueda = styled.input.attrs(({ size }) => ({
@@ -71,77 +77,89 @@ const Login = styled.button`
 
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      currentlocation:''
+
+    }
+  }
+
+
+
   render() {
-    var URLactual = window.location.href;
-      console.log("location-->",URLactual);
+    var URLactual = window.location;
+    console.log(URLactual.pathname);
+    switch (URLactual.pathname) {
+      case "/Admin":
+        return (
+        <div className="App">
+          <img class="logo" src={logo}/>
+          <Busqueda
+            type="text"
+            placeholder="Busqueda" />
 
-    return (
-
-
-      <div className="App">
-
-
-        <img class="logo" src={logo}/>
-        <Busqueda
-          className="busqueda"
-          type="text"
-          placeholder="Busqueda" />
-
-         <Buscar
-          name="busqueda"
-          type="submit"
-
-          >
-          Buscar
-         </Buscar>
-
-          <Sesion
-           name="busqueda"
-           type="submit"
-           >
-
-           Iniciar Sesion
-           </Sesion>
-
-           <Login
+           <Buscar
             name="busqueda"
             type="submit">
-            Crear Cuenta
-            </Login>
+            Buscar
+           </Buscar>
+
+            <Sesion
+             name="busqueda"
+             type="submit"
+             >
+             Iniciar Sesion
+             </Sesion>
+
+             <Login
+              name="busqueda"
+              type="submit">
+              Crear Cuenta
+              </Login>
+
+
+              <div className="App-Header" >
+             <Gallery
+               images={["http://lorempixel.com/400/200/technics/","http://lorempixel.com/400/200/technics/",
+               "http://lorempixel.com/400/200/technics/"]}
+               span={["Tecnologias","Comida","Maquillaje"]}
+              />
+
+              <div className="Footer">
+                <h1>CONOCENOS</h1>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                </p>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                </p>
+               </div>
 
 
 
-            <div className="App-Header" >
-           <Gallery
-             images={["http://lorempixel.com/400/200/technics/","http://lorempixel.com/400/200/technics/",
-             "http://lorempixel.com/400/200/technics/"]}
-             span={["Tecnologias","Comida","Maquillaje"]}
-            />
-            <div className="Footer">
-              <h1>CONOCENOS</h1>
-              <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-              </p>
-              <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-              </p>
 
+   </div>
+  </div>
 
-             </div>
+);
 
+    break;
+  case "/Login":
+    return (<FormLogin/>);
+    break;
 
+   case "/Perfil":
+        return (<ProfilesU/>);
+        break;
+default:
+return(<h1> Pagina no encontrada</h1>)
 
-            <ProfilesU />
-
-
-
-
- </div>
-</div>
-
-
-
-    );
-   }
   }
+ }
+}
+
+
+
+
 
 
 
