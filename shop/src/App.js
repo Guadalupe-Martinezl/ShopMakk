@@ -5,6 +5,7 @@ import Gallery from './Components/Gallery/';
 import ProfilesU from './Components/Profile/';
 import FormLogin from './Components/Login/';
 import Header from './Components/Header/';
+import Products from './Components/Products/';
 
 
 import styled,{css} from 'styled-components'
@@ -149,6 +150,10 @@ class App extends Component {
 
    case "/Perfil":
         return (<ProfilesU/>);
+        break;
+
+   case "/Products":
+        return (<Products/>);
         break;
 default:
 return(<h1> Pagina no encontrada</h1>)
