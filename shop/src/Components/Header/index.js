@@ -36,7 +36,7 @@ const Contain = styled.div`
         margin-right: -20px;
         cursor: pointer;
         color: white;
-        transform: translate(80%, 40%);
+        transform: translate(70%, 40%);
         }
       .sidenav {
         height: 100%;
@@ -68,7 +68,6 @@ const Contain = styled.div`
       font-size: 36px;
       margin-left: 50px;
     }
-
     @media screen and (max-width:768px){
           .logo{
             width: 45%;
@@ -84,7 +83,6 @@ const Contain = styled.div`
              height:5px;
              background-color:white;
              margin:5px;
-
            }
           .nav2{
             position: absolute;
@@ -105,7 +103,6 @@ const Contain = styled.div`
             transform: translate(-50%, -40%);
             display:block;
             cursor:pointer;
-
           }
  `;
   const Input = styled.input.attrs(({ size }) => ({
@@ -188,7 +185,9 @@ const Contain = styled.div`
        </Buscar>
        <li className="li">Productos</li>
        <li className="li">Favoritos</li>
-       <li className="li">About</li>
+       <li className="li">Registrarse</li>
+       <li className="li">Login</li>
+
 
     </ul>
 
@@ -196,7 +195,8 @@ const Contain = styled.div`
        <a href="javascript:void(0)" class="closebtn" onClick={()=>closeNav()}>&times;</a>
        <a href="#">Productos</a>
        <a href="#">Favoritos</a>
-       <a href="#">About</a>
+       <a href="#">Registrarse</a>
+       <a href="#">Login</a>
      </div>
 
    <div onClick={()=>openNav()} className="nav2">
@@ -204,6 +204,8 @@ const Contain = styled.div`
       <div className="line1"></div>
       <div className="line2"></div>
       <div className="line3"></div>
+      <div className="line4"></div>
+
 
   </div>
    </Contain>
