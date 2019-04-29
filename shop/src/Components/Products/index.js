@@ -93,7 +93,7 @@ h1 {
 }
 
   `;
-  
+
   filterSelection("all")
   function filterSelection(c) {
     var x, i;
@@ -130,46 +130,37 @@ h1 {
     element.className = arr1.join(" ");
   }
 
-  var btnContainer = document.getElementById("myBtnContainer");
-  var btns = btnContainer.getElementsByClassName("btn");
-  for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function(){
-      var current = document.getElementsByClassName("active");
-      current[0].className = current[0].className.replace(" active", "");
-      this.className += " active";
-    });
-  }
-
- const Portafolio = (props) => {
+ function Portafolio(props) {
+   console.log("imagen medio--->", medio);
   return (
     <Contain>
       <h2>PORTFOLIO</h2>
         <div id="myBtnContainer">
-          <button className="btn active" onclick="filterSelection('all')"> Show all</button>
-          <button className="btn" onclick="filterSelection('nature')"> Nature</button>
-          <button className="btn" onclick="filterSelection('cars')"> Cars</button>
-          <button className="btn" onclick="filterSelection('people')"> People</button>
+          <button className="btn active" onClick="filterSelection('all')"> Show all</button>
+          <button className="btn" onClick="filterSelection('nature')"> Nature</button>
+          <button className="btn" onClick="filterSelection('cars')"> Cars</button>
+          <button className="btn" onClick="filterSelection('people')"> People</button>
         </div>
 
 
     <div className="row">
       <div className="column nature">
         <div className="content">
-          <img src={medio} alt="Mountains" style="width:100%"/>
+          <img src={medio} alt="Mountains" style={{width:"100%"}}/>
           <h4>Mountains</h4>
           <p>Lorem ipsum dolor..</p>
         </div>
       </div>
       <div className="column nature">
         <div className="content">
-          <img src={medio} alt="Lights"  style="width:100%"/>
+          <img src={medio} alt="Lights"  style={{width:"100%"}}/>
           <h4>Lights</h4>
           <p>Lorem ipsum dolor..</p>
         </div>
       </div>
       <div className="column nature">
         <div className="content">
-          <img src={medio} alt="Nature"  style="width:100%"/>
+          <img src={medio} alt="Nature"  style={{width:"100%"}}/>
           <h4>Forest</h4>
           <p>Lorem ipsum dolor..</p>
         </div>
@@ -177,21 +168,21 @@ h1 {
 
       <div className="column cars">
         <div className="content">
-          <img src={medio} alt="Car" style="width:100%"/>
+          <img src={medio} alt="Car" style={{width:"100%"}}/>
           <h4>Retro</h4>
           <p>Lorem ipsum dolor..</p>
         </div>
       </div>
       <div className="column cars">
         <div className="content">
-          <img src={medio} alt="Car" style="width:100%"/>
+          <img src={medio} alt="Car" style={{width:"100%"}}/>
           <h4>Fast</h4>
           <p>Lorem ipsum dolor..</p>
         </div>
       </div>
       <div className="column cars">
         <div className="content">
-          <img src={medio} alt="Car" style="width:100%"/>
+          <img src={medio} alt="Car" style={{width:"100%"}}/>
           <h4>Classic</h4>
           <p>Lorem ipsum dolor..</p>
         </div>
@@ -199,21 +190,21 @@ h1 {
 
       <div className="column people">
         <div className="content">
-          <img src={medio} alt="People" style="width:100%"/>
+          <img src={medio} alt="People" style={{width:"100%"}}/>
           <h4>Girl</h4>
           <p>Lorem ipsum dolor..</p>
         </div>
       </div>
       <div className="column people">
         <div className="content">
-          <img src={medio} alt="People" style="width:100%"/>
+          <img src={medio} alt="People" style={{width:"100%"}}/>
           <h4>Man</h4>
           <p>Lorem ipsum dolor..</p>
         </div>
       </div>
       <div className="column people">
         <div className="content">
-          <img src={medio} alt="People" style="width:100%"/>
+          <img src={medio} alt="People" style={{width:"100%"}}/>
           <h4>Woman</h4>
           <p>Lorem ipsum dolor..</p>
         </div>
@@ -229,6 +220,7 @@ h1 {
     return(
       <Contain>
        <Header />
+       <Portafolio />
 
       </Contain>
     )
