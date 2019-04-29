@@ -1,4 +1,3 @@
-
 import React from "react";
 
 import shop from '../../images/shopMak.png';
@@ -37,7 +36,7 @@ const Contain = styled.div`
         margin-right: -20px;
         cursor: pointer;
         color: white;
-        transform: translate(80%, 40%);
+        transform: translate(70%, 40%);
         }
       .sidenav {
         height: 100%;
@@ -187,6 +186,8 @@ const Contain = styled.div`
        <li className="li">Productos</li>
        <li className="li">Favoritos</li>
        <li className="li">Registrarse</li>
+       <li className="li">Login</li>
+
 
     </ul>
 
@@ -195,6 +196,7 @@ const Contain = styled.div`
        <a href="#">Productos</a>
        <a href="#">Favoritos</a>
        <a href="#">Registrarse</a>
+       <a href="#">Login</a>
      </div>
 
    <div onClick={()=>openNav()} className="nav2">
