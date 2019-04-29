@@ -12,20 +12,44 @@ import galeria3 from '../../images/galeria3.jpg';
 import galeria4 from '../../images/galeria4.jpg';
 
 import styled, {css}from 'styled-components'
-
 const Contain = styled.div`
 padding: 10px;
 margin: 0;
-background: url(${fondo}) ;
-width: 1350px;
-height: 1150px;
-
+background: url(${fondo}) no-repeat;
+width: 100%;
+height: 100%;
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 .wrap{
   width: 1100px;
   margin: 50px auto;
   display: flex;
   justify-content: center;
   transform: translate(3%, 5%);
+}
+  @media screen and (max-width:800px){
+    .wrap{
+      width: 15%;
+      margin: 15%;
+      display: flex;
+      justify-content: center;
+      transform: translate(150%, -145%);
+    }
+    .tarjeta-wrap{
+      margin: 15%;
+    }
+    .tarjeta{
+      width: 15%;
+      height: 15%;
+    }
+    .adelante, .atras {
+      width: 15%;
+      height: 15%;
+    }
+    .adelante{
+      width: 50%;
+    }
 }
 .tarjeta-wrap{
   margin: 10px;
@@ -75,24 +99,42 @@ height: 1150px;
 .card3{
   background: url(${ropa}) repeat;
 }
-.slider {
-  width: 85%;
-  margin: auto;
-  border: 2px solid black;
-  overflow: hidden;
-  img {
-    width: 100%;
-    height: 100%;
+
+@media screen and (max-width:800px){
+  .container{
+    width: 5%;
+    margin:auto;
+    transform:translate(10%);
   }
-  ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
+  textarea {
+    opacity: 0;
+    width: 20%;
+    top: 10%;
+    position: relative;
+    transform: scaleY(30);
+    cursor: e-resize;
   }
-  li {
-    width: 100%;
-    list-style: none;
+
+  .imagen1{
+    width: 15%;
+    height: 10%;
+    margin: 5%;
+    transform: translate(-50%, 30%);
+
   }
+  .imagen2 {
+    width: 15%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    resize: horizontal;
+    overflow: hidden;
+  }
+}
+.container{
+  width: 1100px;
+  height: 1090px;
+  margin:auto;
 }
 textarea {
   opacity: 0;
@@ -104,6 +146,7 @@ textarea {
   cursor: e-resize;
   max-width: 100%;
 }
+
 .imagen1{
   width: 700px;
   height: 400px;
@@ -130,7 +173,11 @@ const Caja = styled.div`
   color: white;
   justify-content:center;
   text-align:center;
-  transform: translate(300%, 10%)
+  transform: translate(300%, 10%);
+  @media (max-width: 800px) {
+    width: 50%;
+    transform: translate(10%, -680%);
+  }
 `;
 const Texto = styled.p`
   font-family:"arial";
@@ -143,10 +190,12 @@ export default function Productos(props) {
   return(
     <Contain>
     <Header />
+    <div className="container">
       <div className="imagen1">
         <div className="imagen2">
           <textarea disabled></textarea>
         </div>
+      </div>
       </div>
 
     <Caja className="caja">

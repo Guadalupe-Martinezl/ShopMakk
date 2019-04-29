@@ -4,6 +4,7 @@ import FormLogin from './Components/Login/';
 import Registro from './Components/Registro/';
 import Header from './Components/Header/';
 import Productos from './Components/Productos/';
+import ProfilesU from './Components/Profile/';
 
 import styled,{css} from 'styled-components'
 
@@ -164,6 +165,10 @@ class App extends Component {
       case "/Productos":
         return (<Productos />);
         break;
+
+        case "/Profile":
+          return (<ProfilesU />);
+          break;
 
       default:
       return(<h1> Pagina no encontrada</h1>)

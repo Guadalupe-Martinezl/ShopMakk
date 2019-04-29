@@ -105,7 +105,7 @@ const Contain = styled.div`
 	overflow: hidden;
 	box-shadow: 1px 1px 4px rgba(0,0,0,0.08);
 	border: 7px solid rgba(255,255,255,0.6);
-    transform: translate(-2%, -120%);
+    transform: translate(-2%, -110%);
 }
 
 .ia-container figure {
@@ -290,14 +290,14 @@ const Buscar = styled.button`
 const Compras = styled.button`
   background:  #000 ;
   color: #fff;
-  font:105% "sans-serif";
+  font:95% "sans-serif";
   border-radius: 1em;
   border: 2px solid white;
   padding: 1em 1em;
   transform: translate(565%);
   width: 10%;
   box-sizing: border-box;
-  transform: translate(500%, -980%);
+  transform: translate(500%, -1030%);
 `;
 
 const Datos = styled.button`
@@ -310,7 +310,7 @@ const Datos = styled.button`
   transform: translate(565%);
   width: 10%;
   box-sizing: border-box;
-  transform: translate(280%, -980%);
+  transform: translate(280%, -939%);
 `;
 
 const Menu = (props) => {

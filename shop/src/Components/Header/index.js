@@ -11,7 +11,7 @@ const Contain = styled.div`
       width: 15%;
       height: 15%;
       border-radius: 5px;
-      transform: translate(-60%, 25%);
+      transform: translate(-45%, 25%);
      }
      .nav{
       position: absolute;
@@ -68,7 +68,7 @@ const Contain = styled.div`
       font-size: 36px;
       margin-left: 50px;
     }
-    @media screen and (max-width:768px){
+    @media screen and (max-width:800px){
           .logo{
             width: 45%;
             height: 45%;
