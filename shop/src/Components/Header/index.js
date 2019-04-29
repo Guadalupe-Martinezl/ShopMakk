@@ -74,7 +74,7 @@ const Contain = styled.div`
             width: 45%;
             height: 45%;
             border-radius: 5px;
-            transform: translate(65%, 80%);
+            transform: translate(60%, 80%);
           }
           .nav{
             display:none;
@@ -84,7 +84,7 @@ const Contain = styled.div`
              height:5px;
              background-color:white;
              margin:5px;
-
+             transform: translate(-90%, -50%);
            }
           .nav2{
             position: absolute;
@@ -98,7 +98,7 @@ const Contain = styled.div`
             list-style: none;
             background: #000;
             padding: 30px;
-            width: 97.4%;
+            width: 89.5%;
             font-weight: bold;
             left: 50%;
             margin-top: 1%;
