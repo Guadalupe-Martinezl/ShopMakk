@@ -5,6 +5,7 @@ import Registro from './Components/Registro/';
 import Header from './Components/Header/';
 import Productos from './Components/Productos/';
 
+
 import styled,{css} from 'styled-components'
 
 import fondo from './images/fondo.jpg';
@@ -13,19 +14,15 @@ import iphone from './images/iphone.gif';
 import watch from './images/watch.jpg';
 import makeup from './images/makeup.jpg';
 
-//import './App.css';
 const Contain = styled.div`
   padding: 0;
   margin: 0;
   background: url(${fondo}) no-repeat ;
   background-size:  2000px 40%;
-
   .logo{
     width: 15%;
     height: 15%;
-
   }
-
   .card{
       display: flex;
       width: 50%;
@@ -34,7 +31,6 @@ const Contain = styled.div`
       box-sizing: border-box;
         transform: translate(45%, 5%);
   }
-
   .box{
       width: 20%;
       height: 350px;
@@ -46,7 +42,6 @@ const Contain = styled.div`
       box-shadow: 0 20px 30px rgba(0, 0, 0, 0.20);
       line-height: 0;
       transition: all 600ms;
-
   }
   .box > img{
       width: 120%;
@@ -65,7 +60,6 @@ const Contain = styled.div`
   .box:hover{
       flex: 50%;
   }
-
   .box:hover > img{
       width: 100%;
       height: 100%;
@@ -170,6 +164,7 @@ class App extends Component {
       case "/Productos":
         return (<Productos />);
         break;
+
 
       default:
       return(<h1> Pagina no encontrada</h1>)
