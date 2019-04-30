@@ -1,8 +1,6 @@
 import React from "react";
 import Header from '../../Components/Header/';
 
-
-
 import shop from '../../images/shop2.png';
 import reloj from '../../images/watch.jpg';
 import fondo from '../../images/fondo.jpg';
@@ -39,6 +37,7 @@ const Contain = styled.div`
   text-align: center;
   box-sizing: border-box;
 }
+
 .izquierda{
   transform:translate(5%, -100%);
 }
