@@ -14,7 +14,7 @@ padding: 10px;
 margin: 0;
 background: url(${fondop}) ;
 width: 1480px;
-height: 1150px;
+height: 1300px;
 
 * {
   box-sizing: border-box;
