@@ -68,12 +68,13 @@ const Contain = styled.div`
       font-size: 36px;
       margin-left: 50px;
     }
-    @media screen and (max-width:800px) and (min-width: 312px){
-          .logo{
-            width: 45%;
-            height: 45%;
+
+    @media screen and (max-width:768px){
+          .logo2{
+            width: 60%;
+            height: 50%;
             border-radius: 5px;
-            transform: translate(65%, 80%);
+            transform: translate(30%, 60%);
           }
           .nav{
             display:none;
@@ -83,6 +84,7 @@ const Contain = styled.div`
              height:5px;
              background-color:white;
              margin:5px;
+             transform: translate(-90%, -80%);
            }
           .nav2{
             position: absolute;
@@ -96,13 +98,14 @@ const Contain = styled.div`
             list-style: none;
             background: #000;
             padding: 30px;
-            width: 97.4%;
+            width: 100%;
             font-weight: bold;
             left: 50%;
             margin-top: 1%;
             transform: translate(-50%, -40%);
             display:block;
             cursor:pointer;
+
           }
  `;
   const Input = styled.input.attrs(({ size }) => ({
@@ -185,9 +188,7 @@ const Contain = styled.div`
        </Buscar>
        <li className="li">Productos</li>
        <li className="li">Favoritos</li>
-       <li className="li">Registrarse</li>
-       <li className="li">Login</li>
-
+       <li className="li">About</li>
 
     </ul>
 
@@ -195,17 +196,14 @@ const Contain = styled.div`
        <a href="javascript:void(0)" class="closebtn" onClick={()=>closeNav()}>&times;</a>
        <a href="#">Productos</a>
        <a href="#">Favoritos</a>
-       <a href="#">Registrarse</a>
-       <a href="#">Login</a>
+       <a href="#">About</a>
      </div>
 
    <div onClick={()=>openNav()} className="nav2">
-    <img className="logo" src={shop}/>
+     <img className="logo2" src={shop}/>
       <div className="line1"></div>
       <div className="line2"></div>
       <div className="line3"></div>
-      <div className="line4"></div>
-
 
   </div>
    </Contain>
