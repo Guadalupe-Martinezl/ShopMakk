@@ -1,5 +1,5 @@
 import React from "react";
-
+import Header from '../../Components/Header/';
 
 import shop from '../../images/shopMak.png';
 //import reloj from '../../images/reloj.jpeg';
@@ -91,19 +91,7 @@ const Buscar = styled.button`
 export default function Login(props) {
   return(
     <Contain>
-      <div className="menu">
-        <img  src={shop}/>
-      <Busqueda
-        type="text"
-        placeholder="Busqueda"
-        />
-      <Buscar
-        name="busqueda"
-        type="submit">
-        Buscar
-      </Buscar>
-        </div>
-
+    <Header />
   <div className="login">
     <h1>Login</h1>
     <form>
