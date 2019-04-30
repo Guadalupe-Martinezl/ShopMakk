@@ -12,7 +12,7 @@ import styled, {css}from 'styled-components'
 const Contain = styled.div`
 padding: 10px;
 margin: 0;
-background: url(${fondop}) ;
+background: url(${fondop});
 width: 1480px;
 height: 1300px;
 
