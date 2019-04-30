@@ -4,6 +4,7 @@ import FormLogin from './Components/Login/';
 import Registro from './Components/Registro/';
 import Header from './Components/Header/';
 import Productos from './Components/Productos/';
+import Perfil from './Components/Profile/';
 
 
 import styled,{css} from 'styled-components'
@@ -164,6 +165,10 @@ class App extends Component {
       case "/Productos":
         return (<Productos />);
         break;
+
+        case "/Perfil":
+          return (<Perfil />);
+          break;
 
 
       default:
