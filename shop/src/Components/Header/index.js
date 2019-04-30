@@ -25,7 +25,7 @@ const Contain = styled.div`
       list-style: none;
       background: #000;
       padding: 20px;
-      width: 100.5%;
+      width: 100.05%;
       font-weight: bold;
       left: 50%;
       margin-top: 1%;
