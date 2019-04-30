@@ -11,7 +11,7 @@ const Contain = styled.div`
       width: 15%;
       height: 15%;
       border-radius: 5px;
-      transform: translate(-60%, 25%);
+      transform: translate(-100%, 15%);
      }
      .nav{
       position: absolute;
@@ -25,7 +25,7 @@ const Contain = styled.div`
       list-style: none;
       background: #000;
       padding: 20px;
-      width: 97.4%;
+      width: 100.05%;
       font-weight: bold;
       left: 50%;
       margin-top: 1%;
@@ -70,11 +70,11 @@ const Contain = styled.div`
     }
 
     @media screen and (max-width:768px){
-          .logo{
-            width: 45%;
-            height: 45%;
+          .logo2{
+            width: 60%;
+            height: 50%;
             border-radius: 5px;
-            transform: translate(60%, 80%);
+            transform: translate(30%, 60%);
           }
           .nav{
             display:none;
@@ -84,7 +84,7 @@ const Contain = styled.div`
              height:5px;
              background-color:white;
              margin:5px;
-             transform: translate(-90%, -50%);
+             transform: translate(-90%, -80%);
            }
           .nav2{
             position: absolute;
@@ -98,7 +98,7 @@ const Contain = styled.div`
             list-style: none;
             background: #000;
             padding: 30px;
-            width: 89.5%;
+            width: 100%;
             font-weight: bold;
             left: 50%;
             margin-top: 1%;
@@ -200,6 +200,7 @@ const Contain = styled.div`
      </div>
 
    <div onClick={()=>openNav()} className="nav2">
+     <img className="logo2" src={shop}/>
       <div className="line1"></div>
       <div className="line2"></div>
       <div className="line3"></div>
