@@ -98,7 +98,7 @@ const Contain = styled.div`
             list-style: none;
             background: #000;
             padding: 30px;
-            width: 89.8%;
+            width: 100%;
             font-weight: bold;
             left: 50%;
             margin-top: 1%;
