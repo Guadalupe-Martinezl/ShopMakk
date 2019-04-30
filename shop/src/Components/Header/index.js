@@ -11,7 +11,7 @@ const Contain = styled.div`
       width: 15%;
       height: 15%;
       border-radius: 5px;
-      transform: translate(-45%, 25%);
+      transform: translate(-100%, 15%);
      }
      .nav{
       position: absolute;
