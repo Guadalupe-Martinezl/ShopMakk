@@ -15,10 +15,10 @@ import styled, {css}from 'styled-components'
 const Contain = styled.div`
 padding: 10px;
 margin: 0;
-background: url(${fondo}) no-repeat;
-width: 100%;
-height: 100%;
-  @media (max-width: 800px) {
+background: url(${fondo}) repeat;
+width: 1380px;
+height: 1250px;
+  @media (max-width: 800px)  {
     width: 100%;
   }
 .wrap{
@@ -26,7 +26,7 @@ height: 100%;
   margin: 50px auto;
   display: flex;
   justify-content: center;
-  transform: translate(3%, 5%);
+  transform: translate(3%, -170%);
 }
   @media screen and (max-width:800px){
     .wrap{
@@ -173,7 +173,7 @@ const Caja = styled.div`
   color: white;
   justify-content:center;
   text-align:center;
-  transform: translate(300%, 10%);
+  transform: translate(300%, -850%);
   @media (max-width: 800px) {
     width: 50%;
     transform: translate(10%, -680%);
