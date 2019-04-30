@@ -25,7 +25,7 @@ const Contain = styled.div`
       list-style: none;
       background: #000;
       padding: 20px;
-      width: 97.4%;
+      width: 100.5%;
       font-weight: bold;
       left: 50%;
       margin-top: 1%;
@@ -36,7 +36,7 @@ const Contain = styled.div`
         margin-right: -20px;
         cursor: pointer;
         color: white;
-        transform: translate(70%, 40%);
+        transform: translate(80%, 40%);
         }
       .sidenav {
         height: 100%;
