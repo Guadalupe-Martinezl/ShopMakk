@@ -14,7 +14,7 @@ import iphone from './images/iphone.gif';
 import watch from './images/watch.jpg';
 import makeup from './images/makeup.jpg';
 
-//import './App.css';
+
 const Contain = styled.div`
   padding: 0;
   margin: 0;
