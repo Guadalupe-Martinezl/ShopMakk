@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Gallery from './Components/Gallery/';
+import FormLogin from './Components/Login/';
+import Registro from './Components/Registro/';
+import Header from './Components/Header/';
 
 import styled,{css} from 'styled-components'
 
@@ -64,52 +67,80 @@ const Login = styled.button`
   box-sizing: border-box;
 `;
 
+
+
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      currentlocation:'',
+
+
+    }
+}
 
   render() {
-    return (
+    var URLactual = window.location;
+    console.log(URLactual.pathname);
+      console.log(URLactual);
+    switch (URLactual.pathname) {
+      case "/Admin":
+        return (
+        <div className="App">
+         <Header/>
+          <img class="logo" src={logo}/>
+          <Busqueda
+            type="text"
+            placeholder="Busqueda" />
 
-      <div className="App">
-
-
-        <img class="logo" src={logo}/>
-        <Busqueda
-          type="text"
-          placeholder="Busqueda" />
-
-         <Buscar
-          name="busqueda"
-          type="submit">
-          Buscar
-         </Buscar>
-
-          <Sesion
-           name="busqueda"
-           type="submit">
-           Iniciar Sesion
-           </Sesion>
-
-           <Login
+           <Buscar
             name="busqueda"
             type="submit">
-            Crear Cuenta
-            </Login>
+            Buscar
+           </Buscar>
 
-            <h4>CONOCENOS</h4>
+            <Sesion
+             name="busqueda"
+             type="submit"
+             >
+             Iniciar Sesion
+             </Sesion>
 
-            <div className="App-Header" >
-           <Gallery
-             images={["http://lorempixel.com/400/200/technics/","http://lorempixel.com/400/200/technics/",
-             "http://lorempixel.com/400/200/technics/"]}
-             span={["Tecnologias","Comida","Maquillaje"]}
-            />
-
- </div>
-</div>
+             <Login
+              name="busqueda"
+              type="submit">
+              Crear Cuenta
+              </Login>
 
 
+              <div className="App-Header" >
+             <Gallery
+               images={["http://lorempixel.com/400/200/technics/","http://lorempixel.com/400/200/technics/",
+               "http://lorempixel.com/400/200/technics/"]}
+               span={["Tecnologias","Comida","Maquillaje"]}
+              />
 
-    );
+
+   </div>
+  </div>
+
+
+
+      );
+        break;
+
+      case "/Login":
+        return (<FormLogin/>);
+        break;
+
+      case "/Registro":
+        return (<Registro />);
+        break;
+      default:
+      return(<h1> Pagina no encontrada</h1>)
+    }
+
+
    }
   }
 

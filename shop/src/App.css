@@ -1,10 +1,8 @@
-
-
 body{
   padding: 0;
   margin: 0;
   background: url(images/fondo.jpg) no-repeat top ;
-  background-size:  2000px 20%;
+  background-size:  2000px 40%;
 }
 
 .logo{
@@ -62,5 +60,5 @@ body{
   body{
       background-size:  100% 20%;
   }
-  
+
 }
