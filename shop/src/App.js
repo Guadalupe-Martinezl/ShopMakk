@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-
 import Gallery from './Components/Gallery/';
-import ProfilesU from './Components/Profile/';
 import FormLogin from './Components/Login/';
+import Registro from './Components/Registro/';
 import Header from './Components/Header/';
-import Products from './Components/Products/';
-
+import Productos from './Components/Productos/';
 import ProfilesU from './Components/Profile/';
 
 import styled,{css} from 'styled-components'
