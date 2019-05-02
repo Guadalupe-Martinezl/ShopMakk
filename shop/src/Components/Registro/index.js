@@ -115,6 +115,55 @@ img{
 }
 `;
 
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      usuario:'',
+      correo: '',
+      contraseña: ''
+    }
+}
+
+handleAddTodo(todo) {
+    this.setState({
+
+    })
+  }
+
+  handleInputChangeUpdate(e) {
+    const {value, name} = e.target;
+    // console.log(value, name);
+    this.setState({
+      [name]: value
+    });
+}
+
+componentDidMount(){
+        fetch("http://192.168.2.106:8000/usuario/")
+        .then((response) => { return response.json()})
+        .then((json) => {
+          console.log(json)
+          let {usuarios} = this.state
+
+          json.forEach(function(element, index) {
+            var registro = {
+              usuario:'',
+              correo: '',
+              contraseña: ''
+            };
+            usuarios.push(registro);
+
+               console.log(element, index );
+               });
+          this.setState({
+            usuarios
+          })
+
+        })
+    }
+
 export default function Registro(props) {
   return(
     <Contain>
@@ -129,6 +178,7 @@ export default function Registro(props) {
                 <Input
                   name ="usuario"
                   type="text"
+                  value={this.state.usuario}
                   placeholder="Usuario"
                   />
             </div>
@@ -137,6 +187,7 @@ export default function Registro(props) {
                 <Input
                   name ="usuario"
                   type="email"
+                  value={this.state.correo}
                   placeholder="Correo"
                   />
             </div>
@@ -146,6 +197,7 @@ export default function Registro(props) {
                 <Input
                   name="password"
                   type="password"
+                  value={this.state.contrseña}
                   placeholder="Contraseña"
                   />
               </div><br/>
