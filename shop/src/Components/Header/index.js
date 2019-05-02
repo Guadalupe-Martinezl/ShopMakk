@@ -11,7 +11,7 @@ const Contain = styled.div`
       width: 15%;
       height: 15%;
       border-radius: 5px;
-      transform: translate(-60%, 25%);
+      transform: translate(-40%, 25%);
      }
      .nav{
       position: absolute;
@@ -70,10 +70,10 @@ const Contain = styled.div`
     }
     @media screen and (max-width:768px){
           .logo{
-            width: 45%;
-            height: 45%;
+            width: 40%;
+            height:40%;
             border-radius: 5px;
-            transform: translate(65%, 80%);
+            transform: translate(30%, 95%);
           }
           .nav{
             display:none;
@@ -147,10 +147,10 @@ const Contain = styled.div`
   const Buscar = styled.button`
     background:  #000 ;
     color: #fff;
-    font:100% "sans-serif";
+    font:95% "sans-serif";
     border-radius: 1em;
     border: 2px solid white;
-    padding: 0.25em 1em;
+    padding: 0.25em;
     transform: translate(565%);
     width: 7%;
     max-width: 500px;
@@ -200,7 +200,7 @@ const Contain = styled.div`
      </div>
 
    <div onClick={()=>openNav()} className="nav2">
-    <img className="logo" src={shop}/>
+      <img className="logo" src={shop}/>
       <div className="line1"></div>
       <div className="line2"></div>
       <div className="line3"></div>

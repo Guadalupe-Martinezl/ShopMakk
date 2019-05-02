@@ -19,6 +19,9 @@ margin: 0;
 background: url(${fondo}) ;
 width: 1350px;
 height: 1150px;
+@media (max-width: 800px)  {
+ width: 100%;
+}
 
 .wrap{
   width: 1100px;

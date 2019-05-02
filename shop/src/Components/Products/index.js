@@ -1,4 +1,3 @@
-
 import React from "react";
 
 import Header from '../../Components/Header/';
@@ -13,55 +12,66 @@ import styled, {css}from 'styled-components'
 const Contain = styled.div`
 padding: 10px;
 margin: 0;
-background: url(${fondop});
+background: url(${fondop}) ;
 width: 1480px;
-height: 1300px;
+height: 1150px;
+
 * {
   box-sizing: border-box;
 }
+
 body {
   background-color: #f1f1f1;
   padding: 20px;
   font-family: Arial;
 }
+
 /* Center website */
 .main {
   max-width: 1000px;
   margin: auto;
 }
+
 h1 {
   font-size: 50px;
   word-break: break-all;
 }
+
 .row {
   margin: 8px -16px;
 }
+
 /* Add padding BETWEEN each column (if you want) */
 .row,
 .row > .column {
   padding: 8px;
 }
+
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
   width: 33.33%;
   display: none; /* Hide columns by default */
 }
+
 /* Clear floats after rows */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
+
 /* Content */
 .content {
   background-color: white;
   padding: 10px;
 }
+
 /* The "show" className is added to the filtered elements */
 .show {
   display: block;
 }
+
 /* Style the buttons */
 .btn {
   border: none;
@@ -70,17 +80,23 @@ h1 {
   background-color: white;
   cursor: pointer;
 }
+
 /* Add a grey background color on mouse-over */
 .btn:hover {
   background-color: #ddd;
 }
+
 /* Add a dark background color to the active button */
 .btn.active {
   background-color: #666;
    color: white;
 }
+
   `;
- function Portafolio(props) {
+
+
+
+ const Portafolio = (props) => {
    console.log("imagen medio--->", medio);
   return (
     <Contain>
@@ -176,4 +192,4 @@ h1 {
     )
 
 
-}
+  }
