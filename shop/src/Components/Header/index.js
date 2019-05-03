@@ -11,7 +11,7 @@ const Contain = styled.div`
       width: 15%;
       height: 15%;
       border-radius: 5px;
-      transform: translate(-60%, 25%);
+      transform: translate(-50%, 25%);
      }
      .nav{
       position: absolute;
@@ -38,70 +38,76 @@ const Contain = styled.div`
         color: white;
         transform: translate(70%, 40%);
         }
-      .sidenav {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #111;
-        overflow-x: hidden;
-        padding-top: 60px;
-        transition: 0.5s;
-         a {
-          height:44px;
-          padding: 0 20px;
-          position:relative;
-          z-index:3;
-          cursor:pointer;
-          line-height:46px;
-          text-decoration: none;
-          color: white;
-          display: block;
-          font: oblique bold 150% cursive;
-          }
-          .back-menu{
-            position:absolute;
-            top:0;
-            left:0;
-            height:47px;
-            width:100%;
-            background: linear-gradient(90deg,red 2%, orange 80%);
-            border-radius:60px;
-            transition:0.3s;
-          }
-           a:hover :nth-of-type(1):hover ~ .back-menu{
-               transform:translateY(0);
-             }
-              a:hover:nth-of-type(2):hover ~ .back-menu{
-               transform:translateY(calc(100% *1));
-             }
-              a:hover:nth-of-type(3):hover ~ .back-menu{
-               transform:translateY(calc(100% *2));
-             }
-             a:hover:nth-of-type(4):hover ~ .back-menu{
-              transform:translateY(calc(100% *3));
+        .nav2{
+          display:none;
+        }
+        .sidenav {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #111;
+          overflow-x: hidden;
+          padding-top: 60px;
+          transition: 0.5s;
+
+           a {
+            height:44px;
+            padding: 0 20px;
+            position:relative;
+            z-index:3;
+            cursor:pointer;
+            line-height:46px;
+            text-decoration: none;
+            color: white;
+            display: block;
+            font: oblique bold 150% cursive;
             }
-            a:hover:nth-of-type(5):hover ~ .back-menu{
-             transform:translateY(calc(100% *4));
-           }
-            color: #f1f1f1;
-           }
-     }
-    .sidenav .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-    }
+            .back-menu{
+              position:absolute;
+              top:0;
+              left:0;
+              height:47px;
+              width:100%;
+              background: linear-gradient(90deg,red 2%, orange 80%);
+              border-radius:60px;
+              transition:0.3s;
+            }
+             a:hover :nth-of-type(1):hover ~ .back-menu{
+                 transform:translateY(0);
+               }
+                a:hover:nth-of-type(2):hover ~ .back-menu{
+                 transform:translateY(calc(100% *1));
+               }
+                a:hover:nth-of-type(3):hover ~ .back-menu{
+                 transform:translateY(calc(100% *2));
+               }
+               a:hover:nth-of-type(4):hover ~ .back-menu{
+                transform:translateY(calc(100% *3));
+              }
+              a:hover:nth-of-type(5):hover ~ .back-menu{
+               transform:translateY(calc(100% *4));
+             }
+              color: #f1f1f1;
+             }
+       }
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+
     @media screen and (max-width:768px){
           .logo{
             width: 45%;
             height: 45%;
             border-radius: 5px;
             transform: translate(65%, 80%);
+            display:block;
           }
           .nav{
             display:none;

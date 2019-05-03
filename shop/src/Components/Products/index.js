@@ -24,27 +24,24 @@ body {
   padding: 20px;
   font-family: Arial;
 }
-
+/* Center website */
 .main {
   max-width: 1000px;
   margin: auto;
 }
-h1 {
-  font-size: 50px;
-  word-break: break-all;
-}
+
 .row {
-  margin: 8px -16px;
+  margin: 5px -10px;
 }
 
 .row,
 .row > .column {
-  padding: 8px;
+  padding: 5px;
 }
-
+/* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  width: 33.33%;
+  width: 30%;
   display: none;
 }
 
@@ -56,7 +53,7 @@ h1 {
 
 .content {
   background-color: white;
-  padding: 10px;
+  padding: 5px;
 }
 
 .show {
@@ -79,29 +76,6 @@ h1 {
   background-color: #666;
    color: white;
 }
-
-@media screen and (max-width:768px){
-  .main{
-    width:100%;
-  }
-  .btn {
-   width:7%;
-   transform: translate(-10%, 300%);
-  }
-  .content {
-    width:90%;
-    padding: 10px;
-  }
-  .row:after {
-    content: "";
-    display: column;
-
-  }
-
-
-}
-
-
   `;
  function Portafolio(props) {
    console.log("imagen medio--->", medio);
@@ -192,7 +166,7 @@ h1 {
 
     return(
       <Contain>
-
+       <Header />
        <Portafolio />
 
       </Contain>
