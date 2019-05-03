@@ -1,5 +1,7 @@
 import React from "react";
 
+import Header from '../../Components/Header/';
+
 import shop from '../../images/shopMak.png';
 import fondo from '../../images/fondo.jpg';
 import medio from '../../images/perfil2.png';
@@ -37,31 +39,6 @@ const Contain = styled.div`
     border-radius: 5px;
   }
 
-  .nav{
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  font-size: 20px;
-  color: #fff;
-  justify-content: center;
-  align-items: center;
-  z-index: 3;
-  list-style: none;
-  background: #000;
-  padding: 20px;
-  width: 97.4%;
-  font-weight: bold;
-  left: 50%;
-  margin-top: 1%;
-  transform: translate(-50%, -40%);
-
-  }
-  .li{
-    margin-left: 100px;
-    margin-right: 20px;
-    cursor: pointer;
-    color: white;
-    }
 
   .imgaleria{
     width:800px;
@@ -202,9 +179,11 @@ const Contain = styled.div`
 }
 
    @media screen and (max-width: 600px){
-    .nav{
-      width:82.4%;
-    }
+
+     .ia-container{
+       width:90%;
+       transform: translate(0%, -30%);
+     }
     .li{
       margin-left: 30px;
       margin-right: 30px;
@@ -214,21 +193,21 @@ const Contain = styled.div`
       width:58%;
     }
     .logo{
-      width:25%;
-      transform: translate(-20%, -5%);
+      width:50%;
+      transform: translate(50%, 90%);
     }
     .icono{
       width:7%;
    }
    .compras{
-     width:15%;
-     transform: translate(-180%, -530%);
-     font:60% "sans-serif";
+     width:35%;
+     transform: translate(30%, -350%);
+     font:100% "sans-serif";
    }
    .datos{
-     width:15%;
-     transform: translate(-160%, -530%);
-     font:60% "sans-serif";
+     width:35%;
+     transform: translate(50%, -350%);
+     font:100% "sans-serif";
    }
 }
 `;
@@ -312,30 +291,6 @@ const Datos = styled.button`
   box-sizing: border-box;
   transform: translate(280%, -939%);
 `;
-
-const Menu = (props) => {
-
-  return (
-    <ul className="nav">
-      <img className="logo" src={shop}/>
-      <Busqueda
-        className="busqueda"
-        type="text"
-        placeholder="Busqueda"
-        />
-        <Buscar
-          className="Buscar"
-          name="busqueda"
-          type="submit">
-          Buscar
-        </Buscar>
-        <li className="li">Productos</li>
-        <li className="li">Favoritos</li>
-        <li className="li">About</li>
-        <img className="icono" src={icono}/>
-     </ul>
-  )
-}
 const Menu2 = (props) => {
   return (
 
@@ -418,11 +373,12 @@ export default function Profile(props) {
 
   return(
     <Contain>
-      <Menu />
+<Header />
 
       <img className="fondo" src={fondo}/>
 
     <Galeria2/>
+
       <Menu2/>
       <Menu3/>
 
