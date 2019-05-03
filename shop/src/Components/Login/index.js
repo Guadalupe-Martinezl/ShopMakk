@@ -12,10 +12,10 @@ const Contain = styled.div`
   padding:0;
   margin: 0;
   background: url(${fondo}) no-repeat;
-  background-size: 100% 70%;
+  background-size: 100%, 70%;
   box-sizing: border-box;
   @media (max-width: 800px)  {
-   width: 100%;
+    width:100%;
   }
 
 .menu img {
@@ -40,8 +40,19 @@ const Contain = styled.div`
   box-sizing: border-box;
 }
 
+@media (max-width: 800px)  {
+  .login{
+    margin:auto;
+    width: 70%;
+    padding: 3%;
+    transform: translate(3%, 60%);
+  }
+}
+
+
 .izquierda{
   transform:translate(3%, -180%);
+
 }
 
 .derecha{
@@ -50,6 +61,11 @@ const Contain = styled.div`
 
 .derecha img{
   width: 250px;
+  @media (max-width: 800px)  {
+   width: 35%;
+   height: 35%;
+   transform:translate(-10%, -100%);
+  }
 }
 
 .izquierda img{
@@ -69,6 +85,9 @@ const Input = styled.input.attrs(({ size }) => ({
   width: 100%;
   max-width: 500px;
   box-sizing: border-box;
+  @media (max-width: 800px)  {
+   width: 80%;
+  }
 `;
 
 const Button = styled.button`
@@ -128,6 +147,7 @@ export default function Login(props) {
 <div className="derecha">
   <img src={iphone} />
 </div>
+
     </Contain>
   )
 

@@ -16,19 +16,19 @@ import styled, {css}from 'styled-components'
 const Contain = styled.div`
 padding: 10px;
 margin: 0;
-background: url(${fondo}) ;
-width: 1350px;
-height: 1150px;
+background: url(${fondo}) no-repeat;
+background-size: cover;
 @media (max-width: 800px)  {
  width: 100%;
 }
 
 .wrap{
   width: 1100px;
-  margin: 50px auto;
+  margin: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  transform: translate(3%, 5%);
+  transform: translate(12%, -20%);
 }
 @media screen and (max-width:800px){
     .wrap{
@@ -36,7 +36,7 @@ height: 1150px;
       margin: 15%;
       display: flex;
       justify-content: center;
-      transform: translate(150%, -145%);
+      transform: translate(150%, -20%);
     }
     .tarjeta-wrap{
       margin: 15%;
@@ -57,6 +57,7 @@ height: 1150px;
   margin: 10px;
   -webkit-perspective: 700;
   perspective: 700;
+
 }
 .tarjeta{
   width: 220px;
@@ -100,65 +101,14 @@ height: 1150px;
 }
 .card3{
   background: url(${ropa}) repeat;
-}
-@media screen and (max-width:800px){
-  .container{
-    width: 10%;
-    margin:auto;
-    transform:translate(-18%, 5%);
-  }
-}
-.slider {
-  width: 85%;
-  margin: auto;
-  border: 2px solid black;
-  overflow: hidden;
-  img {
-    width: 100%;
-    height: 100%;
-  }
-  ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
-  }
-  li {
-    width: 100%;
-    list-style: none;
-  }
-}
-textarea {
-  opacity: 0;
-  width: 20px;
-  height: 10px;
-  position: relative;
-  top: 50%;
-  transform: scaleY(30);
-  cursor: e-resize;
-  max-width: 100%;
-}
-.container{
-  width: 1100px;
-  height: 1090px;
-  margin:auto;
-}
-.imagen1{
-  width: 700px;
-  height: 400px;
-  background: url(${galeria1});
-  margin: 100px auto;
-  position: relative;
-}
-.imagen2 {
-  background: url(${galeria4});
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  max-width: 100%;
 
-  resize: horizontal;
-  overflow: hidden;
+}
+@media screen and (max-width:800px) {
+  .imagen1{
+    width: -1%;
+    transform:translate(1%, 5%);
+  }
+
 }
 `;
 const Caja = styled.div`
@@ -168,10 +118,10 @@ const Caja = styled.div`
   color: white;
   justify-content:center;
   text-align:center;
-  transform: translate(300%, 10%);
+  transform: translate(300%, -100%);
   @media (max-width: 800px) {
     width: 50%;
-    transform: translate(10%, -680%);
+    transform: translate(10%, -50%);
   }
 `;
 const Texto = styled.p`
@@ -185,13 +135,7 @@ export default function Productos(props) {
   return(
     <Contain>
     <Header />
-     <div className="container">
-      <div className="imagen1">
-        <div className="imagen2">
-          <textarea disabled></textarea>
-        </div>
-      </div>
-      </div>
+
     <Caja className="caja">
       <h2> Categorias </h2>
     </Caja>
@@ -202,9 +146,9 @@ export default function Productos(props) {
     <div className="atras">
     <Texto> Tecnologias</Texto>
     </div>
-
 </div>
   </div>
+
 
   <div className="tarjeta-wrap">
     <div className="tarjeta">
@@ -223,6 +167,61 @@ export default function Productos(props) {
     </div>
 </div>
   </div>
+
+  <div className="tarjeta-wrap">
+    <div className="tarjeta">
+      <div className="adelante card3"> </div>
+    <div className="atras">
+    <Texto> Ropa </Texto>
+    </div>
+</div>
+  </div>
+
+  <div className="tarjeta-wrap">
+    <div className="tarjeta">
+      <div className="adelante card3"> </div>
+    <div className="atras">
+    <Texto> Ropa </Texto>
+    </div>
+</div>
+  </div>
+
+  <div className="tarjeta-wrap">
+    <div className="tarjeta">
+      <div className="adelante card3"> </div>
+    <div className="atras">
+    <Texto> Ropa </Texto>
+    </div>
+</div>
+  </div>
+
+  <div className="tarjeta-wrap">
+    <div className="tarjeta">
+      <div className="adelante card3"> </div>
+    <div className="atras">
+    <Texto> Ropa </Texto>
+    </div>
+</div>
+  </div>
+
+  <div className="tarjeta-wrap">
+    <div className="tarjeta">
+      <div className="adelante card3"> </div>
+    <div className="atras">
+    <Texto> Ropa </Texto>
+    </div>
+</div>
+  </div>
+
+  <div className="tarjeta-wrap">
+    <div className="tarjeta">
+      <div className="adelante card3"> </div>
+    <div className="atras">
+    <Texto> Ropa </Texto>
+    </div>
+</div>
+  </div>
+
     </div>
 
     </Contain>

@@ -68,7 +68,7 @@ const Contain = styled.div`
       font-size: 36px;
       margin-left: 50px;
     }
-    @media screen and (max-width:768px){
+    @media screen and (max-width:800px){
           .logo{
             width: 40%;
             height:40%;
