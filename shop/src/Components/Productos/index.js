@@ -30,6 +30,29 @@ height: 1150px;
   justify-content: center;
   transform: translate(3%, 5%);
 }
+@media screen and (max-width:800px){
+    .wrap{
+      width: 15%;
+      margin: 15%;
+      display: flex;
+      justify-content: center;
+      transform: translate(150%, -145%);
+    }
+    .tarjeta-wrap{
+      margin: 15%;
+    }
+    .tarjeta{
+      width: 15%;
+      height: 15%;
+    }
+    .adelante, .atras {
+      width: 15%;
+      height: 15%;
+    }
+    .adelante{
+      width: 50%;
+    }
+}
 .tarjeta-wrap{
   margin: 10px;
   -webkit-perspective: 700;
@@ -78,6 +101,13 @@ height: 1150px;
 .card3{
   background: url(${ropa}) repeat;
 }
+@media screen and (max-width:800px){
+  .container{
+    width: 10%;
+    margin:auto;
+    transform:translate(-18%, 5%);
+  }
+}
 .slider {
   width: 85%;
   margin: auto;
@@ -107,6 +137,11 @@ textarea {
   cursor: e-resize;
   max-width: 100%;
 }
+.container{
+  width: 1100px;
+  height: 1090px;
+  margin:auto;
+}
 .imagen1{
   width: 700px;
   height: 400px;
@@ -133,7 +168,11 @@ const Caja = styled.div`
   color: white;
   justify-content:center;
   text-align:center;
-  transform: translate(300%, 10%)
+  transform: translate(300%, 10%);
+  @media (max-width: 800px) {
+    width: 50%;
+    transform: translate(10%, -680%);
+  }
 `;
 const Texto = styled.p`
   font-family:"arial";
@@ -146,12 +185,13 @@ export default function Productos(props) {
   return(
     <Contain>
     <Header />
+     <div className="container">
       <div className="imagen1">
         <div className="imagen2">
           <textarea disabled></textarea>
         </div>
       </div>
-
+      </div>
     <Caja className="caja">
       <h2> Categorias </h2>
     </Caja>

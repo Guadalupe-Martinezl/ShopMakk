@@ -11,10 +11,12 @@ import styled, {css}from 'styled-components'
 const Contain = styled.div`
   padding:0;
   margin: 0;
-
   background: url(${fondo}) no-repeat;
   background-size: 100% 70%;
   box-sizing: border-box;
+  @media (max-width: 800px)  {
+   width: 100%;
+  }
 
 .menu img {
   width: 15%;
