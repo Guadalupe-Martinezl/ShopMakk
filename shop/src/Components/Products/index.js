@@ -24,7 +24,7 @@ body {
   padding: 20px;
   font-family: Arial;
 }
-/* Center website */
+
 .main {
   max-width: 1000px;
   margin: auto;
@@ -36,33 +36,33 @@ h1 {
 .row {
   margin: 8px -16px;
 }
-/* Add padding BETWEEN each column (if you want) */
+
 .row,
 .row > .column {
   padding: 8px;
 }
-/* Create three equal columns that floats next to each other */
+
 .column {
   float: left;
   width: 33.33%;
-  display: none; /* Hide columns by default */
+  display: none;
 }
-/* Clear floats after rows */
+
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-/* Content */
+
 .content {
   background-color: white;
   padding: 10px;
 }
-/* The "show" className is added to the filtered elements */
+
 .show {
   display: block;
 }
-/* Style the buttons */
+
 .btn {
   border: none;
   outline: none;
@@ -70,21 +70,44 @@ h1 {
   background-color: white;
   cursor: pointer;
 }
-/* Add a grey background color on mouse-over */
+
 .btn:hover {
   background-color: #ddd;
 }
-/* Add a dark background color to the active button */
+
 .btn.active {
   background-color: #666;
    color: white;
 }
+
+@media screen and (max-width:768px){
+  .main{
+    width:100%;
+  }
+  .btn {
+   width:7%;
+   transform: translate(-10%, 300%);
+  }
+  .content {
+    width:90%;
+    padding: 10px;
+  }
+  .row:after {
+    content: "";
+    display: column;
+
+  }
+
+
+}
+
+
   `;
  function Portafolio(props) {
    console.log("imagen medio--->", medio);
   return (
     <Contain>
-      <h2>PORTFOLIO</h2>
+
         <div id="myBtnContainer">
           <button className="btn active" onClick="filterSelection('all')"> Show all</button>
           <button className="btn" onClick="filterSelection('nature')"> Nature</button>
@@ -169,7 +192,7 @@ h1 {
 
     return(
       <Contain>
-       <Header />
+
        <Portafolio />
 
       </Contain>
