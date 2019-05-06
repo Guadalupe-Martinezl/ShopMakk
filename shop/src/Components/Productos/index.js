@@ -19,40 +19,30 @@ margin: 0;
 background: url(${fondo}) no-repeat;
 background-size: cover;
 @media (max-width: 800px)  {
- width: 100%;
+ width: 200%;
 }
 
 .wrap{
   width: 1100px;
   margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  transform: translate(12%, -20%);
+  line-height: 1px;
+  justify-content: space-around;
+  transform: translate(12%, 10%);
 }
-@media screen and (max-width:800px){
-    .wrap{
-      width: 15%;
-      margin: 15%;
-      display: flex;
-      justify-content: center;
-      transform: translate(150%, -20%);
-    }
-    .tarjeta-wrap{
-      margin: 15%;
-    }
-    .tarjeta{
-      width: 15%;
-      height: 15%;
-    }
-    .adelante, .atras {
-      width: 15%;
-      height: 15%;
-    }
-    .adelante{
-      width: 50%;
-    }
+@media (max-width: 800px)  {
+ .wrap {
+   width: 1100px;
+   margin: 0;
+   display: flex;
+   flex-wrap: wrap;
+   transform: translate(12%, -20%);
+
+ }
 }
+
 .tarjeta-wrap{
   margin: 10px;
   -webkit-perspective: 700;
@@ -103,26 +93,6 @@ background-size: cover;
   background: url(${ropa}) repeat;
 
 }
-@media screen and (max-width:800px) {
-  .imagen1{
-    width: -1%;
-    transform:translate(1%, 5%);
-  }
-
-}
-`;
-const Caja = styled.div`
-  border: 2px solid white;
-  width: 200px;
-  background-color:  #0e0e0d;
-  color: white;
-  justify-content:center;
-  text-align:center;
-  transform: translate(300%, -100%);
-  @media (max-width: 800px) {
-    width: 50%;
-    transform: translate(10%, -50%);
-  }
 `;
 const Texto = styled.p`
   font-family:"arial";
@@ -135,10 +105,6 @@ export default function Productos(props) {
   return(
     <Contain>
     <Header />
-
-    <Caja className="caja">
-      <h2> Categorias </h2>
-    </Caja>
 <div className="wrap">
   <div className="tarjeta-wrap">
     <div className="tarjeta">
