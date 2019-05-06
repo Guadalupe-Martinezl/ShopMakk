@@ -10,7 +10,7 @@ import fondop from '../../images/fondop.jpg';
 import styled, {css}from 'styled-components'
 
 const Contain = styled.div`
-padding: 10px;
+padding: 2px;
 margin: 0;
 background: url(${fondop}) ;
 width: 1480px;
@@ -80,29 +80,58 @@ body {
   background-color: #666;
    color: white;
 }
-
   `;
-
-
-
-
-
  class Products extends Component {
    constructor(){
      super();
      this. state={
-
+       producto:[],
+       nombre: '',
+       marca:'',
+       precio: '',
+       modelo: '',
+       descripcion:'',
+       imagen:''
      }
-
+     this.handleProducts = this.handleProducts.bind(this);
    }
-   // handleAddProducts() {
-   //
-   // }
+   handleProducts() {
+     this.setState({
+
+     });
+   }
+   componentDidMount(){
+       fetch('192.168.2.106:8000/producto/')
+       .then((response) => { return response.json()})
+       .then((json) => {
+         console.log("Json---->", json);
+         let {producto} = this.state
+         var task = {
+           nombre:     json.Nombre_producto,
+           marca:      json.Marca_producto,
+           precio:     json.Precio_producto,
+           modelo:     json.Modelo_producto,
+           descripcion:json.Descripcion_producto,
+         };
+
+         // producto.push(task);
+         //       json.forEach(function(element, index) {
+         //         var obj1 = {
+         //           nombre:element.Nombre_producto,
+         //           marca:element.Marca_producto,
+         //    }
+         //       console.log(element.nombre, index);
+         //       });
+         //
+         // this.setState({
+         //  producto
+         // })
+})
+}
    render(){
   return (
     <Contain>
     <Header />
-
         <div id="myBtnContainer">
           <button className="btn active" onClick="filterSelection('all')"> Show all</button>
           <button className="btn" onClick="filterSelection('nature')"> Nature</button>
@@ -115,31 +144,18 @@ body {
       <div className="column nature">
         <div className="content">
           <img src={medio} alt="Mountains" style={{width:"100%"}}/>
-          <h4>nombre</h4>
-          <p>descripcion.</p>
-          <p>marca </p>
-          <p>modelo </p>
-          <p>precio </p>
+
         </div>
       </div>
       <div className="column nature">
         <div className="content">
           <img src={medio} alt="Lights"  style={{width:"100%"}}/>
-          <h4>nombre</h4>
-          <p>descripcion.</p>
-          <p>marca </p>
-          <p>modelo </p>
-          <p>precio </p>
+
         </div>
       </div>
       <div className="column nature">
         <div className="content">
           <img src={medio} alt="Nature"  style={{width:"100%"}}/>
-          <h4>nombre</h4>
-          <p>descripcion.</p>
-          <p>marca </p>
-          <p>modelo </p>
-          <p>precio </p>
 
         </div>
       </div>
@@ -147,63 +163,38 @@ body {
       <div className="column cars">
         <div className="content">
           <img src={medio} alt="Car" style={{width:"100%"}}/>
-          <h4>nombre</h4>
-          <p>descripcion.</p>
-          <p>marca </p>
-          <p>modelo </p>
-          <p>precio </p>
+
         </div>
       </div>
       <div className="column cars">
         <div className="content">
           <img src={medio} alt="Car" style={{width:"100%"}}/>
-          <h4>nombre</h4>
-          <p>descripcion.</p>
-          <p>marca </p>
-          <p>modelo </p>
-          <p>precio </p>
+
         </div>
       </div>
       <div className="column cars">
         <div className="content">
           <img src={medio} alt="Car" style={{width:"100%"}}/>
-          <h4>nombre</h4>
-          <p>descripcion.</p>
-          <p>marca </p>
-          <p>modelo </p>
-          <p>precio </p>
+
         </div>
       </div>
 
       <div className="column people">
         <div className="content">
           <img src={medio} alt="People" style={{width:"100%"}}/>
-          <h4>nombre</h4>
-          <p>descripcion.</p>
-          <p>marca </p>
-          <p>modelo </p>
-          <p>precio </p>
 
         </div>
       </div>
       <div className="column people">
         <div className="content">
           <img src={medio} alt="People" style={{width:"100%"}}/>
-          <h4>nombre</h4>
-          <p>descripcion.</p>
-          <p>marca </p>
-          <p>modelo </p>
-          <p>precio </p>
+
         </div>
       </div>
       <div className="column people">
         <div className="content">
           <img src={medio} alt="People" style={{width:"100%"}}/>
-          <h4>nombre</h4>
-          <p>descripcion.</p>
-          <p>marca </p>
-          <p>modelo </p>
-          <p>precio </p>
+
         </div>
       </div>
     </div>
