@@ -32,47 +32,38 @@ body {
   margin: auto;
 }
 
-h1 {
-  font-size: 50px;
-  word-break: break-all;
-}
 
 .row {
-  margin: 8px -16px;
+  margin: 5px -10px;
 }
 
-/* Add padding BETWEEN each column (if you want) */
 .row,
 .row > .column {
-  padding: 8px;
+  padding: 5px;
 }
 
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  width: 33.33%;
-  display: none; /* Hide columns by default */
+  width: 30%;
+  display: none;
 }
 
-/* Clear floats after rows */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Content */
 .content {
   background-color: white;
-  padding: 10px;
+  padding: 5px;
 }
 
-/* The "show" className is added to the filtered elements */
 .show {
   display: block;
 }
 
-/* Style the buttons */
 .btn {
   border: none;
   outline: none;
@@ -81,12 +72,10 @@ h1 {
   cursor: pointer;
 }
 
-/* Add a grey background color on mouse-over */
 .btn:hover {
   background-color: #ddd;
 }
 
-/* Add a dark background color to the active button */
 .btn.active {
   background-color: #666;
    color: white;
@@ -94,13 +83,11 @@ h1 {
 
   `;
 
-
-
  const Portafolio = (props) => {
    console.log("imagen medio--->", medio);
   return (
     <Contain>
-      <h2>PORTFOLIO</h2>
+
         <div id="myBtnContainer">
           <button className="btn active" onClick="filterSelection('all')"> Show all</button>
           <button className="btn" onClick="filterSelection('nature')"> Nature</button>
