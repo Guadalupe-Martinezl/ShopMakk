@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 
 import Header from '../../Components/Header/';
 
@@ -83,10 +83,25 @@ body {
 
   `;
 
- const Portafolio = (props) => {
-   console.log("imagen medio--->", medio);
+
+
+
+
+ class Products extends Component {
+   constructor(){
+     super();
+     this. state={
+
+     }
+
+   }
+   // handleAddProducts() {
+   //
+   // }
+   render(){
   return (
     <Contain>
+    <Header />
 
         <div id="myBtnContainer">
           <button className="btn active" onClick="filterSelection('all')"> Show all</button>
@@ -100,83 +115,100 @@ body {
       <div className="column nature">
         <div className="content">
           <img src={medio} alt="Mountains" style={{width:"100%"}}/>
-          <h4>Mountains</h4>
-          <p>Lorem ipsum dolor..</p>
+          <h4>nombre</h4>
+          <p>descripcion.</p>
+          <p>marca </p>
+          <p>modelo </p>
+          <p>precio </p>
         </div>
       </div>
       <div className="column nature">
         <div className="content">
           <img src={medio} alt="Lights"  style={{width:"100%"}}/>
-          <h4>Lights</h4>
-          <p>Lorem ipsum dolor..</p>
+          <h4>nombre</h4>
+          <p>descripcion.</p>
+          <p>marca </p>
+          <p>modelo </p>
+          <p>precio </p>
         </div>
       </div>
       <div className="column nature">
         <div className="content">
           <img src={medio} alt="Nature"  style={{width:"100%"}}/>
-          <h4>Forest</h4>
-          <p>Lorem ipsum dolor..</p>
+          <h4>nombre</h4>
+          <p>descripcion.</p>
+          <p>marca </p>
+          <p>modelo </p>
+          <p>precio </p>
+
         </div>
       </div>
 
       <div className="column cars">
         <div className="content">
           <img src={medio} alt="Car" style={{width:"100%"}}/>
-          <h4>Retro</h4>
-          <p>Lorem ipsum dolor..</p>
+          <h4>nombre</h4>
+          <p>descripcion.</p>
+          <p>marca </p>
+          <p>modelo </p>
+          <p>precio </p>
         </div>
       </div>
       <div className="column cars">
         <div className="content">
           <img src={medio} alt="Car" style={{width:"100%"}}/>
-          <h4>Fast</h4>
-          <p>Lorem ipsum dolor..</p>
+          <h4>nombre</h4>
+          <p>descripcion.</p>
+          <p>marca </p>
+          <p>modelo </p>
+          <p>precio </p>
         </div>
       </div>
       <div className="column cars">
         <div className="content">
           <img src={medio} alt="Car" style={{width:"100%"}}/>
-          <h4>Classic</h4>
-          <p>Lorem ipsum dolor..</p>
+          <h4>nombre</h4>
+          <p>descripcion.</p>
+          <p>marca </p>
+          <p>modelo </p>
+          <p>precio </p>
         </div>
       </div>
 
       <div className="column people">
         <div className="content">
           <img src={medio} alt="People" style={{width:"100%"}}/>
-          <h4>Girl</h4>
-          <p>Lorem ipsum dolor..</p>
+          <h4>nombre</h4>
+          <p>descripcion.</p>
+          <p>marca </p>
+          <p>modelo </p>
+          <p>precio </p>
+
         </div>
       </div>
       <div className="column people">
         <div className="content">
           <img src={medio} alt="People" style={{width:"100%"}}/>
-          <h4>Man</h4>
-          <p>Lorem ipsum dolor..</p>
+          <h4>nombre</h4>
+          <p>descripcion.</p>
+          <p>marca </p>
+          <p>modelo </p>
+          <p>precio </p>
         </div>
       </div>
       <div className="column people">
         <div className="content">
           <img src={medio} alt="People" style={{width:"100%"}}/>
-          <h4>Woman</h4>
-          <p>Lorem ipsum dolor..</p>
+          <h4>nombre</h4>
+          <p>descripcion.</p>
+          <p>marca </p>
+          <p>modelo </p>
+          <p>precio </p>
         </div>
       </div>
     </div>
     </Contain>
         )
       }
-
-
-  export default function Profile(props) {
-
-    return(
-      <Contain>
-       <Header />
-       <Portafolio />
-
-      </Contain>
-    )
-
-
   }
+export default Products;
