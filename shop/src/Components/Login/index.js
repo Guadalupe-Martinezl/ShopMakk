@@ -11,10 +11,12 @@ import styled, {css}from 'styled-components'
 const Contain = styled.div`
   padding:0;
   margin: 0;
-
   background: url(${fondo}) no-repeat;
-  background-size: 100% 70%;
+  background-size: 100%, 70%;
   box-sizing: border-box;
+  @media (max-width: 800px)  {
+    width:100%;
+  }
 
 .menu img {
   width: 15%;
@@ -38,16 +40,32 @@ const Contain = styled.div`
   box-sizing: border-box;
 }
 
+@media (max-width: 800px)  {
+  .login{
+    margin:auto;
+    width: 70%;
+    padding: 3%;
+    transform: translate(3%, 60%);
+  }
+}
+
+
 .izquierda{
-  transform:translate(5%, -100%);
+  transform:translate(3%, -180%);
+
 }
 
 .derecha{
-  transform:translate(70%, -190%);
+  transform:translate(75%, -300%);
 }
 
 .derecha img{
   width: 250px;
+  @media (max-width: 800px)  {
+   width: 35%;
+   height: 35%;
+   transform:translate(-10%, -100%);
+  }
 }
 
 .izquierda img{
@@ -56,8 +74,8 @@ const Contain = styled.div`
 
 `;
 const Input = styled.input.attrs(({ size }) => ({
-  margin: size || "5em",
-  padding: size || "5px"
+  margin: size || "1em",
+  padding: size || "1em"
 }))`
   color:palevioletred ;
   font-size: 20px;
@@ -67,6 +85,9 @@ const Input = styled.input.attrs(({ size }) => ({
   width: 100%;
   max-width: 500px;
   box-sizing: border-box;
+  @media (max-width: 800px)  {
+   width: 80%;
+  }
 `;
 
 const Button = styled.button`
@@ -84,39 +105,40 @@ const Button = styled.button`
 
 export default function Login(props) {
   return(
-    <Contain>
-      <Header />
-<br />
-<br />
-  <div className="login">
-    <h1>Login</h1>
-    <form>
-      <div>
-      <label> Usuario </label><br/>
-        <Input
+      <Contain>
+        <Header />
+  <br />
+  <br />
+    <div className="login">
+      <h1>Login</h1>
+      <form>
+        <div>
+        <label> Usuario </label><br/>
+          <Input
           name ="usuario"
           type="text"
           placeholder="Usuario"
-          />
-      </div>
-      <div>
-       <label> Contraseña</label><br/>
-        <Input
-          name="password"
-          type="password"
-          placeholder="Contraseña"
-          />
-          </div><br />
-    <div>
-      <Button
-        name="ingresar"
-        type="sumbmit"
-        >
-      Ingresar
-      </Button>
+            />
         </div>
-  </form>
-</div>
+
+        <div>
+         <label> Contraseña</label><br/>
+          <Input
+            name="password"
+            type="password"
+            placeholder="Contraseña"
+            />
+            </div><br />
+      <div>
+        <Button
+          name="ingresar"
+          type="sumbmit"
+          >
+        Ingresar
+        </Button>
+          </div>
+    </form>
+  </div>
 
 <div className="izquierda">
   <img src={reloj} />
@@ -125,6 +147,7 @@ export default function Login(props) {
 <div className="derecha">
   <img src={iphone} />
 </div>
+
     </Contain>
   )
 

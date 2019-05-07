@@ -119,16 +119,11 @@ const Login = styled.button`
   max-width: 500px;
   box-sizing: border-box;
 `;
-
-
-
 class App extends Component {
   constructor(){
     super();
     this.state = {
       currentlocation:'',
-
-
     }
 }
 
@@ -142,8 +137,6 @@ filterSelection(c) {
       if (x[i].className.indexOf(c) > -1) this.w3AddClass(x[i], "show");
     }
   }
-
-
  w3AddClass(element, name) {
     var i, arr1, arr2;
     arr1 = element.className.split(" ");
@@ -154,7 +147,6 @@ filterSelection(c) {
       }
     }
   }
-
  w3RemoveClass(element, name) {
     var i, arr1, arr2;
     arr1 = element.className.split(" ");
@@ -166,7 +158,6 @@ filterSelection(c) {
     }
     element.className = arr1.join(" ");
   }
-
   componentDidMount(){
     var btnContainer = document.getElementById("myBtnContainer");
     var btns = document.getElementsByClassName("btn");
@@ -179,8 +170,6 @@ filterSelection(c) {
     }
     this.filterSelection("all")
   }
-
-
   render() {
     var URLactual = window.location;
     console.log(URLactual.pathname);

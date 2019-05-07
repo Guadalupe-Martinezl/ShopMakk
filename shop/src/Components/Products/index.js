@@ -1,5 +1,4 @@
-
-import React from "react";
+import React, {Component} from "react";
 
 import Header from '../../Components/Header/';
 
@@ -11,14 +10,16 @@ import fondop from '../../images/fondop.jpg';
 import styled, {css}from 'styled-components'
 
 const Contain = styled.div`
-padding: 10px;
+padding: 2px;
 margin: 0;
-background: url(${fondop});
+background: url(${fondop}) ;
 width: 1480px;
-height: 1300px;
+height: 1150px;
+
 * {
   box-sizing: border-box;
 }
+
 body {
   background-color: #f1f1f1;
   padding: 20px;
@@ -30,6 +31,7 @@ body {
   margin: auto;
 }
 
+
 .row {
   margin: 5px -10px;
 }
@@ -38,6 +40,7 @@ body {
 .row > .column {
   padding: 5px;
 }
+
 
 .column {
   float: left;
@@ -77,11 +80,57 @@ body {
    color: white;
 }
   `;
- function Portafolio(props) {
-   console.log("imagen medio--->", medio);
+ class Products extends Component {
+   constructor(){
+     super();
+     this. state={
+       producto:[],
+       nombre: '',
+       marca:'',
+       precio: '',
+       modelo: '',
+       descripcion:'',
+       imagen:''
+     }
+     this.handleProducts = this.handleProducts.bind(this);
+   }
+   handleProducts() {
+     this.setState({
+
+     });
+   }
+   componentDidMount(){
+       fetch('192.168.2.106:8000/producto/')
+       .then((response) => { return response.json()})
+       .then((json) => {
+         console.log("Json---->", json);
+         let {producto} = this.state
+         var task = {
+           nombre:     json.Nombre_producto,
+           marca:      json.Marca_producto,
+           precio:     json.Precio_producto,
+           modelo:     json.Modelo_producto,
+           descripcion:json.Descripcion_producto,
+         };
+
+         // producto.push(task);
+         //       json.forEach(function(element, index) {
+         //         var obj1 = {
+         //           nombre:element.Nombre_producto,
+         //           marca:element.Marca_producto,
+         //    }
+         //       console.log(element.nombre, index);
+         //       });
+         //
+         // this.setState({
+         //  producto
+         // })
+})
+}
+   render(){
   return (
     <Contain>
-
+    <Header />
         <div id="myBtnContainer">
           <button className="btn active" onClick="filterSelection('all')"> Show all</button>
           <button className="btn" onClick="filterSelection('nature')"> Nature</button>
@@ -94,83 +143,62 @@ body {
       <div className="column nature">
         <div className="content">
           <img src={medio} alt="Mountains" style={{width:"100%"}}/>
-          <h4>Mountains</h4>
-          <p>Lorem ipsum dolor..</p>
+
         </div>
       </div>
       <div className="column nature">
         <div className="content">
           <img src={medio} alt="Lights"  style={{width:"100%"}}/>
-          <h4>Lights</h4>
-          <p>Lorem ipsum dolor..</p>
+
         </div>
       </div>
       <div className="column nature">
         <div className="content">
           <img src={medio} alt="Nature"  style={{width:"100%"}}/>
-          <h4>Forest</h4>
-          <p>Lorem ipsum dolor..</p>
+
         </div>
       </div>
 
       <div className="column cars">
         <div className="content">
           <img src={medio} alt="Car" style={{width:"100%"}}/>
-          <h4>Retro</h4>
-          <p>Lorem ipsum dolor..</p>
+
         </div>
       </div>
       <div className="column cars">
         <div className="content">
           <img src={medio} alt="Car" style={{width:"100%"}}/>
-          <h4>Fast</h4>
-          <p>Lorem ipsum dolor..</p>
+
         </div>
       </div>
       <div className="column cars">
         <div className="content">
           <img src={medio} alt="Car" style={{width:"100%"}}/>
-          <h4>Classic</h4>
-          <p>Lorem ipsum dolor..</p>
+
         </div>
       </div>
 
       <div className="column people">
         <div className="content">
           <img src={medio} alt="People" style={{width:"100%"}}/>
-          <h4>Girl</h4>
-          <p>Lorem ipsum dolor..</p>
+
         </div>
       </div>
       <div className="column people">
         <div className="content">
           <img src={medio} alt="People" style={{width:"100%"}}/>
-          <h4>Man</h4>
-          <p>Lorem ipsum dolor..</p>
+
         </div>
       </div>
       <div className="column people">
         <div className="content">
           <img src={medio} alt="People" style={{width:"100%"}}/>
-          <h4>Woman</h4>
-          <p>Lorem ipsum dolor..</p>
+
         </div>
       </div>
     </div>
     </Contain>
         )
       }
-
-
-  export default function Profile(props) {
-
-    return(
-      <Contain>
-       <Header />
-       <Portafolio />
-
-      </Contain>
-    )
-
-
-}
+  }
+export default Products;
