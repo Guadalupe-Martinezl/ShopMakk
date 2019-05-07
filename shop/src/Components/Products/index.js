@@ -24,7 +24,7 @@ body {
   padding: 20px;
   font-family: Arial;
 }
-/* Center website */
+
 .main {
   max-width: 1000px;
   margin: auto;
@@ -38,7 +38,7 @@ body {
 .row > .column {
   padding: 5px;
 }
-/* Create three equal columns that floats next to each other */
+
 .column {
   float: left;
   width: 30%;
