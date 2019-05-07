@@ -57,6 +57,7 @@ body {
 .content {
   background-color: white;
   padding: 5px;
+  transform: translate(2%,50%);
 }
 
 .show {
@@ -69,6 +70,7 @@ body {
   padding: 12px 16px;
   background-color: white;
   cursor: pointer;
+  transform: translate(10%,250%);
 }
 
 .btn:hover {
@@ -78,6 +80,7 @@ body {
 .btn.active {
   background-color: #666;
    color: white;
+
 }
   `;
  class Products extends Component {
@@ -100,7 +103,7 @@ body {
      });
    }
    componentDidMount(){
-       fetch('192.168.2.106:8000/producto/')
+       fetch('http://192.168.2.106:8000/producto')
        .then((response) => { return response.json()})
        .then((json) => {
          console.log("Json---->", json);
@@ -112,6 +115,7 @@ body {
            modelo:     json.Modelo_producto,
            descripcion:json.Descripcion_producto,
          };
+         console.log("task--->",task);
 
          // producto.push(task);
          //       json.forEach(function(element, index) {
@@ -125,80 +129,74 @@ body {
          // this.setState({
          //  producto
          // })
-})
-}
+    })
+    }
    render(){
-  return (
-    <Contain>
-    <Header />
-        <div id="myBtnContainer">
-          <button className="btn active" onClick="filterSelection('all')"> Show all</button>
-          <button className="btn" onClick="filterSelection('nature')"> Nature</button>
-          <button className="btn" onClick="filterSelection('cars')"> Cars</button>
-          <button className="btn" onClick="filterSelection('people')"> People</button>
-        </div>
+    return (
+      <Contain>
+      <Header />
+
+          <div className="row">
+            <div className="column nature">
+              <div className="content">
+                <img src={medio} alt="Mountains" style={{width:"100%"}}/>
 
 
-    <div className="row">
-      <div className="column nature">
-        <div className="content">
-          <img src={medio} alt="Mountains" style={{width:"100%"}}/>
+              </div>
+            </div>
+            <div className="column nature">
+              <div className="content">
+                <img src={medio} alt="Lights"  style={{width:"100%"}}/>
 
-        </div>
-      </div>
-      <div className="column nature">
-        <div className="content">
-          <img src={medio} alt="Lights"  style={{width:"100%"}}/>
+              </div>
+            </div>
+            <div className="column nature">
+              <div className="content">
+                <img src={medio} alt="Nature"  style={{width:"100%"}}/>
 
-        </div>
-      </div>
-      <div className="column nature">
-        <div className="content">
-          <img src={medio} alt="Nature"  style={{width:"100%"}}/>
+              </div>
+            </div>
 
-        </div>
-      </div>
+            <div className="column cars">
+              <div className="content">
+                <img src={medio} alt="Car" style={{width:"100%"}}/>
 
-      <div className="column cars">
-        <div className="content">
-          <img src={medio} alt="Car" style={{width:"100%"}}/>
+              </div>
+            </div>
+            <div className="column cars">
+              <div className="content">
+                <img src={medio} alt="Car" style={{width:"100%"}}/>
 
-        </div>
-      </div>
-      <div className="column cars">
-        <div className="content">
-          <img src={medio} alt="Car" style={{width:"100%"}}/>
+              </div>
+            </div>
+            <div className="column cars">
+              <div className="content">
+                <img src={medio} alt="Car" style={{width:"100%"}}/>
 
-        </div>
-      </div>
-      <div className="column cars">
-        <div className="content">
-          <img src={medio} alt="Car" style={{width:"100%"}}/>
+              </div>
+            </div>
 
-        </div>
-      </div>
+            <div className="column people">
+              <div className="content">
+                <img src={medio} alt="People" style={{width:"100%"}}/>
 
-      <div className="column people">
-        <div className="content">
-          <img src={medio} alt="People" style={{width:"100%"}}/>
+              </div>
+            </div>
+            <div className="column people">
+              <div className="content">
+                <img src={medio} alt="People" style={{width:"100%"}}/>
 
-        </div>
-      </div>
-      <div className="column people">
-        <div className="content">
-          <img src={medio} alt="People" style={{width:"100%"}}/>
+              </div>
+            </div>
+            <div className="column people">
+              <div className="content">
+                <img src={medio} alt="People" style={{width:"100%"}}/>
 
-        </div>
-      </div>
-      <div className="column people">
-        <div className="content">
-          <img src={medio} alt="People" style={{width:"100%"}}/>
-
-        </div>
-      </div>
-    </div>
-    </Contain>
-        )
-      }
+              </div>
+            </div>
+          </div>
+          </Contain>
+              )
+            }
   }
 export default Products;
