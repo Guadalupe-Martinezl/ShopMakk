@@ -86,7 +86,7 @@ body {
  class Products extends Component {
    constructor(){
      super();
-     this. state={
+     this.state={
        producto:[],
        nombre: '',
        marca:'',
@@ -102,35 +102,37 @@ body {
 
      });
    }
+
    componentDidMount(){
-       fetch('http://192.168.2.106:8000/producto')
+       fetch('http://192.168.2.106:8000/producto/')
        .then((response) => { return response.json()})
        .then((json) => {
          console.log("Json---->", json);
          let {producto} = this.state
-         var task = {
-           nombre:     json.Nombre_producto,
-           marca:      json.Marca_producto,
-           precio:     json.Precio_producto,
-           modelo:     json.Modelo_producto,
-           descripcion:json.Descripcion_producto,
-         };
-         console.log("task--->",task);
 
-         // producto.push(task);
-         //       json.forEach(function(element, index) {
-         //         var obj1 = {
-         //           nombre:element.Nombre_producto,
-         //           marca:element.Marca_producto,
-         //    }
-         //       console.log(element.nombre, index);
-         //       });
-         //
-         // this.setState({
-         //  producto
-         // })
-    })
+         json.forEach(function(element, index) {
+           var task = {
+             nombre:element.Nombre_producto,
+             marca:element.Marca_producto,
+             precio:element.Precio_producto,
+             modelo:element.Modelo_producto,
+             descripcion: element.Descripcion_producto
+};
+
+          producto.push(task);
+
+                 console.log(element, index );
+                 });
+            this.setState({
+              producto
+
+            })
+            console.log("producto-->",producto.nombre );
+
+          })
+
     }
+
    render(){
     return (
       <Contain>
@@ -141,61 +143,59 @@ body {
               <div className="content">
                 <img src={medio} alt="Mountains" style={{width:"100%"}}/>
 
-
               </div>
             </div>
+
             <div className="column nature">
               <div className="content">
                 <img src={medio} alt="Lights"  style={{width:"100%"}}/>
-
               </div>
             </div>
+
             <div className="column nature">
               <div className="content">
                 <img src={medio} alt="Nature"  style={{width:"100%"}}/>
-
               </div>
             </div>
 
             <div className="column cars">
               <div className="content">
                 <img src={medio} alt="Car" style={{width:"100%"}}/>
-
               </div>
             </div>
+
             <div className="column cars">
               <div className="content">
                 <img src={medio} alt="Car" style={{width:"100%"}}/>
-
               </div>
             </div>
+
             <div className="column cars">
               <div className="content">
                 <img src={medio} alt="Car" style={{width:"100%"}}/>
-
               </div>
             </div>
 
             <div className="column people">
               <div className="content">
                 <img src={medio} alt="People" style={{width:"100%"}}/>
-
               </div>
             </div>
+
             <div className="column people">
               <div className="content">
                 <img src={medio} alt="People" style={{width:"100%"}}/>
-
               </div>
             </div>
+
             <div className="column people">
               <div className="content">
                 <img src={medio} alt="People" style={{width:"100%"}}/>
-
               </div>
             </div>
           </div>
-          </Contain>
+
+        </Contain>
               )
             }
   }

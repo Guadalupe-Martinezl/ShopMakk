@@ -381,9 +381,7 @@ export default function Profile(props) {
 
       <Menu2/>
       <Menu3/>
-
-
-
+      
     </Contain>
   )
 
