@@ -30,6 +30,7 @@ const Contain = styled.div`
       left: 50%;
       margin-top: 1%;
       transform: translate(-50%, -40%);
+      margin:auto;
       }
       .li{
         margin-left: 80px;
