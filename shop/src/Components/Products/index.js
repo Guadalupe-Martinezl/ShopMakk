@@ -84,16 +84,20 @@ body {
 }
   `;
  class Products extends Component {
-   constructor(){
-     super();
+   constructor(props){
+     super(props);
      this.state={
-       producto:[],
-       nombre: '',
-       marca:'',
-       precio: '',
-       modelo: '',
-       descripcion:'',
-       imagen:''
+       producto:[
+         {
+         nombre: ,
+         marca:'',
+         precio: '',
+         modelo: '',
+         descripcion:'',
+         imagen:[]
+       }
+       ]
+
      }
      this.handleProducts = this.handleProducts.bind(this);
    }
@@ -103,100 +107,37 @@ body {
      });
    }
 
-   componentDidMount(){
-       fetch('http://192.168.2.106:8000/producto/')
-       .then((response) => { return response.json()})
-       .then((json) => {
-         console.log("Json---->", json);
-         let {producto} = this.state
-
-         json.forEach(function(element, index) {
-           var task = {
-             nombre:element.Nombre_producto,
-             marca:element.Marca_producto,
-             precio:element.Precio_producto,
-             modelo:element.Modelo_producto,
-             descripcion: element.Descripcion_producto
-};
-
-          producto.push(task);
-
-                 console.log(element, index );
-                 });
-            this.setState({
-              producto
-
-            })
-            console.log("producto-->",producto.nombre );
-
-          })
-
-    }
 
    render(){
-    return (
+     const productos = this.state.producto;
+     console.log("prueba-->",productos);
+     return this.state.producto.map((producto, i) => (
+
       <Contain>
-      <Header />
+      <div className="row">
+           <div className="column nature">
+             <div className="content">
 
-          <div className="row">
-            <div className="column nature">
-              <div className="content">
-                <img src={medio} alt="Mountains" style={{width:"100%"}}/>
+               <span>
+               {this.props.nombre}
 
-              </div>
-            </div>
+               </span>
 
-            <div className="column nature">
-              <div className="content">
-                <img src={medio} alt="Lights"  style={{width:"100%"}}/>
-              </div>
-            </div>
-
-            <div className="column nature">
-              <div className="content">
-                <img src={medio} alt="Nature"  style={{width:"100%"}}/>
-              </div>
-            </div>
-
-            <div className="column cars">
-              <div className="content">
-                <img src={medio} alt="Car" style={{width:"100%"}}/>
-              </div>
-            </div>
-
-            <div className="column cars">
-              <div className="content">
-                <img src={medio} alt="Car" style={{width:"100%"}}/>
-              </div>
-            </div>
-
-            <div className="column cars">
-              <div className="content">
-                <img src={medio} alt="Car" style={{width:"100%"}}/>
-              </div>
-            </div>
-
-            <div className="column people">
-              <div className="content">
-                <img src={medio} alt="People" style={{width:"100%"}}/>
-              </div>
-            </div>
-
-            <div className="column people">
-              <div className="content">
-                <img src={medio} alt="People" style={{width:"100%"}}/>
-              </div>
-            </div>
-
-            <div className="column people">
-              <div className="content">
-                <img src={medio} alt="People" style={{width:"100%"}}/>
-              </div>
-            </div>
+             </div>
+        </div>
+        </div>
+        <div className="row">
+             <div className="column nature">
+               <div className="content">
+                 <img src={medio} alt="Mountains" style={{width:"100%"}}/>
+                 <span>{productos.nombre}</span>
+               </div>
           </div>
-
+          </div>
         </Contain>
-              )
-            }
+
+
+     ));
+   }
   }
 export default Products;
