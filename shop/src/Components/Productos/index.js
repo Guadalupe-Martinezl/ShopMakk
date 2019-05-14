@@ -32,7 +32,7 @@ background-size: cover;
   justify-content: space-around;
   transform: translate(12%, 10%);
 }
-@media (max-width: 800px)  {
+@media screen (max-width: 800px)  {
  .wrap {
    width: 1100px;
    margin: 0;
