@@ -124,17 +124,14 @@ class App extends Component {
     super();
     this.state = {
       currentlocation:'',
-      producto:[
-        {
+      producto:[],
+        index:'',
         nombre: '',
         marca:'',
-        precio: '',
-        modelo: '',
+        precio:'',
+        modelo:'',
         descripcion:'',
         imagen:[]
-      }
-      ]
-
     }
 }
 
@@ -152,18 +149,17 @@ componentDidMount(){
           marca:element.Marca_producto,
           precio:element.Precio_producto,
           modelo:element.Modelo_producto,
-          descripcion: element.Descripcion_producto
- };
-
+          descripcion: element.Descripcion_producto,
+          imagen:element.img
+         };
        producto.push(task);
-
-              console.log(element, index );
               });
          this.setState({
            producto
 
          })
-         console.log("producto-->",producto);
+         console.log("producto-->",producto[2].nombre);
+
 
        })
        var btnContainer = document.getElementById("myBtnContainer");
@@ -228,12 +224,15 @@ filterSelection(c) {
                span={["Tecnologias","Comida","Maquillaje"]}
               />
 
+
+
               <Products
-                nombre={this.state.producto.nombre}
-                marca={this.state.producto.marca}
-                precio={this.state.producto.precio}
-                modelo={this.state.producto.modelo}
-                descripcion={this.state.producto.descripcion}
+                index={this.state.index}
+                nombre={this.state.nombre}
+                marca={this.state.marca}
+                precio={this.state.precio}
+                modelo={this.state.modelo}
+                descripcion={this.state.descripcion}
               />
    </div>
   </div>

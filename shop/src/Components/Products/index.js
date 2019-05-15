@@ -86,10 +86,10 @@ body {
  class Products extends Component {
    constructor(props){
      super(props);
-     this.state={
+     this.state= {
        producto:[
          {
-         nombre: ,
+         nombre:'nombre',
          marca:'',
          precio: '',
          modelo: '',
@@ -97,7 +97,6 @@ body {
          imagen:[]
        }
        ]
-
      }
      this.handleProducts = this.handleProducts.bind(this);
    }
@@ -109,17 +108,19 @@ body {
 
 
    render(){
+     console.log("props-->",this.props);
+
      const productos = this.state.producto;
-     console.log("prueba-->",productos);
+
      return this.state.producto.map((producto, i) => (
 
       <Contain>
       <div className="row">
            <div className="column nature">
              <div className="content">
+             <input type="hidden" id="index" name="index" value={this.props.index}/>
 
                <span>
-               {this.props.nombre}
 
                </span>
 
@@ -135,7 +136,7 @@ body {
           </div>
           </div>
         </Contain>
-
+    
 
      ));
    }
