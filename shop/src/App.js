@@ -124,7 +124,18 @@ class App extends Component {
     super();
     this.state = {
       currentlocation:'',
-    }  
+      producto:[
+        {
+        nombre: '',
+        marca:'',
+        precio: '',
+        modelo: '',
+        descripcion:'',
+        imagen:[]
+      }
+      ]
+
+    }
 }
 
 
@@ -141,7 +152,8 @@ componentDidMount(){
           marca:element.Marca_producto,
           precio:element.Precio_producto,
           modelo:element.Modelo_producto,
-          descripcion: element.Descripcion_producto
+          descripcion: element.Descripcion_producto,
+          imagen: element.img
  };
 
        producto.push(task);
@@ -223,6 +235,7 @@ filterSelection(c) {
                 precio={this.state.producto.precio}
                 modelo={this.state.producto.modelo}
                 descripcion={this.state.producto.descripcion}
+                imagen={this.state.producto.imagen}
               />
    </div>
   </div>
