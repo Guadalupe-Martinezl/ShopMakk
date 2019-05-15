@@ -156,8 +156,7 @@ body {
 }
    render(){
      const productos = this.state.producto;
-          console.log("Holi ---->", productos);
-     return  this.state.producto.map((producto, i) => (
+     return  this.state.producto.map((productos, i) => (
     <Contain>
     <Header />
     <div className="row">

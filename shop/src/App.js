@@ -124,7 +124,7 @@ class App extends Component {
     super();
     this.state = {
       currentlocation:'',
-    }
+    }  
 }
 
 filterSelection(c) {
