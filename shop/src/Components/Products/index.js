@@ -27,7 +27,6 @@ body {
   font-family: Arial;
 }
 
-/* Center website */
 .main {
   max-width: 1000px;
   margin: auto;
@@ -61,7 +60,7 @@ body {
   padding: 5px;
 }
 
-/* Create three equal columns that floats next to each other */
+
 .column {
   float: left;
   width: 30%;
@@ -90,6 +89,7 @@ body {
   padding: 12px 16px;
   background-color: white;
   cursor: pointer;
+  transform: translate(10%,250%);
 }
 
 .btn:hover {
@@ -99,19 +99,11 @@ body {
 .btn.active {
   background-color: #666;
    color: white;
+
 }
   `;
  class Products extends Component {
-   constructor(){
-     super();
-     this.state={
-       producto:[],
-       nombre     : '',
-       marca      :'',
-       precio     : '',
-       modelo     : '',
-       descripcion:'',
-       imagen:[]
+
      }
      this.handleProducts = this.handleProducts.bind(this);
    }
@@ -178,9 +170,6 @@ body {
         </div>
       </div>
 
-      <div className="column cars">
-        <div className="content">
-          <img src={medio} alt="Car" style={{width:"100%"}}/>
 
         </div>
       </div>
@@ -196,22 +185,13 @@ body {
         </div>
       </div>
 
-      <div className="column people">
-        <div className="content">
-          <img src={medio} alt="People" style={{width:"100%"}}/>
+               <span>
+               {this.props.nombre}
 
+               </span>
+
+             </div>
         </div>
-      </div>
-      <div className="column people">
-        <div className="content">
-          <img src={medio} alt="People" style={{width:"100%"}}/>
-
-        </div>
-      </div>
-      <div className="column people">
-        <div className="content">
-          <img src={medio} alt="People" style={{width:"100%"}}/>
-
         </div>
       </div>
     </div>

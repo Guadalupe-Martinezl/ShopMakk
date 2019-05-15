@@ -11,7 +11,7 @@ const Contain = styled.div`
       width: 15%;
       height: 15%;
       border-radius: 5px;
-      transform: translate(-60%, 25%);
+      transform: translate(-50%, 35%);
      }
      .nav{
       position: absolute;
@@ -25,11 +25,12 @@ const Contain = styled.div`
       list-style: none;
       background: #000;
       padding: 20px;
-      width: 97.4%;
+      width: 99.5%;
       font-weight: bold;
       left: 50%;
       margin-top: 1%;
       transform: translate(-50%, -40%);
+      margin:auto;
       }
       .li{
         margin-left: 80px;
@@ -37,6 +38,9 @@ const Contain = styled.div`
         cursor: pointer;
         color: white;
         transform: translate(70%, 40%);
+        }
+        .logo2{
+          display:none;
         }
       .sidenav {
         height: 100%;
@@ -97,11 +101,12 @@ const Contain = styled.div`
       margin-left: 50px;
     }
     @media screen and (max-width:768px){
-          .logo{
-            width: 45%;
-            height: 45%;
+          .logo2{
+            display:block;
+            width: 60%;
+            height: 50%;
             border-radius: 5px;
-            transform: translate(65%, 80%);
+            transform: translate(35%, 80%);
           }
           .nav{
             display:none;
@@ -230,7 +235,7 @@ const Contain = styled.div`
 
 
    <div onClick={()=>openNav()} className="nav2">
-
+      <img className="logo2" src={shop}/>
       <div className="line1"></div>
       <div className="line2"></div>
       <div className="line3"></div>

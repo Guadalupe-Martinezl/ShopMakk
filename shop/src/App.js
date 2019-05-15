@@ -127,6 +127,47 @@ class App extends Component {
     }  
 }
 
+
+componentDidMount(){
+    fetch('http://192.168.2.106:8000/producto/')
+    .then((response) => { return response.json()})
+    .then((json) => {
+      console.log("Json---->", json);
+      let {producto} = this.state;
+
+      json.forEach(function(element, index) {
+        var task = {
+          nombre:element.Nombre_producto,
+          marca:element.Marca_producto,
+          precio:element.Precio_producto,
+          modelo:element.Modelo_producto,
+          descripcion: element.Descripcion_producto
+ };
+
+       producto.push(task);
+
+              console.log(element, index );
+              });
+         this.setState({
+           producto
+
+         })
+         console.log("producto-->",producto);
+
+       })
+       var btnContainer = document.getElementById("myBtnContainer");
+       var btns = document.getElementsByClassName("btn");
+       for (var i = 0; i < btns.length; i++) {
+         btns[i].addEventListener("click",function(){
+           var current = document.getElementsByClassName("active");
+           current[0].className = current[0].className.replace(" active", "");
+           this.className += " active";
+         });
+       }
+       this.filterSelection("all")
+
+ }
+
 filterSelection(c) {
     var x, i;
     x = document.getElementsByClassName("column");
@@ -158,23 +199,12 @@ filterSelection(c) {
     }
     element.className = arr1.join(" ");
   }
-  componentDidMount(){
-    var btnContainer = document.getElementById("myBtnContainer");
-    var btns = document.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click",function(){
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-      });
-    }
-    this.filterSelection("all")
-  }
+
   render() {
     var URLactual = window.location;
-    console.log(URLactual.pathname);
+      console.log(URLactual.pathname);
       console.log(URLactual);
-    switch (URLactual.pathname) {
+      switch (URLactual.pathname) {
       case "/Admin":
         return (
           <Contain>
@@ -186,11 +216,20 @@ filterSelection(c) {
                "http://lorempixel.com/400/200/technics/"]}
                span={["Tecnologias","Comida","Maquillaje"]}
               />
+
+              <Products
+                nombre={this.state.producto.nombre}
+                marca={this.state.producto.marca}
+                precio={this.state.producto.precio}
+                modelo={this.state.producto.modelo}
+                descripcion={this.state.producto.descripcion}
+              />
    </div>
   </div>
   </Contain>
 
       );
+
         break;
 
       case "/Login":
