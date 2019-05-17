@@ -133,8 +133,16 @@ class App extends Component {
         descripcion:'',
         imagen:[]
     }
+    this.forceUpdateHandler = this.forceUpdateHandler.bind(this);
 }
-
+forceUpdateHandler(){
+  this.forceUpdate();
+};
+// handleAddProducto(producto){
+//    this.setState({
+//      producto: [...this.state.producto, producto]
+// })
+// }
 
 componentDidMount(){
     fetch('http://192.168.2.106:8000/producto/')
@@ -143,25 +151,31 @@ componentDidMount(){
       console.log("Json---->", json);
       let {producto} = this.state;
 
-      json.forEach(function(element, index) {
-        var task = {
-          nombre:element.Nombre_producto,
-          marca:element.Marca_producto,
-          precio:element.Precio_producto,
-          modelo:element.Modelo_producto,
-          descripcion: element.Descripcion_producto,
-          imagen:element.img
-         };
-       producto.push(task);
-              });
-         this.setState({
-           producto
+      // json.forEach(function(element, index) {
+      //   var task = {
+      //     nombre:element.Nombre_producto,
+      //     marca:element.Marca_producto,
+      //     precio:element.Precio_producto,
+      //     modelo:element.Modelo_producto,
+      //     descripcion: element.Descripcion_producto,
+      //     imagen:element.img
+      //    };
 
-         })
-         console.log("producto-->",producto[2].nombre);
+      producto.push(json);
+        this.setState({
+
+          producto
+
+        })
+        console.log("productoFetch-->",producto);
 
 
-       })
+      });
+
+       // })
+
+
+
        var btnContainer = document.getElementById("myBtnContainer");
        var btns = document.getElementsByClassName("btn");
        for (var i = 0; i < btns.length; i++) {
@@ -208,6 +222,7 @@ filterSelection(c) {
   }
 
   render() {
+    console.log("state --->", this.state);
     var URLactual = window.location;
       console.log(URLactual.pathname);
       console.log(URLactual);
@@ -227,12 +242,14 @@ filterSelection(c) {
 
 
               <Products
-                index={this.state.index}
-                nombre={this.state.nombre}
-                marca={this.state.marca}
-                precio={this.state.precio}
-                modelo={this.state.modelo}
-                descripcion={this.state.descripcion}
+              productos = {this.state.producto}
+                // onAddProducto={this.handleAddProducto}
+                // index={this.state.index}
+                // nombre={this.state.nombre}
+                // marca={this.state.marca}
+                // precio={this.state.precio}
+                // modelo={this.state.modelo}
+                // descripcion={this.state.descripcion}
               />
    </div>
   </div>

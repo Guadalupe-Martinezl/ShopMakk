@@ -86,59 +86,53 @@ body {
  class Products extends Component {
    constructor(props){
      super(props);
-     this.state= {
-       producto:[
-         {
-         nombre:'nombre',
-         marca:'',
-         precio: '',
-         modelo: '',
-         descripcion:'',
-         imagen:[]
-       }
-       ]
+     // this.state= {
+     //   producto:[
+     //     {
+     //     nombre:"nombre",
+     //     marca:'',
+     //     precio: '',
+     //     modelo: '',
+     //     descripcion:'',
+     //     imagen:[]
+     //   }
+     //   ]
      }
-     this.handleProducts = this.handleProducts.bind(this);
-   }
-   handleProducts() {
-     this.setState({
+     // this.handleProducts = this.handleProducts.bind(this);
 
-     });
-   }
+   // handleProducts() {
+   //   this.setState({
+   //
+   //   });
+   // }
 
 
    render(){
      console.log("props-->",this.props);
 
-     const productos = this.state.producto;
+     const productos = this.props.productos != undefined ? this.props.productos : []
 
-     return this.state.producto.map((producto, i) => (
+     console.log("productoComponente ---->", productos);
+      return(<Contain>
+      {productos != undefined && productos.map((producto, i) => (
 
-      <Contain>
       <div className="row">
            <div className="column nature">
              <div className="content">
-             <input type="hidden" id="index" name="index" value={this.props.index}/>
+             <input type="hidden" id="index" name="index" value=""/>
 
                <span>
-
+               {producto.nombre}
                </span>
-
              </div>
         </div>
         </div>
-        <div className="row">
-             <div className="column nature">
-               <div className="content">
-                 <img src={medio} alt="Mountains" style={{width:"100%"}}/>
-                 <span>{productos.nombre}</span>
-               </div>
-          </div>
-          </div>
-        </Contain>
-    
 
-     ));
-   }
-  }
+      ))
+      }
+
+        </Contain>)
+      }
+    }
+
 export default Products;
