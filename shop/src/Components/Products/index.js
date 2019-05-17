@@ -15,43 +15,55 @@ margin: 0;
 background: url(${fondop}) ;
 width: 1480px;
 height: 1150px;
+
 * {
   box-sizing: border-box;
 }
+
 body {
   background-color: #f1f1f1;
   padding: 20px;
   font-family: Arial;
 }
+
 .main {
   max-width: 1000px;
   margin: auto;
 }
+
+
 .row {
   margin: 5px -10px;
 }
+
 .row,
 .row > .column {
   padding: 5px;
 }
+
+
 .column {
   float: left;
   width: 30%;
   display: none;
 }
+
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
+
 .content {
   background-color: white;
   padding: 5px;
   transform: translate(2%,50%);
 }
+
 .show {
   display: block;
 }
+
 .btn {
   border: none;
   outline: none;
@@ -60,29 +72,31 @@ body {
   cursor: pointer;
   transform: translate(10%,250%);
 }
+
 .btn:hover {
   background-color: #ddd;
 }
+
 .btn.active {
   background-color: #666;
    color: white;
+
 }
   `;
  class Products extends Component {
    constructor(props){
      super(props);
-     this.state={
-       producto:[
-         {
-         nombre: '',
-         marca:'',
-         precio: '',
-         modelo: '',
-         descripcion:'',
-         imagen:[]
-       }
-       ]
-
+     // this.state= {
+     //   producto:[
+     //     {
+     //     nombre:"nombre",
+     //     marca:'',
+     //     precio: '',
+     //     modelo: '',
+     //     descripcion:'',
+     //     imagen:[]
+     //   }
+     //   ]
      }
      // this.handleProducts = this.handleProducts.bind(this);
 
@@ -96,7 +110,7 @@ body {
    render(){
      console.log("props-->",this.props);
 
-     const productos = this.props.productos != undefined ? this.props.productos : []
+     const productos = productos != undefined ? this.props.productos : []
 
      console.log("productoComponente ---->", productos);
       return(<Contain>
@@ -114,11 +128,11 @@ body {
         </div>
         </div>
 
-
       ))
       }
 
         </Contain>)
-  }
+      }
+    }
 
 export default Products;
