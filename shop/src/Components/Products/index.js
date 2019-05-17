@@ -71,19 +71,6 @@ body {
  class Products extends Component {
    constructor(props){
      super(props);
-<<<<<<< HEAD
-     // this.state= {
-     //   producto:[
-     //     {
-     //     nombre:"nombre",
-     //     marca:'',
-     //     precio: '',
-     //     modelo: '',
-     //     descripcion:'',
-     //     imagen:[]
-     //   }
-     //   ]
-=======
      this.state={
        producto:[
          {
@@ -96,7 +83,6 @@ body {
        }
        ]
 
->>>>>>> 4744e964ade19061e5cf251133e7096725b3757e
      }
      // this.handleProducts = this.handleProducts.bind(this);
 
@@ -127,29 +113,12 @@ body {
              </div>
         </div>
         </div>
-<<<<<<< HEAD
+
 
       ))
       }
 
         </Contain>)
-      }
-    }
-
-=======
-        <div className="row">
-             <div className="column nature">
-               <div className="content">
-                 <img src={medio} alt="Mountains" style={{width:"100%"}}/>
-                 <span>{producto.nombre}</span>
-               </div>
-          </div>
-          </div>
-        </Contain>
-
-
-     ));
-   }
   }
->>>>>>> 4744e964ade19061e5cf251133e7096725b3757e
+
 export default Products;
