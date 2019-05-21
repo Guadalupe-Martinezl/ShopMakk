@@ -3,7 +3,6 @@ import Gallery from './Components/Gallery/';
 import FormLogin from './Components/Login/';
 import Registro from './Components/Registro/';
 import Header from './Components/Header/';
-import Productos from './Components/Productos/';
 import Products from './Components/Products/';
 import Perfil from './Components/Profile/';
 
@@ -124,19 +123,12 @@ class App extends Component {
     super();
     this.state = {
       currentlocation:'',
-      producto:[],
-        index:'',
-        nombre: '',
-        marca:'',
-        precio:'',
-        modelo:'',
-        descripcion:'',
-        imagen:[]
+      producto:[]
     }
     this.forceUpdateHandler = this.forceUpdateHandler.bind(this);
 }
 forceUpdateHandler(){
-  this.forceUpdate();
+  this.forceUpdate(this.state);
 };
 // handleAddProducto(producto){
 //    this.setState({
@@ -167,7 +159,7 @@ componentDidMount(){
           producto
 
         })
-        console.log("productoFetch-->",producto);
+        console.log("productoFetch-->",producto[0][4].Nombre_producto);
 
 
       });
@@ -251,8 +243,8 @@ filterSelection(c) {
                 // modelo={this.state.modelo}
                 // descripcion={this.state.descripcion}
               />
-   </div>
-  </div>
+      </div>
+    </div>
   </Contain>
 
       );
@@ -267,9 +259,7 @@ filterSelection(c) {
         return (<Registro />);
         break;
 
-      case "/Productos":
-        return (<Productos />);
-        break;
+      
 
         case "/Perfil":
           return (<Perfil />);

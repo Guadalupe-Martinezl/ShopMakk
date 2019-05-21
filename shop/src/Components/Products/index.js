@@ -86,17 +86,15 @@ body {
  class Products extends Component {
    constructor(props){
      super(props);
-     // this.state= {
-     //   producto:[
-     //     {
-     //     nombre:"nombre",
-     //     marca:'',
-     //     precio: '',
-     //     modelo: '',
-     //     descripcion:'',
-     //     imagen:[]
-     //   }
-     //   ]
+     this.state={
+         nombre:'',
+         marca:'',
+         precio: '',
+         modelo: '',
+         descripcion:'',
+         imagen:[]
+        }
+        this.handleSubmit = this.handleSubmit.bind(this);
      }
      // this.handleProducts = this.handleProducts.bind(this);
 
@@ -105,15 +103,27 @@ body {
    //
    //   });
    // }
-
+   handleSubmit(e) {
+      e.preventDefault();
+      this.props.productos(this.state);
+      this.setState({
+        nombre:'',
+        marca:'',
+        precio: '',
+        modelo: '',
+        descripcion:'',
+        imagen:[]
+      });
+  }
 
    render(){
-     console.log("props-->",this.props);
+     console.log("props-->",this.setState.nombre);
 
      const productos = productos != undefined ? this.props.productos : []
 
      console.log("productoComponente ---->", productos);
-      return(<Contain>
+      return(<Contain onSubmit={this.props.productos}>
+
       {productos != undefined && productos.map((producto, i) => (
 
       <div className="row">
