@@ -83,66 +83,24 @@ body {
 
 }
   `;
- class Products extends Component {
-   constructor(props){
-     super(props);
-     this.state={
-         nombre:'',
-         marca:'',
-         precio: '',
-         modelo: '',
-         descripcion:'',
-         imagen:[]
-        }
-        this.handleSubmit = this.handleSubmit.bind(this);
-     }
-     // this.handleProducts = this.handleProducts.bind(this);
+ function  Products (props) {
+  console.log("propsProducts---->",props);
+   const productos = productos != undefined ? this.props.productos : []
+   return(
+     <Contain>
+     <div className="row">
+     <div className="column nature">
+       <div className="content">
+         <img src={medio} alt="Mountains" style={{width:"100%"}}/>
+         <h4>{productos.nombre}</h4>
+         <p>{props.productos}</p>
+       </div>
+       </div>
+       </div>
 
-   // handleProducts() {
-   //   this.setState({
-   //
-   //   });
-   // }
-   handleSubmit(e) {
-      e.preventDefault();
-      this.props.productos(this.state);
-      this.setState({
-        nombre:'',
-        marca:'',
-        precio: '',
-        modelo: '',
-        descripcion:'',
-        imagen:[]
-      });
-  }
+      </Contain>
 
-   render(){
-     console.log("props-->",this.setState.nombre);
-
-     const productos = productos != undefined ? this.props.productos : []
-
-     console.log("productoComponente ---->", productos);
-      return(<Contain onSubmit={this.props.productos}>
-
-      {productos != undefined && productos.map((producto, i) => (
-
-      <div className="row">
-           <div className="column nature">
-             <div className="content">
-             <input type="hidden" id="index" name="index" value=""/>
-
-               <span>
-               {producto.nombre}
-               </span>
-             </div>
-        </div>
-        </div>
-
-      ))
-      }
-
-        </Contain>)
-      }
+   )
     }
 
-export default Products;
+    export default Products;

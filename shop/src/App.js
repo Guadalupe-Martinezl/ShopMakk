@@ -123,48 +123,61 @@ class App extends Component {
     super();
     this.state = {
       currentlocation:'',
-      producto:[]
+          producto:[],
+          index:'',
+          nombre:'',
+          marca:'',
+          precio:'',
+          modelo:'',
+          descripcion:'',
+          imagen:[]
+
     }
+    console.log("stateproducto ---->", this.state.producto);
     this.forceUpdateHandler = this.forceUpdateHandler.bind(this);
+
 }
+
 forceUpdateHandler(){
   this.forceUpdate(this.state);
 };
-// handleAddProducto(producto){
-//    this.setState({
-//      producto: [...this.state.producto, producto]
-// })
-// }
 
 componentDidMount(){
     fetch('http://192.168.2.106:8000/producto/')
     .then((response) => { return response.json()})
     .then((json) => {
       console.log("Json---->", json);
-      let {producto} = this.state;
+      let {producto} = this.state
 
-      // json.forEach(function(element, index) {
-      //   var task = {
-      //     nombre:element.Nombre_producto,
-      //     marca:element.Marca_producto,
-      //     precio:element.Precio_producto,
-      //     modelo:element.Modelo_producto,
-      //     descripcion: element.Descripcion_producto,
-      //     imagen:element.img
-      //    };
+      var task = {
+        nombre:json.Nombre_producto,
+        marca:json.Marca_producto,
+        precio:json.Precio_producto,
+        modelo:json.Modelo_producto,
+        descripcion: json.Descripcion_producto,
+        imagen:json.img
+       }
+        producto.push(json);
 
-      producto.push(json);
+        json.map(function(element, index) {
+          var obj1 = {
+            nombre:element.Nombre_producto,
+            marca:element.Marca_producto,
+            precio:element.Precio_producto,
+            modelo:element.Modelo_producto,
+            descripcion: element.Descripcion_producto,
+            imagen:element.img
+           }
+           console.log("MAP ----->", obj1);
+             });
+
+
         this.setState({
-
           producto
-
         })
-        console.log("productoFetch-->",producto[0][4].Nombre_producto);
+        console.log("productoFetch-->",producto);
 
-
-      });
-
-       // })
+       })
 
 
 
@@ -235,6 +248,7 @@ filterSelection(c) {
 
               <Products
               productos = {this.state.producto}
+              nombre ={this.state.nombre}
                 // onAddProducto={this.handleAddProducto}
                 // index={this.state.index}
                 // nombre={this.state.nombre}
@@ -259,7 +273,7 @@ filterSelection(c) {
         return (<Registro />);
         break;
 
-      
+
 
         case "/Perfil":
           return (<Perfil />);
