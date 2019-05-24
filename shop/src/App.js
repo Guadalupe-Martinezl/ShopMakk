@@ -125,11 +125,11 @@ class App extends Component {
       currentlocation:'',
           producto:[],
           index:'',
-          nombre:'',
+          nombre:'kkjg',
           marca:'',
           precio:'',
           modelo:'',
-          descripcion:'',
+          descripcion:'jh55',
           imagen:[]
 
     }
@@ -237,6 +237,7 @@ filterSelection(c) {
           <Contain>
         <div className="App">
          <Header/>
+
               <div className="App-Header" >
              <Gallery
                images={["http://lorempixel.com/400/200/technics/","http://lorempixel.com/400/200/technics/",
@@ -247,8 +248,9 @@ filterSelection(c) {
 
 
               <Products
-              productos = {this.state.producto}
-              nombre ={this.state.nombre}
+              productos = {this.state.nombre}
+              descripcion = {this.state.descripcion}
+
                 // onAddProducto={this.handleAddProducto}
                 // index={this.state.index}
                 // nombre={this.state.nombre}

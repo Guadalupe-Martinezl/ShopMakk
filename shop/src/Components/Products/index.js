@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-
+import ReactDOM from 'react-dom';
 import Header from '../../Components/Header/';
 
 import shop from '../../images/shopMak.png';
@@ -92,8 +92,8 @@ body {
      <div className="column nature">
        <div className="content">
          <img src={medio} alt="Mountains" style={{width:"100%"}}/>
-         <h4>{productos.nombre}</h4>
-         <p>{props.productos}</p>
+         <h4>{props.productos}</h4>
+         <p>{props.descripcion}</p>
        </div>
        </div>
        </div>
@@ -102,5 +102,8 @@ body {
 
    )
     }
-
-    export default Products;
+export default Products;
+ReactDOM.render(
+  <Products />,
+  document.getElementById('root')
+);
