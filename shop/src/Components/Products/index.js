@@ -92,8 +92,11 @@ body {
      <div className="column nature">
        <div className="content">
          <img src={medio} alt="Mountains" style={{width:"100%"}}/>
-         <h4>{props.productos}</h4>
+         <h3>{props.nombre}</h3>
+         <p>{props.modelo}</p>
+         <p>{props.marca}</p>
          <p>{props.descripcion}</p>
+          <p>{props.precio}</p>
        </div>
        </div>
        </div>

@@ -247,21 +247,11 @@ filterSelection(c) {
 
 
 
-              <Products
-              productos = {this.state.nombre}
-              descripcion = {this.state.descripcion}
 
-                // onAddProducto={this.handleAddProducto}
-                // index={this.state.index}
-                // nombre={this.state.nombre}
-                // marca={this.state.marca}
-                // precio={this.state.precio}
-                // modelo={this.state.modelo}
-                // descripcion={this.state.descripcion}
-              />
       </div>
     </div>
   </Contain>
+
 
       );
 
@@ -282,7 +272,16 @@ filterSelection(c) {
           break;
 
           case "/Products":
-            return (<Products />);
+            return (<Products
+                index = {this.state.index}
+                descripcion = {this.state.descripcion}
+                nombre={this.state.nombre}
+                marca={this.state.marca}
+                precio={this.state.precio}
+                modelo={this.state.modelo}
+                // onAddProducto={this.handleAddProducto}
+                // index={this.state.index}
+               />);
             break;
 
 
